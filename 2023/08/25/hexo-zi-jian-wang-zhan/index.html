@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Wolf&#39;s void">
+    <meta name="keywords" content="基于Hexo自建一个github托管的静态网页, Wolf&#39;s void">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Wolf&#39;s void</title>
+    <title>基于Hexo自建一个github托管的静态网页 | Wolf&#39;s void</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">基于Hexo自建一个github托管的静态网页</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/webpage/" class="post-category">
+                                webpage
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -450,12 +463,22 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-22
+                    2023-08-26
                 </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.2k
+                </div>
+                
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
                 
 
                 
@@ -477,109 +500,143 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="OpenMP并行编程"><a href="#OpenMP并行编程" class="headerlink" title="OpenMP并行编程"></a>OpenMP并行编程</h1><p>在codeblocks上配置OpenMP</p>
-<p>本质：</p>
-<p>编译时添加 -fopenmp命令</p>
-<p>链接时添加 -lgomp -lpthread</p>
-<p>【vscode本机】</p>
-<p>使用终端编译</p>
-<p> g++ -fopenmp -lgomp -lpthread parallel.cpp</p>
-<p>使用以下命令编译即可直接得到结果</p>
-<pre class="line-numbers language-none"><code class="language-none">g++ -fopenmp -lgomp -lpthread parallel.cpp -o process.exe ; .\process.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="基于Hexo自建一个github托管的静态网页"><a href="#基于Hexo自建一个github托管的静态网页" class="headerlink" title="基于Hexo自建一个github托管的静态网页"></a>基于Hexo自建一个github托管的静态网页</h1><h2 id="建立github密钥"><a href="#建立github密钥" class="headerlink" title="建立github密钥"></a>建立github密钥</h2><pre class="line-numbers language-none"><code class="language-none">git config --global user.name wolfvoid
+git config --global user.email 1055320990@qq.com
+三个回车，根据提示内容找到密钥储存地址，复制密钥在github上的ssh部分添加
+ssh git@github.com
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>经历如下过程，出现如下结果</p>
+<pre class="line-numbers language-none"><code class="language-none">y@LAPTOP-S8GDLRKI MINGW64 ~&#x2F;Desktop
+$ ssh git@github.com
+The authenticity of host &#39;github.com (20.205.243.166)&#39; can&#39;t be established.
+ED25519 key fingerprint is 密码.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? yes
+Warning: Permanently added &#39;github.com&#39; (ED25519) to the list of known hosts.
+PTY allocation request failed on channel 0
+Hi wolfvoid! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
 
+y@LAPTOP-S8GDLRKI MINGW64 ~&#x2F;Desktop
+$ ssh git@github.com
+PTY allocation request failed on channel 0
+Hi wolfvoid! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
-#include&lt;iostream&gt;
-using namespace std;
-int main()
-&#123;
-#pragma omp parallel
-	&#123;
-		cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;
-	&#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>第二次表示匹配成功</p>
+<h2 id="确保node和npm已安装"><a href="#确保node和npm已安装" class="headerlink" title="确保node和npm已安装"></a>确保node和npm已安装</h2><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>命令行如下</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli 
+hexo init My_blog
+cd My_blog
+hexo new test_my_site
+hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>设置并行线程个数</p>
-<pre class="line-numbers language-none"><code class="language-none">#pragma omp parallel num_threads(5)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接下来在本地localhost:4000可见初始网页</p>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><pre class="line-numbers language-none"><code class="language-none">npm install hexo -g #安装Hexo
+npm update hexo -g #升级
+hexo init #初始化博客
 
-<p>或者</p>
-<pre class="line-numbers language-none"><code class="language-none">omp_set_num_threads(2);
-#pragma omp parallel<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+命令简写
+hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章
+hexo g &#x3D;&#x3D; hexo generate #生成
+hexo s &#x3D;&#x3D; hexo server #启动服务预览
+hexo d &#x3D;&#x3D; hexo deploy #部署
 
-<p>循环</p>
-<pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
-#include&lt;iostream&gt;
-using namespace std;
-int main()
-&#123;
-	omp_set_num_threads(2);
-#pragma omp parallel
-	&#123;
-#pragma omp for
-		for(int i&#x3D;0;i&lt;4;i++)
-		 cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;
-	&#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+hexo server #Hexo会监视文件变动并自动更新，无须重启服务器
+hexo server -s #静态模式
+hexo server -p 5000 #更改端口
+hexo server -i 192.168.1.1 #自定义 IP
+hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="用schedule子句进行for循环任务调度的管理"><a href="#用schedule子句进行for循环任务调度的管理" class="headerlink" title="用schedule子句进行for循环任务调度的管理"></a>用schedule子句进行for循环任务调度的管理</h2><p>schedule子句形式</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">schedule(type, size)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>blog根目录里的_config.yml文件称为站点配置文件</p>
+<p>themes文件夹，里面也有个_config.yml文件，这个称为主题配置文件</p>
+<p>打开站点的配置文件_config.yml，翻到最后修改为：</p>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: git
+  repo: https:&#x2F;&#x2F;github.com&#x2F;wolfvoid&#x2F;wolfvoid.github.io.git
+  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>type参数有四种：1.static, 2.dynamic, 3.guided, 4.runtime</p>
-<p>size参数是整形数据：表示循环迭代次数划分的单位。</p>
-<ul>
-<li><p><strong>static参数</strong></p>
-<p>静态调度，不用size参数时分配给每个程序的都是n&#x2F;t次连续迭代，n为迭代次数，t为并行的线程数目。</p>
-</li>
-<li><p><strong>dynamic参数</strong></p>
-<p>动态调度模式是先到先得的方式进行任务分配，不用size参数的时候，先把任务干完的线程先取下一个任务，以此类推，而不是一开始就分配固定的任务数。使用size参数的时候，分配的任务以size为单位，一次性分配size个。虽然很智能，在任务难度不均衡的时候适合用dynamic，否则会引起过多的任务动态申请的开销。</p>
-</li>
-<li><p><strong>guided参数</strong></p>
-<p>刚开始每个线程会分配到比较大的迭代块，后来分配到的迭代块逐渐递减，没有指定size就会降到1，否则降到size。</p>
-</li>
-<li><p><strong>runtime</strong></p>
-<p>基本不会用到，需要了解的可以自行了解。</p>
-</li>
-</ul>
-<h2 id="sections制导指令"><a href="#sections制导指令" class="headerlink" title="sections制导指令"></a>sections制导指令</h2><p>用sections把不同的区域交给不同的线程去执行</p>
-<p>用法：</p>
-<pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
-#include&lt;iostream&gt;
-using namespace std;
-int main()
-&#123;
-	omp_set_num_threads(3);
-#pragma omp parallel sections
-	&#123;
-#pragma omp section
-		&#123;
-			cout &lt;&lt;omp_get_thread_num();
-		&#125;
-#pragma omp section
-		&#123;
-			cout &lt;&lt; omp_get_thread_num();
-		&#125;
-#pragma omp section
-		&#123;
-			cout &lt;&lt; omp_get_thread_num();
-		&#125;
-	&#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里应该是有问题的，后面会修改</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save
+hexo clean 
+hexo g 
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="single制导指令"><a href="#single制导指令" class="headerlink" title="single制导指令"></a>single制导指令</h2><p>single制导指令所包含的代码段只有一个线程执行，别的线程跳过该代码，如果没有nowait子句，那么其他线程将会在single制导指令结束的隐式同步点等待。有nowait子句其他线程将跳过等待往下执行。</p>
-<pre class="line-numbers language-none"><code class="language-none">int main()
-&#123;
-	omp_set_num_threads(4);
-#pragma omp parallel
-	&#123;
-#pragma omp single
-		&#123;
-			cout &lt;&lt; &quot;single thread&#x3D;&quot; &lt;&lt; omp_get_thread_num()&lt;&lt;endl;
-		&#125;
-		cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;
-	&#125;
-		
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>报错如下</p>
+<pre class="line-numbers language-none"><code class="language-none">(base) PS E:\My_blog\My_blog&gt; npm install hexo-deployer-git --save
+npm ERR! Cannot read properties of null (reading &#39;matches&#39;)
+
+npm ERR! A complete log of this run can be found in:
+npm ERR! C:\Users\y\AppData\Local\npm-cache\_logs\2023-08-24T17_51_02_435Z-debug-0.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>原因：我的node版本太高了，反正就是不符合要求</p>
+<p>补救方法：安装适合版本的node。为了方便管理，直接安装nvm</p>
+<h2 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h2><p><a target="_blank" rel="noopener" href="https://www.rstk.cn/news/1475977.html?action=onClick">https://www.rstk.cn/news/1475977.html?action=onClick</a></p>
+<p>注意在E:\nvm\nvm\settings.txt中替换镜像源为</p>
+<pre class="line-numbers language-none"><code class="language-none">node_mirror:https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;
+npm_mirror:https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>注意路径为</p>
+<p><img src="C:\Users\y\AppData\Roaming\Typora\typora-user-images\image-20230825151837550.png" alt="image-20230825151837550"></p>
+<p>出现安装nvm后node和npm无法正常显示的问题</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/taylorzun/article/details/105471841">https://blog.csdn.net/taylorzun/article/details/105471841</a></p>
+<h2 id="★基本搭建结束符★"><a href="#★基本搭建结束符★" class="headerlink" title="★基本搭建结束符★"></a>★基本搭建结束符★</h2><p>至此网站基本的工作完成了，主题为landscape，太low了，我想要更换主题</p>
+<h2 id="闪烁之狐主题"><a href="#闪烁之狐主题" class="headerlink" title="闪烁之狐主题"></a>闪烁之狐主题</h2><p>hexo-theme-matery的示例网站：<a target="_blank" rel="noopener" href="http://blinkfox.com/">http://blinkfox.com/</a></p>
+<p>介绍网站<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35668237">https://zhuanlan.zhihu.com/p/35668237</a></p>
+<p>★详见“闪烁之狐”主题的README</p>
+<p>根据该README文件完成了新建所有页的操作</p>
+<p>并完成了插件构建 </p>
+<h2 id="解决更换主题后无法显示的问题"><a href="#解决更换主题后无法显示的问题" class="headerlink" title="解决更换主题后无法显示的问题"></a>解决更换主题后无法显示的问题</h2><p>hexo更换主题后出现问题：WARN No layout: index.html</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44460555/article/details/111866191">https://blog.csdn.net/weixin_44460555/article/details/111866191</a></p>
+<p>主要来说就是下载的包名字是hexo-theme-matery-master，而设置里面是用的hexo-theme-matery，它找不到了。把它对应起来就好了。</p>
+<h2 id="解决无法连接github的问题"><a href="#解决无法连接github的问题" class="headerlink" title="解决无法连接github的问题"></a>解决无法连接github的问题</h2><p>解决无法连接github的 Connection was reset问题</p>
+<pre class="line-numbers language-none"><code class="language-none">fatal: unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;wolfvoid&#x2F;wolfvoid.github.io.git&#x2F;&#39;: Recv failure: Connection was reset
+FATAL Something&#39;s wrong. Maybe you can find the solution here: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html
+Error: Spawn failed
+    at ChildProcess.&lt;anonymous&gt; (E:\My_blog\blog\node_modules\hexo-util\lib\spawn.js:51:21)
+    at ChildProcess.emit (node:events:390:28)
+    at ChildProcess.cp.emit (E:\My_blog\blog\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>解决方法：</p>
+<p>_config.yml文件修改为</p>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: git
+  repo: git@github.com:wolfvoid&#x2F;wolfvoid.github.io.git
+  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="如何向github仓库上传文件"><a href="#如何向github仓库上传文件" class="headerlink" title="如何向github仓库上传文件"></a>如何向github仓库上传文件</h2><p>（使用github作为图床）</p>
+<pre class="line-numbers language-none"><code class="language-none">git init #把这个文件夹变成git
+git status #查看文件夹里的文件的情况
+git add xxxx #添加东西
+git commit -m &#39;我提交了xxx&#39; #注释
+建立github密钥联系
+建立GitHub上的仓库
+git remote add origin git@github.com:wolfvoid&#x2F;pictures.git
+#若初次上传
+git push -u origin master
+若已经有过东西
+git pull --rebase origin master
+git push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用上述方法出错如下</p>
+<pre class="line-numbers language-none"><code class="language-none">$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to &#39;github.com:wolfvoid&#x2F;pictures.git&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>错误原因是git上的master和github上的main不符合（有病吧）</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gongdamrgao/article/details/115032436?spm=1001.2014.3001.5502">https://blog.csdn.net/gongdamrgao/article/details/115032436?spm=1001.2014.3001.5502</a></p>
+<p>操作流程：</p>
+<pre class="line-numbers language-none"><code class="language-none">git clone git@github.com:wolfvoid&#x2F;pictures.git #先把远程仓库扒下来
+git add xxxx #添加东西
+git commit -m &#39;我提交了xxx&#39; #注释
+git push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样应该就没问题了</p>
+
                 
             </div>
             <hr/>
@@ -605,7 +662,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfvoid.github.io/2023/08/25/OpenMP%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B/">https://wolfvoid.github.io/2023/08/25/OpenMP%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B/</a>
+                    <a href="https://wolfvoid.github.io/2023/08/25/hexo-zi-jian-wang-zhan/">https://wolfvoid.github.io/2023/08/25/hexo-zi-jian-wang-zhan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,7 +699,11 @@ int main()
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -689,51 +750,13 @@ int main()
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/08/25/OpenMP%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B/">
+                <a href="/2023/08/25/hexo-zi-jian-wang-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="基于Hexo自建一个github托管的静态网页">
                         
-                        <span class="card-title"></span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            wolf void
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/08/25/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">基于Hexo自建一个github托管的静态网页</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -750,8 +773,58 @@ int main()
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/webpage/" class="post-category">
+                                    webpage
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/08/25/hellohexo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="hellohexo">
+                        
+                        <span class="card-title">hellohexo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/webpage/" class="post-category">
+                                    webpage
                                 </a>
                             
                             
@@ -761,12 +834,8 @@ int main()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -1004,6 +1073,9 @@ int main()
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">1.9k</span>&nbsp;字
             
             
             
