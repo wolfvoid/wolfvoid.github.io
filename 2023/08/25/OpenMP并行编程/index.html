@@ -469,6 +469,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -482,23 +485,45 @@
 <p>使用终端编译</p>
 <p> g++ -fopenmp -lgomp -lpthread parallel.cpp</p>
 <p>使用以下命令编译即可直接得到结果</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -fopenmp -lgomp -lpthread parallel.cpp -o process.exe ; .\process.exe</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">g++ -fopenmp -lgomp -lpthread parallel.cpp -o process.exe ; .\process.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;omp.h&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">#pragma omp parallel</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+&#123;
+#pragma omp parallel
+	&#123;
+		cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>设置并行线程个数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#pragma omp parallel num_threads(5)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#pragma omp parallel num_threads(5)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>或者</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">omp_set_num_threads(2);</span><br><span class="line">#pragma omp parallel</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">omp_set_num_threads(2);
+#pragma omp parallel<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>循环</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;omp.h&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	omp_set_num_threads(2);</span><br><span class="line">#pragma omp parallel</span><br><span class="line">	&#123;</span><br><span class="line">#pragma omp for</span><br><span class="line">		for(int i=0;i&lt;4;i++)</span><br><span class="line">		 cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+&#123;
+	omp_set_num_threads(2);
+#pragma omp parallel
+	&#123;
+#pragma omp for
+		for(int i&#x3D;0;i&lt;4;i++)
+		 cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="用schedule子句进行for循环任务调度的管理"><a href="#用schedule子句进行for循环任务调度的管理" class="headerlink" title="用schedule子句进行for循环任务调度的管理"></a>用schedule子句进行for循环任务调度的管理</h2><p>schedule子句形式</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schedule(type, size)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">schedule(type, size)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>type参数有四种：1.static, 2.dynamic, 3.guided, 4.runtime</p>
 <p>size参数是整形数据：表示循环迭代次数划分的单位。</p>
@@ -518,10 +543,43 @@
 </ul>
 <h2 id="sections制导指令"><a href="#sections制导指令" class="headerlink" title="sections制导指令"></a>sections制导指令</h2><p>用sections把不同的区域交给不同的线程去执行</p>
 <p>用法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;omp.h&gt;</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	omp_set_num_threads(3);</span><br><span class="line">#pragma omp parallel sections</span><br><span class="line">	&#123;</span><br><span class="line">#pragma omp section</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt;omp_get_thread_num();</span><br><span class="line">		&#125;</span><br><span class="line">#pragma omp section</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; omp_get_thread_num();</span><br><span class="line">		&#125;</span><br><span class="line">#pragma omp section</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; omp_get_thread_num();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+&#123;
+	omp_set_num_threads(3);
+#pragma omp parallel sections
+	&#123;
+#pragma omp section
+		&#123;
+			cout &lt;&lt;omp_get_thread_num();
+		&#125;
+#pragma omp section
+		&#123;
+			cout &lt;&lt; omp_get_thread_num();
+		&#125;
+#pragma omp section
+		&#123;
+			cout &lt;&lt; omp_get_thread_num();
+		&#125;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="single制导指令"><a href="#single制导指令" class="headerlink" title="single制导指令"></a>single制导指令</h2><p>single制导指令所包含的代码段只有一个线程执行，别的线程跳过该代码，如果没有nowait子句，那么其他线程将会在single制导指令结束的隐式同步点等待。有nowait子句其他线程将跳过等待往下执行。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	omp_set_num_threads(4);</span><br><span class="line">#pragma omp parallel</span><br><span class="line">	&#123;</span><br><span class="line">#pragma omp single</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; &quot;single thread=&quot; &lt;&lt; omp_get_thread_num()&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">int main()
+&#123;
+	omp_set_num_threads(4);
+#pragma omp parallel
+	&#123;
+#pragma omp single
+		&#123;
+			cout &lt;&lt; &quot;single thread&#x3D;&quot; &lt;&lt; omp_get_thread_num()&lt;&lt;endl;
+		&#125;
+		cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;
+	&#125;
+		
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -669,13 +727,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/08/25/hellohexo/">
+                <a href="/2023/08/25/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="hellohexo">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">hellohexo</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -690,11 +748,27 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wolf void
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
