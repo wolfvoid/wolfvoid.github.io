@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>OpenMP并行编程</title>
-      <link href="/2023/08/25/openmp-bing-xing-bian-cheng/"/>
-      <url>/2023/08/25/openmp-bing-xing-bian-cheng/</url>
-      
-        <content type="html"><![CDATA[<h1 id="OpenMP并行编程"><a href="#OpenMP并行编程" class="headerlink" title="OpenMP并行编程"></a>OpenMP并行编程</h1><p>在codeblocks上配置OpenMP</p><p>本质：</p><p>编译时添加 -fopenmp命令</p><p>链接时添加 -lgomp -lpthread</p><p>【vscode本机】</p><p>使用终端编译</p><p> g++ -fopenmp -lgomp -lpthread parallel.cpp</p><p>使用以下命令编译即可直接得到结果</p><pre class="line-numbers language-none"><code class="language-none">g++ -fopenmp -lgomp -lpthread parallel.cpp -o process.exe ; .\process.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;#pragma omp parallel&#123;cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>设置并行线程个数</p><pre class="line-numbers language-none"><code class="language-none">#pragma omp parallel num_threads(5)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>或者</p><pre class="line-numbers language-none"><code class="language-none">omp_set_num_threads(2);#pragma omp parallel<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>循环</p><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;omp_set_num_threads(2);#pragma omp parallel&#123;#pragma omp forfor(int i&#x3D;0;i&lt;4;i++) cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="用schedule子句进行for循环任务调度的管理"><a href="#用schedule子句进行for循环任务调度的管理" class="headerlink" title="用schedule子句进行for循环任务调度的管理"></a>用schedule子句进行for循环任务调度的管理</h2><p>schedule子句形式</p><pre class="line-numbers language-text" data-language="text"><code class="language-text">schedule(type, size)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>type参数有四种：1.static, 2.dynamic, 3.guided, 4.runtime</p><p>size参数是整形数据：表示循环迭代次数划分的单位。</p><ul><li><p><strong>static参数</strong></p><p>静态调度，不用size参数时分配给每个程序的都是n&#x2F;t次连续迭代，n为迭代次数，t为并行的线程数目。</p></li><li><p><strong>dynamic参数</strong></p><p>动态调度模式是先到先得的方式进行任务分配，不用size参数的时候，先把任务干完的线程先取下一个任务，以此类推，而不是一开始就分配固定的任务数。使用size参数的时候，分配的任务以size为单位，一次性分配size个。虽然很智能，在任务难度不均衡的时候适合用dynamic，否则会引起过多的任务动态申请的开销。</p></li><li><p><strong>guided参数</strong></p><p>刚开始每个线程会分配到比较大的迭代块，后来分配到的迭代块逐渐递减，没有指定size就会降到1，否则降到size。</p></li><li><p><strong>runtime</strong></p><p>基本不会用到，需要了解的可以自行了解。</p></li></ul><h2 id="sections制导指令"><a href="#sections制导指令" class="headerlink" title="sections制导指令"></a>sections制导指令</h2><p>用sections把不同的区域交给不同的线程去执行</p><p>用法：</p><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;omp_set_num_threads(3);#pragma omp parallel sections&#123;#pragma omp section&#123;cout &lt;&lt;omp_get_thread_num();&#125;#pragma omp section&#123;cout &lt;&lt; omp_get_thread_num();&#125;#pragma omp section&#123;cout &lt;&lt; omp_get_thread_num();&#125;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="single制导指令"><a href="#single制导指令" class="headerlink" title="single制导指令"></a>single制导指令</h2><p>single制导指令所包含的代码段只有一个线程执行，别的线程跳过该代码，如果没有nowait子句，那么其他线程将会在single制导指令结束的隐式同步点等待。有nowait子句其他线程将跳过等待往下执行。</p><pre class="line-numbers language-none"><code class="language-none">int main()&#123;omp_set_num_threads(4);#pragma omp parallel&#123;#pragma omp single&#123;cout &lt;&lt; &quot;single thread&#x3D;&quot; &lt;&lt; omp_get_thread_num()&lt;&lt;endl;&#125;cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 并行编程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>基于Hexo自建一个github托管的静态网页</title>
       <link href="/2023/08/25/hexo-zi-jian-wang-zhan/"/>
       <url>/2023/08/25/hexo-zi-jian-wang-zhan/</url>
@@ -46,6 +21,31 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OpenMP并行编程</title>
+      <link href="/2023/08/25/openmp-bing-xing-bian-cheng/"/>
+      <url>/2023/08/25/openmp-bing-xing-bian-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="OpenMP并行编程"><a href="#OpenMP并行编程" class="headerlink" title="OpenMP并行编程"></a>OpenMP并行编程</h1><p>在codeblocks上配置OpenMP</p><p>本质：</p><p>编译时添加 -fopenmp命令</p><p>链接时添加 -lgomp -lpthread</p><p>【vscode本机】</p><p>使用终端编译</p><p> g++ -fopenmp -lgomp -lpthread parallel.cpp</p><p>使用以下命令编译即可直接得到结果</p><pre class="line-numbers language-none"><code class="language-none">g++ -fopenmp -lgomp -lpthread parallel.cpp -o process.exe ; .\process.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;#pragma omp parallel&#123;cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>设置并行线程个数</p><pre class="line-numbers language-none"><code class="language-none">#pragma omp parallel num_threads(5)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>或者</p><pre class="line-numbers language-none"><code class="language-none">omp_set_num_threads(2);#pragma omp parallel<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>循环</p><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;omp_set_num_threads(2);#pragma omp parallel&#123;#pragma omp forfor(int i&#x3D;0;i&lt;4;i++) cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="用schedule子句进行for循环任务调度的管理"><a href="#用schedule子句进行for循环任务调度的管理" class="headerlink" title="用schedule子句进行for循环任务调度的管理"></a>用schedule子句进行for循环任务调度的管理</h2><p>schedule子句形式</p><pre class="line-numbers language-text" data-language="text"><code class="language-text">schedule(type, size)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>type参数有四种：1.static, 2.dynamic, 3.guided, 4.runtime</p><p>size参数是整形数据：表示循环迭代次数划分的单位。</p><ul><li><p><strong>static参数</strong></p><p>静态调度，不用size参数时分配给每个程序的都是n&#x2F;t次连续迭代，n为迭代次数，t为并行的线程数目。</p></li><li><p><strong>dynamic参数</strong></p><p>动态调度模式是先到先得的方式进行任务分配，不用size参数的时候，先把任务干完的线程先取下一个任务，以此类推，而不是一开始就分配固定的任务数。使用size参数的时候，分配的任务以size为单位，一次性分配size个。虽然很智能，在任务难度不均衡的时候适合用dynamic，否则会引起过多的任务动态申请的开销。</p></li><li><p><strong>guided参数</strong></p><p>刚开始每个线程会分配到比较大的迭代块，后来分配到的迭代块逐渐递减，没有指定size就会降到1，否则降到size。</p></li><li><p><strong>runtime</strong></p><p>基本不会用到，需要了解的可以自行了解。</p></li></ul><h2 id="sections制导指令"><a href="#sections制导指令" class="headerlink" title="sections制导指令"></a>sections制导指令</h2><p>用sections把不同的区域交给不同的线程去执行</p><p>用法：</p><pre class="line-numbers language-none"><code class="language-none">#include&lt;omp.h&gt;#include&lt;iostream&gt;using namespace std;int main()&#123;omp_set_num_threads(3);#pragma omp parallel sections&#123;#pragma omp section&#123;cout &lt;&lt;omp_get_thread_num();&#125;#pragma omp section&#123;cout &lt;&lt; omp_get_thread_num();&#125;#pragma omp section&#123;cout &lt;&lt; omp_get_thread_num();&#125;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="single制导指令"><a href="#single制导指令" class="headerlink" title="single制导指令"></a>single制导指令</h2><p>single制导指令所包含的代码段只有一个线程执行，别的线程跳过该代码，如果没有nowait子句，那么其他线程将会在single制导指令结束的隐式同步点等待。有nowait子句其他线程将跳过等待往下执行。</p><pre class="line-numbers language-none"><code class="language-none">int main()&#123;omp_set_num_threads(4);#pragma omp parallel&#123;#pragma omp single&#123;cout &lt;&lt; &quot;single thread&#x3D;&quot; &lt;&lt; omp_get_thread_num()&lt;&lt;endl;&#125;cout &lt;&lt; omp_get_thread_num() &lt;&lt; endl;&#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 并行编程 </tag>
             
         </tags>
       
