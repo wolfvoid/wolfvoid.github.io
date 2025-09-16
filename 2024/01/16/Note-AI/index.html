@@ -114,7 +114,7 @@
   <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基本概览了人工智能领域的基础知识，从Agent入手，经过搜索，逻辑等。</p>
 <p>但对于领域前沿以及一些科研相关的内容没有过多涉及，还是比较浅显。</p>
 <p>我准备分笔记、备考两个页面来讲清楚这门课程怎么收获知识+成绩。这里先放笔记。</p>
-<img src="/note-ai/AI-note.png" class="" title="人工智能笔记">
+
 
 <h1 id="人工智能笔记"><a href="#人工智能笔记" class="headerlink" title="人工智能笔记"></a>人工智能笔记</h1><h2 id="第1章-绪论"><a href="#第1章-绪论" class="headerlink" title="第1章 绪论"></a>第1章 绪论</h2><p>人工智能的4种观点</p>
 <ul>
@@ -151,7 +151,7 @@
 <h3 id="2-4-Agent结构"><a href="#2-4-Agent结构" class="headerlink" title="2.4 Agent结构"></a>2.4 Agent结构</h3><p>Agent&#x3D;体系结构+程序</p>
 <p>★Agent程序（基础4个+转化为学习Agent）</p>
 <p>（每张对应的图要能画出来，下图由前向后每次迭代增加功能）</p>
-<img src="/note-ai/ai-2.png" class="" title="Agent的四张图">
+
 
 <ul>
 <li>简单反射Agent：基于当前感知选择行动，不关注感知历史</li>
@@ -160,7 +160,7 @@
 <li>基于效用的Agent：当达到目标的行为有多种时，基于效用进行决策</li>
 </ul>
 <p>【2020期中】学习Agent：由性能元件，评判元件，学习元件，问题产生器构成</p>
-<img src="/note-ai/ai-3.png" class="" title="学习Agent">
+
 
 <ul>
 <li>评判元件：根据固定的性能标准告诉学习元件Agent的运转情况</li>
@@ -336,7 +336,7 @@
 </tr>
 </tbody></table>
 <p>【某年期末+2020期中】经典题</p>
-<img src="/note-ai/ai-4.png" class="" title="经典题">
+
 
 <p>注意画图与实现</p>
 <p>其中，一致代价：</p>
@@ -352,11 +352,11 @@
 </ul>
 <h4 id="②模拟退火算法"><a href="#②模拟退火算法" class="headerlink" title="②模拟退火算法"></a>②模拟退火算法</h4><p>（允许下山的随机爬山算法）：温度T控制以小于1的概率exp(-Δe&#x2F;T)接受非最佳的移动</p>
 <p>在迭代更新可行解时，以一定的概率来接受一个比当前解要差的解，因此有可能会跳出局部最优解，达到全局的最优解。随着时间的推移，允许算法向坏的方向移动的概率逐步下降。</p>
-<img src="/note-ai/ai-5.png" class="" title="模拟退火算法">
+
 
 <h4 id="③局部束搜索（未讲）"><a href="#③局部束搜索（未讲）" class="headerlink" title="③局部束搜索（未讲）"></a>③局部束搜索（未讲）</h4><p>局部束搜索（记录k个状态，各自搜索但信息传递，通知更好的状态）</p>
 <p>随机束搜索（解决局部束搜索可能的k个状态很快聚集问题，随机选择后继的k个状态，即在topk中随机选择，而不是选择最好的那个）</p>
-<h4 id="④遗传算法"><a href="#④遗传算法" class="headerlink" title="④遗传算法"></a>④遗传算法</h4><img src="/note-ai/ai-6.png" class="" title="遗传算法">
+<h4 id="④遗传算法"><a href="#④遗传算法" class="headerlink" title="④遗传算法"></a>④遗传算法</h4>
 
 <ul>
 <li>编码方案：怎样把优化问题的解进行编码（二进制编码、浮点数编码方法、格雷码、符号编码方法、多参数编码方法）</li>
@@ -371,16 +371,16 @@
 <p>1.产生初始种群 s1&#x3D; 13 (01101) s2&#x3D; 24 (11000) s3&#x3D; 8 (01000) s4&#x3D; 19 (10011)</p>
 <p>2.计算适应度 假定适应度为f(s)&#x3D;s^2 ，则 f (s1) &#x3D; f(13) &#x3D; 13^2 &#x3D; 169 f (s2) &#x3D; f(24) &#x3D; 24^2 &#x3D; 576 f (s3) &#x3D; f(8) &#x3D; 8^2 &#x3D; 64 f (s4) &#x3D; f(19) &#x3D; 19^2 &#x3D; 361</p>
 <p>3.选择概率</p>
-<img src="/note-ai/ai-7.png" class="" title="选择概率">
+
 
 <p>4.累计概率</p>
-<img src="/note-ai/ai-8.png" class="" title="累计概率">
+
 
 <p>平铺图</p>
-<img src="/note-ai/ai-9.png" class="" title="平铺图">
+
 
 <p>例如设从区间［0, 1］中产生4个随机数: r1 &#x3D; 0.450126, r2 &#x3D; 0.110347 r3 &#x3D; 0.572496, r4 &#x3D; 0.98503</p>
-<img src="/note-ai/ai-10.png" class="" title="区间">
+
 
 <p>【2024期中】（TODO）</p>
 <p>轮盘赌算法</p>
@@ -405,16 +405,16 @@
 <li>目标测试：信念状态中的所有物理状态都满足目标状态</li>
 <li>路径开销：假定所有状态下一个行动的开销相同</li>
 <li>结论：如果一个行动序列是信念状态b的解，那么该行动序列是信念状态任何子集的解</li>
-<li><img src="/note-ai/ai-11.png" class="" title="部分可观察信息"></li>
+<li></li>
 </ul>
 <p>②有观察信息的搜索</p>
-<img src="/note-ai/ai-12.png" class="" title="有观察信息的搜索">
+
 
 <p>在无观察信息的基础上多加一步对结果可能感知的预测，再多加一个合并</p>
-<img src="/note-ai/ai-13.png" class="" title="有观察信息的搜索">
+
 
 <p>③求解部分可观察环境中的问题</p>
-<img src="/note-ai/ai-14.png" class="" title="不分可观察环境中的问题">
+
 
 <p>④部分可观察环境中的问题求解Agent</p>
 <ul>
@@ -498,11 +498,11 @@
 <li>约束最多变量：优先选择最能约束其他变量的变量进行赋值</li>
 <li>（取值顺序）最少约束值启发式：选择使得剩余变量赋值空间更大的值</li>
 </ul>
-<img src="/note-ai/ai-15.png" class="" title="最受约束变量">
 
-<img src="/note-ai/ai-16.png" class="" title="约束最多变量">
 
-<img src="/note-ai/ai-17.png" class="" title="最多约束变量2">
+
+
+
 
 <p>搜索与推理交错进行：每步应该怎样的推理？</p>
 <ul>
@@ -510,7 +510,7 @@
 <li>MAC（维护弧相容）：Xi被赋值后，调用AC-3对与Xi弧相容的变量Xj出发进行正常的约束传播。若某变量值域为空，直接回溯。</li>
 <li>MAC传递传播约束，而前向检验只读不改</li>
 </ul>
-<img src="/note-ai/ai-18.png" class="" title="前向检验">
+
 
 <p>智能回溯：向后看：收获到达某赋值违反约束时，搜索本身能否避免重复这样的失败？</p>
 <ul>
@@ -634,7 +634,7 @@
 <li>等价变换为合取范式（将合取分配到析取中）</li>
 </ul>
 <p>Skolem化补充：</p>
-<img src="/note-ai/ai-19.png" class="" title="skolem化">
+
 
 <p>【很多年的考题】使用归结算法证明</p>
 <p>欲证明KB&#x3D;|α，</p>
@@ -837,19 +837,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/04/27/Note-DBS/" class="article-nav-link">
+      <a href="/2024/01/16/Note-CN/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Note-DBS
+            Note-CN
           
         </div>
       </a>
     
     
-      <a href="/2024/01/16/Note-CN/" class="article-nav-link">
+      <a href="/2023/08/25/HEXO%E8%87%AA%E5%BB%BA%E7%BD%91%E7%AB%99/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Note-CN</div>
+        <div class="article-nav-title">基于Hexo自建一个github托管的静态网页</div>
       </a>
     
   </nav>

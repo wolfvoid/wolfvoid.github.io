@@ -112,7 +112,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="计算机网络-笔记"><a href="#计算机网络-笔记" class="headerlink" title="计算机网络-笔记"></a>计算机网络-笔记</h1><p>计科210X 甘晴void 202108010XXX</p>
-<img src="/note-cn/note-cn.png" class="" title="计算机网络笔记">
+
 
 <h2 id="期中复习"><a href="#期中复习" class="headerlink" title="期中复习"></a>期中复习</h2><p>【注明】这一部分是A橙学长划的重点</p>
 <p>第一章：分组交换和电路交换的比较</p>
@@ -172,22 +172,11 @@
 <p>往返时间（RTT,RoundTripTime），总响应时间&#x3D;2*RTT+传输HTML文件的时间</p>
 <p>2.2.3 HTTP报文格式</p>
 <p>HTTP请求报文：</p>
-<pre class="line-numbers language-none"><code class="language-none">GET &#x2F;somdir&#x2F;page.html HTTP&#x2F;1.1	#方法，URL和HTTP版本字段
-Host: www.someschool.edu
-Connection: close
-User-agent: Mozilla&#x2F;5.0
-Accept-language: fr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GET /somdir/page.html HTTP/1.1	#方法，URL和HTTP版本字段</span><br><span class="line">Host: www.someschool.edu</span><br><span class="line">Connection: close</span><br><span class="line">User-agent: Mozilla/5.0</span><br><span class="line">Accept-language: fr</span><br></pre></td></tr></table></figure>
 
 <p>方法包括：GET,POST,HEAD,PUT,DELETE</p>
 <p>HTTP响应报文：</p>
-<pre class="line-numbers language-none"><code class="language-none">HTTP&#x2F;1.1 200 OK
-Connection: close
-Date: Tue, 18 Gug 2015 15:44:04 GMT
-Server: Apache&#x2F;2.2.3 (CentOS)
-Last-Modified: Tue, 18 Gug 2015 15:11:03 GMT
-Content-Length: 6821
-Content-Type: text&#x2F;html
-(data data ......)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Connection: close</span><br><span class="line">Date: Tue, 18 Gug 2015 15:44:04 GMT</span><br><span class="line">Server: Apache/2.2.3 (CentOS)</span><br><span class="line">Last-Modified: Tue, 18 Gug 2015 15:11:03 GMT</span><br><span class="line">Content-Length: 6821</span><br><span class="line">Content-Type: text/html</span><br><span class="line">(data data ......)</span><br></pre></td></tr></table></figure>
 
 <p>状态码包括</p>
 <ul>
@@ -270,72 +259,10 @@ CDN通常集群部署。每个集群只保留一些视频，当用户请求视�
 <h3 id="2-7-套接字编程"><a href="#2-7-套接字编程" class="headerlink" title="2.7 套接字编程"></a>2.7 套接字编程</h3><pre><code>    网络应用程序有两类，一种使用协议标准(如RFC)定义的操作实现的，另一种是使用专用的应用层协议。如果是开发专用的网络应用程序，应该避免使用熟知端口号。另外一个实现网络应用程序的问题是，该选择TCP还是UDP。这两种协议有各自的特点。以下是分别使用UDP和TCP实现的简单客户-服务器程序(Python实现)。
 </code></pre>
 <p>7.1 UDP套接字编程</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Client</span>
-<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
- 
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    serverName <span class="token operator">=</span> <span class="token string">'127.0.0.1'</span>										<span class="token comment">#本机IP</span>
-    serverPort <span class="token operator">=</span> <span class="token number">12000</span>												<span class="token comment">#端口</span>
-    clientSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span> SOCK_DGRAM<span class="token punctuation">)</span>						<span class="token comment">#IPV4,UDP</span>
-    message <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Input lowercase sentence:"</span><span class="token punctuation">)</span>
-    clientSocket<span class="token punctuation">.</span>sendto<span class="token punctuation">(</span>message<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>serverName<span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    modifiedMessage<span class="token punctuation">,</span>serverAddress <span class="token operator">=</span> clientSocket<span class="token punctuation">.</span>recvfrom<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>modifiedMessage<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    clientSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span>
- 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    
-<span class="token comment"># Server</span>
-<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
- 
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
-    serverSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_DGRAM<span class="token punctuation">)</span>
-    serverSocket<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    message<span class="token punctuation">,</span>clientAddress <span class="token operator">=</span> serverSocket<span class="token punctuation">.</span>recvfrom<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
-    modifiedMessage <span class="token operator">=</span> message<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    serverSocket<span class="token punctuation">.</span>sendto<span class="token punctuation">(</span>modifiedMessage<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>clientAddress<span class="token punctuation">)</span>
- 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Client</span></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    serverName = <span class="string">&#x27;127.0.0.1&#x27;</span>										<span class="comment">#本机IP</span></span><br><span class="line">    serverPort = <span class="number">12000</span>												<span class="comment">#端口</span></span><br><span class="line">    clientSocket = socket(AF_INET, SOCK_DGRAM)						<span class="comment">#IPV4,UDP</span></span><br><span class="line">    message = <span class="built_in">input</span>(<span class="string">&quot;Input lowercase sentence:&quot;</span>)</span><br><span class="line">    clientSocket.sendto(message.encode(), (serverName,serverPort))</span><br><span class="line">    modifiedMessage,serverAddress = clientSocket.recvfrom(<span class="number">2048</span>)</span><br><span class="line">    <span class="built_in">print</span>(modifiedMessage.decode())</span><br><span class="line">    clientSocket.close()</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Server</span></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    serverPort = <span class="number">12000</span></span><br><span class="line">    serverSocket = socket(AF_INET,SOCK_DGRAM)</span><br><span class="line">    serverSocket.bind((<span class="string">&#x27;&#x27;</span>,serverPort))</span><br><span class="line">    message,clientAddress = serverSocket.recvfrom(<span class="number">2048</span>)</span><br><span class="line">    modifiedMessage = message.decode().upper()</span><br><span class="line">    serverSocket.sendto(modifiedMessage.encode(),clientAddress)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
 <p>7.2 TCP套接字编程</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Client</span>
-<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
- 
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    serverName <span class="token operator">=</span> <span class="token string">'127.0.0.1'</span>	
-    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
-    clientSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">)</span>						<span class="token comment">#IPv4,TCP</span>
-    clientSocket<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token punctuation">(</span>serverName<span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>					<span class="token comment">#建立连接</span>
-    sentence <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Input lowercase sentence:"</span><span class="token punctuation">)</span>
-    clientSocket<span class="token punctuation">.</span>send<span class="token punctuation">(</span>sentence<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>							<span class="token comment">#已建立连接，不需要地址了</span>
-    modifiedSentence <span class="token operator">=</span> clientSocket<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"From Server:"</span><span class="token punctuation">,</span>modifiedSentence<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    clientSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token comment"># Server</span>
-<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
- 
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
-    serverSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">)</span>
-    serverSocket<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    serverSocket<span class="token punctuation">.</span>listen<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>											<span class="token comment">#欢迎套接字，等待建立连接</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The server is ready to receive"</span><span class="token punctuation">)</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        connectionSocket<span class="token punctuation">,</span>addr <span class="token operator">=</span> serverSocket<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>				<span class="token comment">#客户专用套接字</span>
-        sentence <span class="token operator">=</span> connectionSocket<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        modifiedSentence <span class="token operator">=</span> sentence<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        connectionSocket<span class="token punctuation">.</span>send<span class="token punctuation">(</span>modifiedSentence<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        connectionSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Client</span></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    serverName = <span class="string">&#x27;127.0.0.1&#x27;</span>	</span><br><span class="line">    serverPort = <span class="number">12000</span></span><br><span class="line">    clientSocket = socket(AF_INET,SOCK_STREAM)						<span class="comment">#IPv4,TCP</span></span><br><span class="line">    clientSocket.connect((serverName,serverPort))					<span class="comment">#建立连接</span></span><br><span class="line">    sentence = <span class="built_in">input</span>(<span class="string">&quot;Input lowercase sentence:&quot;</span>)</span><br><span class="line">    clientSocket.send(sentence.encode())							<span class="comment">#已建立连接，不需要地址了</span></span><br><span class="line">    modifiedSentence = clientSocket.recv(<span class="number">2048</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;From Server:&quot;</span>,modifiedSentence.decode())</span><br><span class="line">    clientSocket.close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"><span class="comment"># Server</span></span><br><span class="line"><span class="keyword">from</span> socket <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    serverPort = <span class="number">12000</span></span><br><span class="line">    serverSocket = socket(AF_INET,SOCK_STREAM)</span><br><span class="line">    serverSocket.bind((<span class="string">&#x27;&#x27;</span>,serverPort))</span><br><span class="line">    serverSocket.listen(<span class="number">1</span>)											<span class="comment">#欢迎套接字，等待建立连接</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;The server is ready to receive&quot;</span>)</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>):</span><br><span class="line">        connectionSocket,addr = serverSocket.accept()				<span class="comment">#客户专用套接字</span></span><br><span class="line">        sentence = connectionSocket.recv(<span class="number">2048</span>).decode()</span><br><span class="line">        modifiedSentence = sentence.upper()</span><br><span class="line">        connectionSocket.send(modifiedSentence.encode())</span><br><span class="line">        connectionSocket.close()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
 
 
@@ -486,7 +413,7 @@ CDN通常集群部署。每个集群只保留一些视频，当用户请求视�
 </ul>
 <p>TCP Tahoe（丢包全部按超时处理，进入慢启动）</p>
 <p>TCP Reno(含快速恢复)</p>
-<img src="/note-cn/cn-2.png" class="" title="图片来自中科大郑烇老师的PPT">
+
 
 
 <p>早期的TCP版本Tahoe没有快恢复机制，无论是收到冗余ACK还是丢包，都直接将cwnd设置为1。TCP的较新版本TCP Reno 则加入了快恢复机制。现在已有Reno的许多变种，例如Vegas，该算法在分组发生丢失之前检查源与目的地之间的拥塞，当检测出快要发生的分组丢失时(通过RTT的变化)，线性降低发送速率。</p>
@@ -507,10 +434,10 @@ CDN通常集群部署。每个集群只保留一些视频，当用户请求视�
 <p>7.4 明确拥塞通告</p>
 <p>拥塞控制的另一类是网络明确向TCP双方发送拥塞信号，这种形式的网络辅助拥塞控制称为明确网络拥塞控制通告ECN。这种形式下，路由器使用一种ECNbit指示该路由器正在经历拥塞，并将该标记携带在IP数据报中，发送给目的主机，再由目的主机告知源主机，实现拥塞控制。</p>
 <p>总结</p>
-<img src="/note-cn/cn-3.png" class="" title="图片来自中科大郑烇老师的PPT">
 
 
-<img src="/note-cn/cn-4.png" class="" title="图片来自中科大郑烇老师的PPT">
+
+
 
 
 
@@ -1031,19 +958,19 @@ CDN通常集群部署。每个集群只保留一些视频，当用户请求视�
    
   <nav class="article-nav">
     
-      <a href="/2024/01/16/Note-AI/" class="article-nav-link">
+      <a href="/2024/04/27/Note-DBS/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Note-AI
+            Note-DBS
           
         </div>
       </a>
     
     
-      <a href="/2023/08/25/HEXO%E8%87%AA%E5%BB%BA%E7%BD%91%E7%AB%99/" class="article-nav-link">
+      <a href="/2024/01/16/Note-AI/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">基于Hexo自建一个github托管的静态网页</div>
+        <div class="article-nav-title">Note-AI</div>
       </a>
     
   </nav>

@@ -111,84 +111,34 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="基于Hexo自建一个github托管的静态网页"><a href="#基于Hexo自建一个github托管的静态网页" class="headerlink" title="基于Hexo自建一个github托管的静态网页"></a>基于Hexo自建一个github托管的静态网页</h1><h2 id="建立github密钥"><a href="#建立github密钥" class="headerlink" title="建立github密钥"></a>建立github密钥</h2><pre class="line-numbers language-none"><code class="language-none">git config --global user.name wolfvoid
-git config --global user.email 1055320990@qq.com
-三个回车，根据提示内容找到密钥储存地址，复制密钥在github上的ssh部分添加
-ssh git@github.com
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+  <h1 id="基于Hexo自建一个github托管的静态网页"><a href="#基于Hexo自建一个github托管的静态网页" class="headerlink" title="基于Hexo自建一个github托管的静态网页"></a>基于Hexo自建一个github托管的静态网页</h1><h2 id="建立github密钥"><a href="#建立github密钥" class="headerlink" title="建立github密钥"></a>建立github密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name wolfvoid</span><br><span class="line">git config --global user.email 1055320990@qq.com</span><br><span class="line">三个回车，根据提示内容找到密钥储存地址，复制密钥在github上的ssh部分添加</span><br><span class="line">ssh git@github.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>经历如下过程，出现如下结果</p>
-<pre class="line-numbers language-none"><code class="language-none">y@LAPTOP-S8GDLRKI MINGW64 ~&#x2F;Desktop
-$ ssh git@github.com
-The authenticity of host &#39;github.com (20.205.243.166)&#39; can&#39;t be established.
-ED25519 key fingerprint is 密码.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? yes
-Warning: Permanently added &#39;github.com&#39; (ED25519) to the list of known hosts.
-PTY allocation request failed on channel 0
-Hi wolfvoid! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-Connection to github.com closed.
-
-y@LAPTOP-S8GDLRKI MINGW64 ~&#x2F;Desktop
-$ ssh git@github.com
-PTY allocation request failed on channel 0
-Hi wolfvoid! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-Connection to github.com closed.
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">y@LAPTOP-S8GDLRKI MINGW64 ~/Desktop</span><br><span class="line">$ ssh git@github.com</span><br><span class="line">The authenticity of host &#x27;github.com (20.205.243.166)&#x27; can&#x27;t be established.</span><br><span class="line">ED25519 key fingerprint is 密码.</span><br><span class="line">This key is not known by any other names.</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span><br><span class="line">Warning: Permanently added &#x27;github.com&#x27; (ED25519) to the list of known hosts.</span><br><span class="line">PTY allocation request failed on channel 0</span><br><span class="line">Hi wolfvoid! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br><span class="line"></span><br><span class="line">y@LAPTOP-S8GDLRKI MINGW64 ~/Desktop</span><br><span class="line">$ ssh git@github.com</span><br><span class="line">PTY allocation request failed on channel 0</span><br><span class="line">Hi wolfvoid! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>第二次表示匹配成功</p>
 <h2 id="确保node和npm已安装"><a href="#确保node和npm已安装" class="headerlink" title="确保node和npm已安装"></a>确保node和npm已安装</h2><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>命令行如下</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli 
-hexo init My_blog
-cd My_blog
-hexo new test_my_site
-hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli </span><br><span class="line">hexo init My_blog</span><br><span class="line">cd My_blog</span><br><span class="line">hexo new test_my_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>接下来在本地localhost:4000可见初始网页</p>
-<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><pre class="line-numbers language-none"><code class="language-none">npm install hexo -g #安装Hexo
-npm update hexo -g #升级
-hexo init #初始化博客
-
-命令简写
-hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章
-hexo g &#x3D;&#x3D; hexo generate #生成
-hexo s &#x3D;&#x3D; hexo server #启动服务预览
-hexo d &#x3D;&#x3D; hexo deploy #部署
-
-hexo server #Hexo会监视文件变动并自动更新，无须重启服务器
-hexo server -s #静态模式
-hexo server -p 5000 #更改端口
-hexo server -i 192.168.1.1 #自定义 IP
-hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #安装Hexo</span><br><span class="line">npm update hexo -g #升级</span><br><span class="line">hexo init #初始化博客</span><br><span class="line"></span><br><span class="line">命令简写</span><br><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
 
 <h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>blog根目录里的_config.yml文件称为站点配置文件</p>
 <p>themes文件夹，里面也有个_config.yml文件，这个称为主题配置文件</p>
 <p>打开站点的配置文件_config.yml，翻到最后修改为：</p>
-<pre class="line-numbers language-none"><code class="language-none">deploy:
-  type: git
-  repo: https:&#x2F;&#x2F;github.com&#x2F;wolfvoid&#x2F;wolfvoid.github.io.git
-  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/wolfvoid/wolfvoid.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>这里应该是有问题的，后面会修改</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save
-hexo clean 
-hexo g 
-hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>报错如下</p>
-<pre class="line-numbers language-none"><code class="language-none">(base) PS E:\My_blog\My_blog&gt; npm install hexo-deployer-git --save
-npm ERR! Cannot read properties of null (reading &#39;matches&#39;)
-
-npm ERR! A complete log of this run can be found in:
-npm ERR! C:\Users\y\AppData\Local\npm-cache\_logs\2023-08-24T17_51_02_435Z-debug-0.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(base) PS E:\My_blog\My_blog&gt; npm install hexo-deployer-git --save</span><br><span class="line">npm ERR! Cannot read properties of null (reading &#x27;matches&#x27;)</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR! C:\Users\y\AppData\Local\npm-cache\_logs\2023-08-24T17_51_02_435Z-debug-0.log</span><br></pre></td></tr></table></figure>
 
 <p>原因：我的node版本太高了，反正就是不符合要求</p>
 <p>补救方法：安装适合版本的node。为了方便管理，直接安装nvm</p>
 <h2 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h2><p><a target="_blank" rel="noopener" href="https://www.rstk.cn/news/1475977.html?action=onClick">https://www.rstk.cn/news/1475977.html?action=onClick</a></p>
 <p>注意在E:\nvm\nvm\settings.txt中替换镜像源为</p>
-<pre class="line-numbers language-none"><code class="language-none">node_mirror:https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;
-npm_mirror:https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror:https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror:https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
 
 <p>注意路径为</p>
 <p><img src="C:\Users\y\AppData\Roaming\Typora\typora-user-images\image-20230825151837550.png" alt="image-20230825151837550"></p>
@@ -204,47 +154,22 @@ npm_mirror:https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;<span ari
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44460555/article/details/111866191">https://blog.csdn.net/weixin_44460555/article/details/111866191</a></p>
 <p>主要来说就是下载的包名字是hexo-theme-matery-master，而设置里面是用的hexo-theme-matery，它找不到了。把它对应起来就好了。</p>
 <h2 id="解决无法连接github的问题"><a href="#解决无法连接github的问题" class="headerlink" title="解决无法连接github的问题"></a>解决无法连接github的问题</h2><p>解决无法连接github的 Connection was reset问题</p>
-<pre class="line-numbers language-none"><code class="language-none">fatal: unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;wolfvoid&#x2F;wolfvoid.github.io.git&#x2F;&#39;: Recv failure: Connection was reset
-FATAL Something&#39;s wrong. Maybe you can find the solution here: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html
-Error: Spawn failed
-    at ChildProcess.&lt;anonymous&gt; (E:\My_blog\blog\node_modules\hexo-util\lib\spawn.js:51:21)
-    at ChildProcess.emit (node:events:390:28)
-    at ChildProcess.cp.emit (E:\My_blog\blog\node_modules\cross-spawn\lib\enoent.js:34:29)
-    at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/wolfvoid/wolfvoid.github.io.git/&#x27;: Recv failure: Connection was reset</span><br><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Spawn failed</span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (E:\My_blog\blog\node_modules\hexo-util\lib\spawn.js:51:21)</span><br><span class="line">    at ChildProcess.emit (node:events:390:28)</span><br><span class="line">    at ChildProcess.cp.emit (E:\My_blog\blog\node_modules\cross-spawn\lib\enoent.js:34:29)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (node:internal/child_process:290:12)</span><br></pre></td></tr></table></figure>
 
 <p>解决方法：</p>
 <p>_config.yml文件修改为</p>
-<pre class="line-numbers language-none"><code class="language-none">deploy:
-  type: git
-  repo: git@github.com:wolfvoid&#x2F;wolfvoid.github.io.git
-  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:wolfvoid/wolfvoid.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <h2 id="如何向github仓库上传文件"><a href="#如何向github仓库上传文件" class="headerlink" title="如何向github仓库上传文件"></a>如何向github仓库上传文件</h2><p>（使用github作为图床）</p>
-<pre class="line-numbers language-none"><code class="language-none">git init #把这个文件夹变成git
-git status #查看文件夹里的文件的情况
-git add xxxx #添加东西
-git commit -m &#39;我提交了xxx&#39; #注释
-建立github密钥联系
-建立GitHub上的仓库
-git remote add origin git@github.com:wolfvoid&#x2F;pictures.git
-#若初次上传
-git push -u origin master
-若已经有过东西
-git pull --rebase origin master
-git push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init #把这个文件夹变成git</span><br><span class="line">git status #查看文件夹里的文件的情况</span><br><span class="line">git add xxxx #添加东西</span><br><span class="line">git commit -m &#x27;我提交了xxx&#x27; #注释</span><br><span class="line">建立github密钥联系</span><br><span class="line">建立GitHub上的仓库</span><br><span class="line">git remote add origin git@github.com:wolfvoid/pictures.git</span><br><span class="line">#若初次上传</span><br><span class="line">git push -u origin master</span><br><span class="line">若已经有过东西</span><br><span class="line">git pull --rebase origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 <p>使用上述方法出错如下</p>
-<pre class="line-numbers language-none"><code class="language-none">$ git push origin master
-error: src refspec master does not match any
-error: failed to push some refs to &#39;github.com:wolfvoid&#x2F;pictures.git&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">error: src refspec master does not match any</span><br><span class="line">error: failed to push some refs to &#x27;github.com:wolfvoid/pictures.git&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>错误原因是git上的master和github上的main不符合（有病吧）</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gongdamrgao/article/details/115032436?spm=1001.2014.3001.5502">https://blog.csdn.net/gongdamrgao/article/details/115032436?spm=1001.2014.3001.5502</a></p>
 <p>操作流程：</p>
-<pre class="line-numbers language-none"><code class="language-none">git clone git@github.com:wolfvoid&#x2F;pictures.git #先把远程仓库扒下来
-git add xxxx #添加东西
-git commit -m &#39;我提交了xxx&#39; #注释
-git push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:wolfvoid/pictures.git #先把远程仓库扒下来</span><br><span class="line">git add xxxx #添加东西</span><br><span class="line">git commit -m &#x27;我提交了xxx&#x27; #注释</span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
 
 <p>这样应该就没问题了</p>
  
@@ -324,11 +249,11 @@ git push origin main<span aria-hidden="true" class="line-numbers-rows"><span></s
    
   <nav class="article-nav">
     
-      <a href="/2024/01/16/Note-CN/" class="article-nav-link">
+      <a href="/2024/01/16/Note-AI/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Note-CN
+            Note-AI
           
         </div>
       </a>
