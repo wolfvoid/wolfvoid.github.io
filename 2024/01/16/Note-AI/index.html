@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Note-AI |  Wolf&#39;s void</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Note-AI"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Note-AI
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/01/16/Note-AI/" class="article-date">
+  <time datetime="2024-01-16T05:11:34.000Z" itemprop="datePublished">2024-01-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Note/">Note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">8.4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">31 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>基本概览了人工智能领域的基础知识，从Agent入手，经过搜索，逻辑等。</p>
+<p>但对于领域前沿以及一些科研相关的内容没有过多涉及，还是比较浅显。</p>
+<p>我准备分笔记、备考两个页面来讲清楚这门课程怎么收获知识+成绩。这里先放笔记。</p>
+<img src="/note-ai/AI-note.png" class="" title="人工智能笔记">
+
+<h1 id="人工智能笔记"><a href="#人工智能笔记" class="headerlink" title="人工智能笔记"></a>人工智能笔记</h1><h2 id="第1章-绪论"><a href="#第1章-绪论" class="headerlink" title="第1章 绪论"></a>第1章 绪论</h2><p>人工智能的4种观点</p>
+<ul>
+<li>像人一样思考</li>
+<li>像人一样行动</li>
+<li>合理地思考</li>
+<li>合理地行动：★理性Agent：能够实现最佳期望结果而行动的Agent</li>
+</ul>
+<h2 id="第2章-智能Agent"><a href="#第2章-智能Agent" class="headerlink" title="第2章 智能Agent"></a>第2章 智能Agent</h2><h3 id="2-1-Agent和环境"><a href="#2-1-Agent和环境" class="headerlink" title="2.1 Agent和环境"></a>2.1 Agent和环境</h3><ul>
+<li>【2024期中】Agent：可以<strong>感知</strong>环境并在环境中<strong>行动</strong>的事物</li>
+<li>Agent函数：描述Agent行为，将感知序列映射为行动</li>
+<li>Agent程序：实现Agent函数</li>
+</ul>
+<h3 id="2-2-理性Agent"><a href="#2-2-理性Agent" class="headerlink" title="2.2 理性Agent"></a>2.2 理性Agent</h3><p>【2024期中】理性Agent：对每一个可能的感知序列，根据已知的感知序列和Agent具有的先验知识，理性Agent应该采取能使其性能度量最大化的行动。</p>
+<p>或：理性 Agent 为合理行动的 Agent，Agent 根据它所知道的做了“正确的事情”。</p>
+<h3 id="2-3-环境PEAS"><a href="#2-3-环境PEAS" class="headerlink" title="2.3 环境PEAS"></a>2.3 环境PEAS</h3><p>【2024期中】一个 Agent 包含 4 个部分，性能、环境、执行器、感知器</p>
+<p>任务环境：PEAS</p>
+<ul>
+<li>性能：Performance</li>
+<li>环境：Environment</li>
+<li>执行器：Actuators</li>
+<li>传感器：Sensors</li>
+</ul>
+<p>任务环境的性质</p>
+<ul>
+<li>完全可观察&lt;&gt;部分可观察（完全可观察：每个时间点上都能获取环境的完整状态）</li>
+<li>单Agent&lt;&gt;多Agent</li>
+<li>确定的&lt;&gt;随机的&lt;&gt;不确定的（确定的：下一状态完全取决于当前状态和Agent执行的动作）【举例：真空吸尘器世界&lt;&gt;自动驾驶&lt;&gt;】</li>
+<li>片段式的&lt;&gt;延续式的（下一片段不依赖于之前片段中采取的行动）【举例：流水线上的分类任务&lt;&gt;自动驾驶和国际象棋】</li>
+<li>静态的&lt;&gt;动态的&lt;&gt;半动态的（环境在Agent计算时是否会发生变化。若Agent性能评价随时间流逝而变化，为半动态）【举例：字谜游戏&lt;&gt;自动驾驶&lt;&gt;国际象棋（计时）】</li>
+<li>离散的&lt;&gt;连续的（环境的状态，时间；Agent的感知信息和行动）【举例：国际象棋&lt;&gt;自动驾驶】</li>
+<li>已知的&lt;&gt;未知的（Agent的知识状态，即Agent了解环境的“物理法则”）环境的部分&#x2F;完全可观察&lt;&gt;环境已知&#x2F;未知【举例：翻牌游戏（已知环境部分可观察）&lt;&gt;视频游戏（未知环境完全可观察）】</li>
+</ul>
+<h3 id="2-4-Agent结构"><a href="#2-4-Agent结构" class="headerlink" title="2.4 Agent结构"></a>2.4 Agent结构</h3><p>Agent&#x3D;体系结构+程序</p>
+<p>★Agent程序（基础4个+转化为学习Agent）</p>
+<p>（每张对应的图要能画出来，下图由前向后每次迭代增加功能）</p>
+<img src="/note-ai/ai-2.png" class="" title="Agent的四张图">
+
+<ul>
+<li>简单反射Agent：基于当前感知选择行动，不关注感知历史</li>
+<li>基于模型的反射Agent：Agent根据感知历史维持内部状态，Agent随时更新内部状态信息</li>
+<li>基于目标的Agent：除了感知信息之外，还需要根据目标信息来选择行动</li>
+<li>基于效用的Agent：当达到目标的行为有多种时，基于效用进行决策</li>
+</ul>
+<p>【2020期中】学习Agent：由性能元件，评判元件，学习元件，问题产生器构成</p>
+<img src="/note-ai/ai-3.png" class="" title="学习Agent">
+
+<ul>
+<li>评判元件：根据固定的性能标准告诉学习元件Agent的运转情况</li>
+<li>学习元件：学习部件根据评判部件反馈的评价Agent的表现，确定如何修改执行部件</li>
+<li>性能元件：接受感知，选择外部行动</li>
+<li>问题产生器：负责得到新的和有信息的经验的行动提议</li>
+</ul>
+<h2 id="第3章-通过搜索进行问题求解"><a href="#第3章-通过搜索进行问题求解" class="headerlink" title="第3章 通过搜索进行问题求解"></a>第3章 通过搜索进行问题求解</h2><h3 id="3-1-问题求解Agent"><a href="#3-1-问题求解Agent" class="headerlink" title="3.1 问题求解Agent"></a>3.1 问题求解Agent</h3><p>搜索问题求解Agent步骤：形式化，搜索，执行</p>
+<p>问题的定义</p>
+<ul>
+<li>初始状态：In(A)</li>
+<li>行动：对于状态s，ACTION(s)&#x3D;{GO(B), GO(C), GO(D)}</li>
+<li>转移模型：RESULT(IN(A), GO(B))&#x3D;IN(B)</li>
+<li>目标测试：测试当前状态是否目标状态{IN(TARGET)}</li>
+<li>路径耗散：反应性能度量</li>
+</ul>
+<h3 id="3-2-问题实例"><a href="#3-2-问题实例" class="headerlink" title="3.2 问题实例"></a>3.2 问题实例</h3><p>真空吸尘器世界</p>
+<ul>
+<li>状态：机器人的位置和灰尘的位置</li>
+<li>行动：向左，向右，吸灰尘</li>
+<li>转移模型：状态+行动-&gt;新状态</li>
+<li>目标测试：检查所有位置是否都干净</li>
+<li>路径耗散：1&#x2F;行动</li>
+</ul>
+<p>八数码问题</p>
+<ul>
+<li>状态：8个棋子以及空格在棋盘9个方格上的分布</li>
+<li>行动：空格向左，向右，向上，向下</li>
+<li>转移模型：状态+行动-&gt;新状态</li>
+<li>目标测试：检查状态是否匹配目标</li>
+<li>路径耗散：1&#x2F;行动</li>
+</ul>
+<p>八皇后问题（原版）</p>
+<ul>
+<li>状态：棋盘上0-8个皇后的任一摆放都是一个状态</li>
+<li>行动：任意空格增加1个皇后</li>
+<li>转移模型：将增加了皇后的棋盘返回</li>
+<li>目标测试：8个皇后都在棋盘上，且无法互相攻击</li>
+<li>路径耗散：无</li>
+</ul>
+<p>八皇后问题（改进）</p>
+<ul>
+<li>状态：n（0&lt;&#x3D;n&lt;&#x3D;8）皇后在棋盘上的任意摆放，满足左边起n列的皇后位置都合法</li>
+<li>行动：在最左侧的空列中选择一格摆放皇后，要求该格子未受攻击</li>
+<li>转移模型：将增加了皇后的棋盘返回</li>
+<li>目标测试：8个皇后都在棋盘上，且无法互相攻击</li>
+<li>路径耗散：无</li>
+</ul>
+<h3 id="3-3-通过搜索求解"><a href="#3-3-通过搜索求解" class="headerlink" title="3.3 通过搜索求解"></a>3.3 通过搜索求解</h3><p>▲搜索树&lt;&gt;搜索图</p>
+<p>【图搜索集特有】探索集（closed表）：记录每个已扩展的节点。新节点若在探索集&#x2F;边缘集中，它将被丢弃而不是被加入边缘集中</p>
+<p>【区别】搜索树会将与之相连的每个节点都作为待扩展结点（即使刚刚由A-&gt;B，A还是会称为B的扩展结点），搜索图则会保存所有已经被扩展的结点（不是待扩展，而是已经扩展）保存在closed表中，这些结点不会再作为被扩展结点。</p>
+<p>节点数据结构：</p>
+<ul>
+<li>n.state 状态空间中的状态</li>
+<li>n.parent 父节点</li>
+<li>n.action 父节点扩展时采取的行动</li>
+<li>n.path-cost 代价，初始状态到达该节点的路径损耗</li>
+</ul>
+<p>搜索顺序：FIFO队列，LIFO队列，优先级队列</p>
+<p>哈希表：快速有效检测重复状态</p>
+<p>问题求解算法性能</p>
+<ul>
+<li>完备性：问题有解时，算法是否能保证找到解</li>
+<li>最优性：搜索策略是否能找到最优解</li>
+<li>时间复杂度：搜索过程中产生结点的数目</li>
+<li>空间复杂度：内存中同一时间存储的最多节点数</li>
+</ul>
+<h3 id="3-4-★无信息搜索（盲目搜索）"><a href="#3-4-★无信息搜索（盲目搜索）" class="headerlink" title="3.4 ★无信息搜索（盲目搜索）"></a>3.4 ★无信息搜索（盲目搜索）</h3><p>【特点】除了问题定义中提供的状态信息外没有任何附加信息，算法只能区分状态是不是目标状态，无法比较非目标状态的好坏</p>
+<ul>
+<li>宽度优先搜索：FIFO队列实现【完备性√】</li>
+<li>一致代价搜索：扩展路径消耗最小的节点（宽搜+优先队列），【若不存在0代价行动，则是完备的】</li>
+<li>深度优先搜索：</li>
+<li>深度受限搜索：规定到了深度d就不再继续搜索，【可能是不完备的】</li>
+<li>迭代加深的深度优先搜索：若到了深度d无结果，则扩展深度到d+1，【不一定最优，但完备】</li>
+</ul>
+<h3 id="3-5-★有信息（启发式）的搜索策略"><a href="#3-5-★有信息（启发式）的搜索策略" class="headerlink" title="3.5 ★有信息（启发式）的搜索策略"></a>3.5 ★有信息（启发式）的搜索策略</h3><p>定义：</p>
+<ul>
+<li>评估函数：f(n)</li>
+<li>启发函数：h(n) &#x3D; 节点n到目标节点的最小代价路径的代价估计值（只依赖于节点状态）</li>
+<li>当前实际代价：g(n)</li>
+</ul>
+<p>案例：</p>
+<ul>
+<li>（一致代价搜索：f(n) &#x3D; g(n)）（这个不是有信息搜索，放这里只是方便比较）</li>
+<li>贪婪最佳优先搜索：f(n) &#x3D; h(n)</li>
+<li>A*搜索：f(n) &#x3D; g(n) + h(n)</li>
+</ul>
+<p>保证最优性的条件：可采纳性 &amp; 一致性 （一致性更难满足，有一致性则必是可采纳的）</p>
+<ul>
+<li>可采纳性：h(n)不会高估到达目标的代价，即h(x)&lt;h*(x)</li>
+<li>一致性&#x2F;单调性（只作用于图搜索）：满足三角不等式 h(n) &lt;&#x3D; c(n,a,n’) + h(n’)</li>
+</ul>
+<p>（可证明A*算法：若具有可采纳性，则有树搜索最优性；若具有一致性，则具有图搜索最优性）</p>
+<p>【证明过程】PPT上有</p>
+<p>【作业题】证明若一致，必是可采纳</p>
+<p>证明：给定一个启发式函数满足h(G)&#x3D;0,其中G是目标状态，证明如果h是一致的，那么它是可采纳的。</p>
+<blockquote>
+<p>假设n为任意状态, G为某目标状态, 且从状态n到状态G的一条最优路径为n, n1, n2, ……, nm</p>
+<p>根据一致性条件，h(n) &lt;&#x3D; c(n, a1, n1) + h(n1)</p>
+<p>&lt;&#x3D; c(n, a1, n1) + c(n1, a2, n2) + h(n2)</p>
+<p>&lt;&#x3D; c(n, a1, n1) + c(n1, a2, n2) + …… + c(nm, am+1, G) + h(G)</p>
+<p>又 h(G) &#x3D;&#x3D; 0，故 h(n) &lt;&#x3D; c(n, a1, n1) + c(n1, a2, n2) + …… + c(nm, am+1, G)</p>
+<p>根据实际意义，h*(n) &#x3D; c(n, a1, n1) + c(n1, a2, n2) + …… + c(nm, am+1, G)，因为这是从n到G的实际距离。</p>
+<p>综上，h(n) &lt;&#x3D; h*(n)</p>
+</blockquote>
+<h3 id="3-6-启发式函数"><a href="#3-6-启发式函数" class="headerlink" title="3.6 启发式函数"></a>3.6 启发式函数</h3><p>评价：对于启发式搜索策略，关键在于启发式函数，启发式函搜索的性能分析可以使用有效分支因子。假设有N个结点，解的深度为d，<code>N+1 = 1+(b*)+(b*)^2+(b*)^3+……+(b*)^n</code>。b*即为有效分支因子。有效分支因子越小，算法性能越好，h(n)越大，有效分支因子越小。有效分支因子越小，算法性能越好。</p>
+<p>优势：若h2(n) &gt; h1(n) 且均可采纳，则h2(n)有优势。（更倚重引导了，有效分支就减少了）</p>
+<h3 id="第3章总结"><a href="#第3章总结" class="headerlink" title="第3章总结"></a>第3章总结</h3><table>
+<thead>
+<tr>
+<th>算法</th>
+<th>完备性</th>
+<th>最优性</th>
+<th>TIME</th>
+<th>SPACE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>宽搜</td>
+<td>√（分支有限时）</td>
+<td>√（单步代价相同时）</td>
+<td>0(b^d)，b分支因子</td>
+<td>0(b^d)</td>
+</tr>
+<tr>
+<td>一致代价</td>
+<td>√（分支有限且代价不为0）</td>
+<td>√</td>
+<td>O(b^(1+lowbound(C*&#x2F;ε)))</td>
+<td>O(b^(1+lowbound(C*&#x2F;ε)))</td>
+</tr>
+<tr>
+<td>深搜</td>
+<td>×</td>
+<td>×</td>
+<td>0(b^m),m最大深度</td>
+<td>0(b*m)</td>
+</tr>
+<tr>
+<td>深度受限</td>
+<td>×</td>
+<td>×</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>迭代加深</td>
+<td>√（分支有限时）</td>
+<td>√（单步代价相同时）</td>
+<td>0(b^d)</td>
+<td>0(b*d)</td>
+</tr>
+<tr>
+<td>双向</td>
+<td>√（都为宽搜且分支有限）</td>
+<td>√（都为宽搜且单步代价相同）</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>贪婪最佳优先</td>
+<td>×</td>
+<td>×</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A*</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>【某年期末+2020期中】经典题</p>
+<img src="/note-ai/ai-4.png" class="" title="经典题">
+
+<p>注意画图与实现</p>
+<p>其中，一致代价：</p>
+<p>队列，每次出队（即为扩展）代价最小的节点，并入队与它相连的且未经扩展过的节点，更新其在队列中的代价，直到扩展到终点节点。</p>
+<h2 id="第4章-超越经典搜索"><a href="#第4章-超越经典搜索" class="headerlink" title="第4章 超越经典搜索"></a>第4章 超越经典搜索</h2><h3 id="4-1局部搜索算法与最优化问题"><a href="#4-1局部搜索算法与最优化问题" class="headerlink" title="4.1局部搜索算法与最优化问题"></a>4.1局部搜索算法与最优化问题</h3><p>智能优化算法（属于启发式算法）：遗传算法，模拟退火算法，禁忌搜索算法，粒子群算法，蚁群算法，爬山法</p>
+<p>局部搜索算法：从单个当前结点出发，通常只移动到它的邻近状态而不保留搜索路径</p>
+<h4 id="①爬山法"><a href="#①爬山法" class="headerlink" title="①爬山法"></a>①爬山法</h4><p>（内存消耗小，能在很大的或者无限的状态空间中找到合理的解。属于局部搜索算法，）</p>
+<p>爬山法的缺陷：</p>
+<ul>
+<li>局部极大值：【主要缺点】会陷入局部最优解，而不一定能搜索到全局最优解</li>
+<li>山脊：一个不直接相连的局部极大值序列，从每个局部极大点出发都是下山方向（搜索可能会在山脊的两面来回震荡，前进步伐很小。）</li>
+<li>高原：一块平的区域，可能会迷路</li>
+</ul>
+<h4 id="②模拟退火算法"><a href="#②模拟退火算法" class="headerlink" title="②模拟退火算法"></a>②模拟退火算法</h4><p>（允许下山的随机爬山算法）：温度T控制以小于1的概率exp(-Δe&#x2F;T)接受非最佳的移动</p>
+<p>在迭代更新可行解时，以一定的概率来接受一个比当前解要差的解，因此有可能会跳出局部最优解，达到全局的最优解。随着时间的推移，允许算法向坏的方向移动的概率逐步下降。</p>
+<img src="/note-ai/ai-5.png" class="" title="模拟退火算法">
+
+<h4 id="③局部束搜索（未讲）"><a href="#③局部束搜索（未讲）" class="headerlink" title="③局部束搜索（未讲）"></a>③局部束搜索（未讲）</h4><p>局部束搜索（记录k个状态，各自搜索但信息传递，通知更好的状态）</p>
+<p>随机束搜索（解决局部束搜索可能的k个状态很快聚集问题，随机选择后继的k个状态，即在topk中随机选择，而不是选择最好的那个）</p>
+<h4 id="④遗传算法"><a href="#④遗传算法" class="headerlink" title="④遗传算法"></a>④遗传算法</h4><img src="/note-ai/ai-6.png" class="" title="遗传算法">
+
+<ul>
+<li>编码方案：怎样把优化问题的解进行编码（二进制编码、浮点数编码方法、格雷码、符号编码方法、多参数编码方法）</li>
+<li>适应度函数：怎样根据目标函数构建适应度函数</li>
+<li>选择策略：优胜劣汰、适者生存</li>
+<li>控制参数：种群的规模<strong>、</strong>算法执行的最大代数、执行不同遗传操作的概率等</li>
+<li>遗传算子：【重要】选择，交叉，变异</li>
+<li>算法终止准则：最大演化代数，或算法在连续多少代以后解的适应值没有改进</li>
+</ul>
+<p>【遗传算法补充（2024期中考试20分）】</p>
+<p>轮盘赌算法：又称比例选择方法，其基本思想：各个个体被选中的概率与其适应度大小成正比。</p>
+<p>1.产生初始种群 s1&#x3D; 13 (01101) s2&#x3D; 24 (11000) s3&#x3D; 8 (01000) s4&#x3D; 19 (10011)</p>
+<p>2.计算适应度 假定适应度为f(s)&#x3D;s^2 ，则 f (s1) &#x3D; f(13) &#x3D; 13^2 &#x3D; 169 f (s2) &#x3D; f(24) &#x3D; 24^2 &#x3D; 576 f (s3) &#x3D; f(8) &#x3D; 8^2 &#x3D; 64 f (s4) &#x3D; f(19) &#x3D; 19^2 &#x3D; 361</p>
+<p>3.选择概率</p>
+<img src="/note-ai/ai-7.png" class="" title="选择概率">
+
+<p>4.累计概率</p>
+<img src="/note-ai/ai-8.png" class="" title="累计概率">
+
+<p>平铺图</p>
+<img src="/note-ai/ai-9.png" class="" title="平铺图">
+
+<p>例如设从区间［0, 1］中产生4个随机数: r1 &#x3D; 0.450126, r2 &#x3D; 0.110347 r3 &#x3D; 0.572496, r4 &#x3D; 0.98503</p>
+<img src="/note-ai/ai-10.png" class="" title="区间">
+
+<p>【2024期中】（TODO）</p>
+<p>轮盘赌算法</p>
+<h3 id="4-2-连续空间中的局部搜索（没讲）"><a href="#4-2-连续空间中的局部搜索（没讲）" class="headerlink" title="4.2 连续空间中的局部搜索（没讲）"></a>4.2 连续空间中的局部搜索（没讲）</h3><h3 id="4-3-使用不确定动作的搜索（没讲）"><a href="#4-3-使用不确定动作的搜索（没讲）" class="headerlink" title="4.3 使用不确定动作的搜索（没讲）"></a>4.3 使用不确定动作的搜索（没讲）</h3><p>实例：不稳定的吸尘器世界</p>
+<p>不确定性问题的解是嵌套if-then-else语句，是树而非序列</p>
+<p>与或搜索树：</p>
+<ul>
+<li>确定性环境，或节点，在或节点上规范一个活动</li>
+<li>不确定性环境：与节点，在与节点上包含所有可能的后果（画图时有连接标记）</li>
+</ul>
+<h3 id="4-4-部分可观察信息的搜索"><a href="#4-4-部分可观察信息的搜索" class="headerlink" title="4.4 部分可观察信息的搜索"></a>4.4 部分可观察信息的搜索</h3><p>①无观察信息的搜素（也称：无传感问题&#x2F;相容问题）【无传感问题可解，不是无解】</p>
+<ul>
+<li>物理状态：对于物理问题P，P有n个物理状态{s1,s2,s3,……,sn}</li>
+<li>信念状态：包含物理状态的每个可能集合（最多2^n个信念状态，其中可能很多不可达）</li>
+<li>初始状态：P这n个物理状态的集合{s1,s2,s3,……,sn}</li>
+<li>行动序列：ACTIONS(b) &#x3D; ∪对任意(s∈b) ACTIONSp(s)</li>
+<li>转移模型：（有点像编译原理LR文法的DFA项集图的感觉，简单来说就是对信念状态内的每个物理状态都做一遍ACTION，所得的为新信念状态）<ul>
+<li>确定行动：b’ &#x3D; RESULT(b,a) &#x3D; {s’ | s’ &#x3D; RESULTp(s,a) 且 s∈b}</li>
+<li>不确定行动：b’ &#x3D; RESULT(b,a) &#x3D; {s’ | s’ ∈ RESULTp(s,a) 且 s∈b}</li>
+</ul>
+</li>
+<li>目标测试：信念状态中的所有物理状态都满足目标状态</li>
+<li>路径开销：假定所有状态下一个行动的开销相同</li>
+<li>结论：如果一个行动序列是信念状态b的解，那么该行动序列是信念状态任何子集的解</li>
+<li><img src="/note-ai/ai-11.png" class="" title="部分可观察信息"></li>
+</ul>
+<p>②有观察信息的搜索</p>
+<img src="/note-ai/ai-12.png" class="" title="有观察信息的搜索">
+
+<p>在无观察信息的基础上多加一步对结果可能感知的预测，再多加一个合并</p>
+<img src="/note-ai/ai-13.png" class="" title="有观察信息的搜索">
+
+<p>③求解部分可观察环境中的问题</p>
+<img src="/note-ai/ai-14.png" class="" title="不分可观察环境中的问题">
+
+<p>④部分可观察环境中的问题求解Agent</p>
+<ul>
+<li>形式化，搜索算法，执行解行动</li>
+<li>解是一个条件规划不是一个序列 if-then-else</li>
+<li>Agent在完成行动和接收感知信息时维护自身的信念状态</li>
+</ul>
+<h3 id="4-5-联机搜索Agent和未知环境（没讲）"><a href="#4-5-联机搜索Agent和未知环境（没讲）" class="headerlink" title="4.5 联机搜索Agent和未知环境（没讲）"></a>4.5 联机搜索Agent和未知环境（没讲）</h3><h2 id="第5章-对抗搜索（博弈）"><a href="#第5章-对抗搜索（博弈）" class="headerlink" title="第5章 对抗搜索（博弈）"></a>第5章 对抗搜索（博弈）</h2><p>定义</p>
+<ul>
+<li>S0 初始状态</li>
+<li>Player 谁行动</li>
+<li>Actions 状态下的合法行动集合</li>
+<li>Result(s,a) 状态转移模型</li>
+<li>Terminal-test(s) 终止测试</li>
+<li>Utility(s,p) 效用函数</li>
+</ul>
+<h3 id="★MIN-MAX算法"><a href="#★MIN-MAX算法" class="headerlink" title="★MIN-MAX算法"></a>★MIN-MAX算法</h3><p>时间复杂度<em>O</em>(b^m)，空间复杂度<em>O</em>(bm)</p>
+<p>MIN层，MAX层</p>
+<h3 id="★αβ剪枝"><a href="#★αβ剪枝" class="headerlink" title="★αβ剪枝"></a>★αβ剪枝</h3><p>剪枝条件（6分）</p>
+<ul>
+<li>对于maximizer的子节点，如果取值大于等于beta，则进行剪枝；</li>
+<li>对于minimizer的子节点，如果取值小于等于alpha，则进行剪枝。</li>
+</ul>
+<h3 id="机会博弈"><a href="#机会博弈" class="headerlink" title="机会博弈"></a>机会博弈</h3><p>扩展极小极大算法：添加chance层</p>
+<h3 id="多人博弈"><a href="#多人博弈" class="headerlink" title="多人博弈"></a>多人博弈</h3><ul>
+<li>用向量值取代单一值</li>
+<li>通常选择使自己效用值最大的行为</li>
+<li>联盟与破坏联盟</li>
+</ul>
+<h3 id="不完整信息游戏"><a href="#不完整信息游戏" class="headerlink" title="不完整信息游戏"></a>不完整信息游戏</h3><h3 id="不完美时的决策"><a href="#不完美时的决策" class="headerlink" title="不完美时的决策"></a>不完美时的决策</h3><p>截断测试，评估函数，向前剪枝，搜索表</p>
+<p>【2017期末】</p>
+<p>提高博弈问题的搜索效率有什么方法并分析每种方法对算法最优性的影响：</p>
+<ul>
+<li>（1）α-β剪枝，不影响算法的最优性 （2分）</li>
+<li>（2）采用评估函数和截断测试的方式，影响算法的最优性（2分）</li>
+<li>（3）向前剪枝策略只考虑最优的部分分支，影响算法的最优性（2分）</li>
+<li>（4）采用搜索表的方式，不影响算法的最优性（2分）</li>
+</ul>
+<h2 id="第6章-CSP约束满足问题"><a href="#第6章-CSP约束满足问题" class="headerlink" title="第6章 CSP约束满足问题"></a>第6章 CSP约束满足问题</h2><h3 id="6-1-约束满足问题的定义："><a href="#6-1-约束满足问题的定义：" class="headerlink" title="6.1 约束满足问题的定义："></a>6.1 约束满足问题的定义：</h3><p>约束满足问题（CSP，Constraint Satisfaction Problem）由一个变量集合和一个约束集合组成。</p>
+<p>每个变量有自己的值域，当每个变量都有自己的赋值同时满足所有关于变量的约束时，问题就得到了解决，这类问题就叫做约束满足问题。</p>
+<p>三元组{X, D, C}</p>
+<ul>
+<li>X 是变量的集合：{X1, X2, X3, ……, Xn}</li>
+<li>D 是值域的集合，每个变量都有自己的值域。：对于Xi有{ D1, D2, D3, ……, Dn} （D即Domain）</li>
+<li>C 是描述变量取值的约束集合（C即Constraint）</li>
+</ul>
+<p>问题的状态定义：对部分&#x2F;全部状态的一个赋值</p>
+<ul>
+<li>相容的：一个不违反任何约束条件的赋值</li>
+<li>完整的：每个变量都已经赋值</li>
+<li>CSP的解是相容的、完整的部分赋值：只有部分变量赋值（通常作为中间状态）</li>
+</ul>
+<p>约束：一元约束、二元约束、高阶约束、全局约束（即这个约束条件涉及几个变量）</p>
+<h3 id="6-2-约束传播：CSP中的推理"><a href="#6-2-约束传播：CSP中的推理" class="headerlink" title="6.2 约束传播：CSP中的推理"></a>6.2 约束传播：CSP中的推理</h3><ul>
+<li>结点相容：单个变量值域中所有取值满足它的一元约束，该变量节点相容。若网络中所有变量都节点相容，该网络节点相容。</li>
+<li>弧相容：某变量值域中所有取值满足它的所有二元约束，该变量弧相容。若网络中所有变量都弧相容，该网络弧相容。<ul>
+<li>通用弧相容：扩展“弧相容”的概念至n元约束，例如对于Xi的{0,1,2,3}，满足约束X&lt;Y&lt;Z，需要删去2和3</li>
+<li>AC-3算法：维护弧相容队列，每次弹出一组弧(Xi,Xj)，首先使Xi对Xj弧相容。若其值域Di无变化，则处理下一条弧；若Di变小，则每个指向Xi的弧(Xk,Xi)都必须重新进入队列中等待检验。若Di变为空集，直接返回失败；否则继续检验。</li>
+</ul>
+</li>
+<li>路径相容：两个变量的集合{Xi,Xj}对于第三个变量Xm是相容的，指对{Xi,Xj}的每一个相容赋值{Xi&#x3D;a,Xj&#x3D;b}，Xm都有合适的取值使得{Xi,Xm}和{Xm,Xj}是相容的。（即）<ul>
+<li>PC-2算法</li>
+</ul>
+</li>
+<li>K相容：对于任何k-1个变量的相容赋值，第k个变量总能被赋予一个和前k-1个变量相容的值，那么这个CSP为k相容<ul>
+<li>1-相容 -&gt; 结点相容</li>
+<li>2-相容 -&gt; 弧相容</li>
+<li>3-相容 -&gt; 路径相容</li>
+<li>强k相容：从k-相容一直到1-相容都成立</li>
+</ul>
+</li>
+</ul>
+<p>全局约束：</p>
+<ul>
+<li>alldiff约束</li>
+<li>资源约束：atmost约束</li>
+</ul>
+<h3 id="6-3-CSP的回溯搜索"><a href="#6-3-CSP的回溯搜索" class="headerlink" title="6.3 CSP的回溯搜索"></a>6.3 CSP的回溯搜索</h3><p>变量和取值顺序：下一步给哪个变量赋值？按什么顺序赋值？</p>
+<ul>
+<li>最少剩余值（MRV）&#x2F;最受约束变量&#x2F;失败优先启发式</li>
+<li>约束最多变量：优先选择最能约束其他变量的变量进行赋值</li>
+<li>（取值顺序）最少约束值启发式：选择使得剩余变量赋值空间更大的值</li>
+</ul>
+<img src="/note-ai/ai-15.png" class="" title="最受约束变量">
+
+<img src="/note-ai/ai-16.png" class="" title="约束最多变量">
+
+<img src="/note-ai/ai-17.png" class="" title="最多约束变量2">
+
+<p>搜索与推理交错进行：每步应该怎样的推理？</p>
+<ul>
+<li>前向检验：只要变量X被赋值了，前向检验对它进行弧相容检查，从与它弧相容的未赋值变量Y的值域中删掉与X不相容的值。若值域为空集，直接回溯。（前向检测从赋值变量向未赋值变量传播信息，但不能对失败提供早期检测）</li>
+<li>MAC（维护弧相容）：Xi被赋值后，调用AC-3对与Xi弧相容的变量Xj出发进行正常的约束传播。若某变量值域为空，直接回溯。</li>
+<li>MAC传递传播约束，而前向检验只读不改</li>
+</ul>
+<img src="/note-ai/ai-18.png" class="" title="前向检验">
+
+<p>智能回溯：向后看：收获到达某赋值违反约束时，搜索本身能否避免重复这样的失败？</p>
+<ul>
+<li>建立冲突集，回溯到冲突集中时间最近的赋值（冲突集可以由前向检验算法提供）</li>
+<li>冲突引导的回跳：直接回溯到导致问题的根源</li>
+</ul>
+<h3 id="6-4-CSP局部搜索（没讲）"><a href="#6-4-CSP局部搜索（没讲）" class="headerlink" title="6.4 CSP局部搜索（没讲）"></a>6.4 CSP局部搜索（没讲）</h3><h3 id="6-5-问题的结构"><a href="#6-5-问题的结构" class="headerlink" title="6.5 问题的结构"></a>6.5 问题的结构</h3><p>应用拓扑排序来求解树结构的CSP</p>
+<p>割集调整</p>
+<ul>
+<li>（1）从CSP的变量中选择子集S，使得约束图在删除S之后成为一棵树。S称为环割集</li>
+<li>（2）对于满足S所有约束的S中的变量的每个可能赋值</li>
+<li>（a）从CSP剩余变量的值域中删除与S赋值不相容的值，</li>
+<li>（b）若去掉S后的剩余CSP有解，把解和S的赋值一起返回</li>
+</ul>
+<p>树分解</p>
+<ul>
+<li>原始问题的每个变量至少在一个子问题出现</li>
+<li>如果两个变量在原问题中由约束相连，那么它们至少同时出现在一个子问题中（连同它们的约束）</li>
+<li>吐过一个变量出现在树中的两个子问题中，那么它必须出现在连接这两个子问题的路径上的所有子问题里</li>
+</ul>
+<h2 id="期中考试（另附）"><a href="#期中考试（另附）" class="headerlink" title="期中考试（另附）"></a>期中考试（另附）</h2><p>1.Agent是什么，理性Agent是什么，一个足球运动员Agent有哪些组件构成</p>
+<p>2.初始状态BBWWE，移动方式有两种：①W或B移动到相邻的E，代价1 ②W或B跳到相隔一个W或B的E，代价2。定义评估函数f(x)&#x3D;d(x)+3*h(x)，d(x)为搜索树深度，h(x)为启发函数，定义为W左侧的B个数之和。要画出搜索树，并问这个启发函数是否具有可采纳性。</p>
+<p>3.轮盘赌算法（见遗传补充部分）这里不知道适应度函数代表概率，全错了。</p>
+<p>4.min-max和αβ剪枝</p>
+<p>5.给了一份数独。问约束满足问题的定义，三个组成构件，以及怎么定义这个数独问题的约束满足问题，最后让写出算法。</p>
+<h2 id="第7章-第9章-逻辑Agent"><a href="#第7章-第9章-逻辑Agent" class="headerlink" title="第7章-第9章 逻辑Agent"></a>第7章-第9章 逻辑Agent</h2><p>【参考《离散数学》】</p>
+<h3 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h3><p>假定世界由一个个的事实组成</p>
+<p>基于知识的Agent</p>
+<ul>
+<li><strong>知识库(KB)</strong>&#x3D;一种正式语言的语句集合</li>
+<li>预先给定的而不是推导的语句称为<strong>公理</strong></li>
+<li>知识库的添加:Tell</li>
+<li>知识库的查询:Ask</li>
+</ul>
+<p>逻辑蕴含关系：α |&#x3D; β， M(α) ⊆ M(β)</p>
+<p>模型检验</p>
+<ul>
+<li>可靠性：KB |-i α</li>
+<li>完备性：任意 KB |&#x3D; α，都有 KB |-i α</li>
+</ul>
+<p>命题逻辑</p>
+<ul>
+<li>命题联结词</li>
+<li>复合命题</li>
+<li>真值表</li>
+<li>语法</li>
+<li>语义</li>
+</ul>
+<p>逻辑等价</p>
+<ul>
+<li>如果两个语句α,β在同样的模型集合中为真，则它们是逻辑等价的,记为α ≡ β</li>
+<li>α ≡ β当且仅当 α |&#x3D; β 且β |&#x3D; α</li>
+</ul>
+<p>语句：</p>
+<ul>
+<li>有效的（所有模型中都为真）</li>
+<li>可满足的（在某一个模型中为真）</li>
+<li>不可满足的（每个模型中都不为真）</li>
+</ul>
+<p>推理规则</p>
+<ul>
+<li>假言推理规则&#x2F;分离规则（M.P.）</li>
+<li>与消解</li>
+<li>与导入</li>
+<li>双重否定</li>
+<li>单项消解&#x2F;单项归结</li>
+<li>★消解&#x2F;归结</li>
+</ul>
+<p>命题逻辑推理算法</p>
+<ul>
+<li>DPLL算法：是一种完备的、以回溯为基础的算法，用于解决在合取范式（CNF）中命题逻辑的布尔可满足性问题。</li>
+<li>WalkSAT算法：用于求解布尔可满足性问题（确定是否存在满足给定布尔公式）的局部搜索算法</li>
+</ul>
+<p>WalkSAT算法：</p>
+<ul>
+<li>每次迭代时选择一个未得到满足的子句并从该子句中选择一个符号对其进行翻转，翻转符号的选择方法：<ul>
+<li>1）最小化新状态下未满足语句的数量</li>
+<li>2）随机挑选符号</li>
+</ul>
+</li>
+<li>评估函数：最小化不满足的子句数量</li>
+</ul>
+<h3 id="一阶逻辑-谓词逻辑"><a href="#一阶逻辑-谓词逻辑" class="headerlink" title="一阶逻辑&#x2F;谓词逻辑"></a>一阶逻辑&#x2F;谓词逻辑</h3><p>命题逻辑假定世界由一个个的事实组成</p>
+<p>命题逻辑的局限性</p>
+<ul>
+<li>在命题逻辑中，每个陈述句是最基本的单位——原子命题，无法对原子命题进行分解。</li>
+<li>命题逻辑中，不能表达局部与整体、一般与个别的关系。</li>
+</ul>
+<p>一阶逻辑&#x2F;谓词逻辑（First Order Logic, FOL）假定世界包含对象、关系、函数</p>
+<p>原子命题被细化为个体、谓词和量词。</p>
+<p>基本元素</p>
+<ul>
+<li>谓词</li>
+<li>量词</li>
+<li>函词</li>
+</ul>
+<p>谓词&lt;&gt;函词（谓词提供由个体到True&#x2F;False的映射，函词提供由个体域中的个体到个体的映射）</p>
+<p>全称量词与存在量词</p>
+<p>主要逻辑连接符：</p>
+<ul>
+<li>任意 对应 -&gt;</li>
+<li>存在 对应 合取符号</li>
+</ul>
+<p>全称量词和存在量词同时存在时不能随意交换顺序，同一类别单独存在时可以全称</p>
+<p>全称&#x2F;存在量词的引入&#x2F;消去</p>
+<p>全称量词实例化（用任何常数置换）</p>
+<p>合一置换（使不同的逻辑表示变得相同的置换）Unify</p>
+<p>一般化假言推理规则（GMP）</p>
+<p>归结：通过合一置换θ&#x3D;{<em>u</em>&#x2F;G(<em>x</em>), <em>v</em>&#x2F;<em>x</em>}进行归结</p>
+<p>【用一阶逻辑描述集合论】</p>
+<p>【用一阶逻辑描述电路领域】</p>
+<p>【某年期末考题：建立亲属关系的公理系统】</p>
+<p>【很多年的考题】★★★转换为合取范式（CNF）</p>
+<ul>
+<li>消去等价词（双向蕴含改单向蕴含）</li>
+<li>消去蕴含词</li>
+<li>否定内移</li>
+<li>变量标准化</li>
+<li>Skolem化（注意三种情况的变化<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/516469801">什么是斯科伦范式（Skloem norm），如何化简 - 知乎</a>）</li>
+<li>删除全称量词</li>
+<li>等价变换为合取范式（将合取分配到析取中）</li>
+</ul>
+<p>Skolem化补充：</p>
+<img src="/note-ai/ai-19.png" class="" title="skolem化">
+
+<p>【很多年的考题】使用归结算法证明</p>
+<p>欲证明KB&#x3D;|α，</p>
+<p>只要证明(KB∧﹁α)是不可满足的</p>
+<p>【经典示例：West贩卖导弹给敌国是犯罪的】</p>
+<h2 id="第13章-不确定性的量化"><a href="#第13章-不确定性的量化" class="headerlink" title="第13章 不确定性的量化"></a>第13章 不确定性的量化</h2><p>【参考《概率论》内容】</p>
+<h3 id="13-1-不确定环境下的行动"><a href="#13-1-不确定环境下的行动" class="headerlink" title="13.1 不确定环境下的行动"></a>13.1 不确定环境下的行动</h3><p>信念度：Agent拥有的知识不能保证实现其中任何一个目标，但可以提供它们在某种程度上将被实现。</p>
+<p>逻辑Agent&lt;&gt;概率Agent</p>
+<ul>
+<li>（相同点，都认为）世界由成立或者不成立的事实组成</li>
+<li>逻辑Agent相信每个语句是正确的或者错误的</li>
+<li>概率Agent为每个语句赋予一个0到1之间的数值作为其信念度</li>
+</ul>
+<p>一个Agent是理性的，当且仅当它选择能产生最高期望效用的行动，称为期望效用最大化</p>
+<p>效用理论：Agent会偏好效用（utility）更高的状态</p>
+<p>决策理论&#x3D;概率理论+效用理论</p>
+<p>期望效用最大化（MEU）原则</p>
+<p>逻辑断言与概率断言</p>
+<ul>
+<li>逻辑断言考虑的是要排除所有那些断言不成立的世界。</li>
+<li>概率断言考虑的是各种可能世界的可能性有多大。</li>
+</ul>
+<h3 id="13-2-基本概率符号"><a href="#13-2-基本概率符号" class="headerlink" title="13.2 基本概率符号"></a>13.2 基本概率符号</h3><p>样本空间( Ω，omega的大写)：所有可能世界组成的集合，是互斥的，完备的</p>
+<p>ω（omega的小写）表示样本空间中的一个样本，即ω是一个特定的可能世界</p>
+<p>★公式1：概率基本公理：样本空间中的可能世界的总概率为1：ΣP(w)&#x3D;1</p>
+<p>★公式2：事件&#x2F;命题：对任意命题f，P(f)&#x3D;Σ(w∈f) P(w)</p>
+<p>★公式3：条件概率：P(a|b)&#x3D;P(a∪b)&#x2F;P(b)，注意可以使用链式规则</p>
+<p>★概率密度函数 P(X&#x3D;x)&#x3D;lim(x-&gt;0) P(x&lt;&#x3D;X&lt;&#x3D;x+dx) &#x2F; dx</p>
+<p>★公式4：概率公理：包含-排斥原理： P(A∩B) + P(A∪B) &#x3D; P(A) + P(B)</p>
+<p>★全概率公式：</p>
+<p>柯尔莫哥洛夫公理：公式1+公式4</p>
+<p>无条件概率&#x2F;先验概率：不知道其它信息的情况下对命题的信念度</p>
+<p>要素化表示，随机变量，概率分布</p>
+<p>概率分布：所有可能的随机变量赋予概率值</p>
+<p>联合概率分布：对多个随机变量中的每个变量发生的可能性进行概率赋值</p>
+<p>使用完全联合概率分布作为“知识库”</p>
+<p>归一化α</p>
+<h3 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h3><p>独立性&#x2F;边缘独立性&#x2F;绝对独立性（a⊥b）【这个⊥符号有问题，应该两条竖线】</p>
+<ul>
+<li>P(a|b)&#x3D;P(a)</li>
+<li>P(b|a)&#x3D;P(b)</li>
+<li>P(a∪b)&#x3D;P(a)P(b)</li>
+</ul>
+<p>条件独立性（a⊥b | Z）定义如下</p>
+<ul>
+<li>任意x,y,z P(x,y | z) &#x3D; P(x | z) * P(y | z)</li>
+<li>任意x,y,z P(x | y,z) &#x3D; P(x | z)</li>
+</ul>
+<p>联合概率规则</p>
+<p>P(a∪b) &#x3D; P(a|b) * P(b) &#x3D; P(b|a) * P(a)</p>
+<h3 id="贝叶斯规则"><a href="#贝叶斯规则" class="headerlink" title="贝叶斯规则"></a>贝叶斯规则</h3><p>贝叶斯公式：P(b|a) &#x3D; P(a|b) * P(b) &#x2F; P(a)</p>
+<p>朴素贝叶斯：假设所有Effecti各自独立，公式如下：</p>
+<p>P(Cause,Effect1,……,Effectn) &#x3D; P(Cause) * Π P(Effecti | Cause)</p>
+<h2 id="第14章-概率推理"><a href="#第14章-概率推理" class="headerlink" title="第14章 概率推理"></a>第14章 概率推理</h2><p>★详细教程：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/USTC-ZCC/p/12786860.html">https://www.cnblogs.com/USTC-ZCC/p/12786860.html</a></p>
+<p>贝叶斯网络（信度网&#x2F;概率网络&#x2F;因果网络&#x2F;知识图）</p>
+<p>条件概率表（CPT）</p>
+<p>链式规则：</p>
+<p>P(x1,x2,……,xn)</p>
+<p>&#x3D; P(xn | x1,x2,……,xn-1) * P(xn-1 | x1,x2,……,xn-2) * …… * P(x3 | x1,x2) * P(x2 | x1) * P(x1)</p>
+<p>&#x3D; Π P(Xi | Xi-1 Xi-2 …… X1)</p>
+<p>贝叶斯网络构建：由原因指向结果</p>
+<p>贝叶斯网络计算公式：</p>
+<p>P(x1,x2,……,xn) &#x3D; Π P (xi | parents(xi))</p>
+<p>【很多年考题】贝叶斯网络计算</p>
+<p>计算联合概率分布，</p>
+<p>计算先验概率，</p>
+<p>计算条件概率，</p>
+<p>计算枚举精确推理（有查询变量，有隐藏变量，有证据变量）</p>
+<p>近似推理（直接采样法）【我没掌握，似乎不重要？】</p>
+<p>【2020期末】贝叶斯网络中的条件独立性</p>
+<ul>
+<li>（小班）经典的三种结构（同父，v型，顺序结构）</li>
+<li>moral图只能确认独立性，不能排除非独立性</li>
+<li>D-seperation适用（<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/72011891">D-Separation：一种概率图结构独立性的判断方法 - 知乎</a>）</li>
+</ul>
+<p>D-seperation划分方法</p>
+<p>碰撞点，观测集合</p>
+<h2 id="第十五章-时间上的概率推理"><a href="#第十五章-时间上的概率推理" class="headerlink" title="第十五章 时间上的概率推理"></a>第十五章 时间上的概率推理</h2><p>马尔科夫假设：当前状态只依赖于有限的固定数量的过去状态</p>
+<p>平稳性假设：转移概率相同</p>
+<p>马尔可夫过程（一阶，二阶）</p>
+<p>马尔科夫链（转移模型）</p>
+<p>隐马尔科夫链（转移模型，传感器模型）</p>
+<p>马尔可夫链的独立性：对于一阶马尔可夫链，不相邻即有独立</p>
+<p>稳定分布：初始分布的影响随着时间的推移，变得越来越少</p>
+<p>【怎么求稳态分布的概率？第∞天和第∞+1天，列二元方程】</p>
+<p>应用：web链接分析，应用内程序的平稳分布</p>
+<p>【2019，2020期末】隐马尔可夫链，序列概率，最可能的隐藏层</p>
+<h2 id="第十八章-机器学习"><a href="#第十八章-机器学习" class="headerlink" title="第十八章 机器学习"></a>第十八章 机器学习</h2><p>机器学习：从数据中自动分析获得规律<strong>，</strong>并利用规律对未知数据进行预测的算法。</p>
+<p>机器学习的分类：</p>
+<ul>
+<li>监督学习（有输入和输出，分类&#x2F;回归）</li>
+<li>无监督学习（没有输出）</li>
+<li>强化学习</li>
+</ul>
+<p>线性回归-参数学习</p>
+<p>损失函数</p>
+<p>训练集，测试集，k折交叉验证</p>
+<p>判别方法&#x2F;生成方法</p>
+<ul>
+<li>判别方法直接学习判别函数𝑓(𝑋) 或者条件概率分布𝑃(𝑌|𝑋) 作为预测的模型，即判别模型。典型判别模型包括回归模型、神经网络、支持向量机和Ada boosting等。</li>
+<li>生成模型从数据中学习联合概率分布𝑃(𝑋, 𝑌)（通过似然概率𝑃(𝑋|𝑌) 和类概率𝑃(𝑌) 的乘积来求取）。典型方法为贝叶斯方法、隐马尔可夫链</li>
+</ul>
+<p>过拟合&#x2F;欠拟合</p>
+<ul>
+<li>early stopping</li>
+<li>数据集扩增</li>
+<li>正则化方法</li>
+<li>Dropout</li>
+</ul>
+<p>KNN（K近邻算法）</p>
+<p>★【】朴素贝叶斯分类器</p>
+<p>★【】决策树</p>
+<p>【期末考试题】</p>
+<p>熵：</p>
+<p>信息增益：</p>
+<h2 id="第十八章-人工神经网络"><a href="#第十八章-人工神经网络" class="headerlink" title="第十八章 人工神经网络"></a>第十八章 人工神经网络</h2><p>感知器算法</p>
+<p>前向传播，反向传播</p>
+<p>多层神经网络</p>
+<p>前向传播，反向传播</p>
+<p>【考题】</p>
+<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><p>卷积神经网络，卷积核</p>
+<p>【猜测考题】</p>
+<p>计算卷积</p>
+<p>卷积核，步长，卷积运算，特征图</p>
+<p>计算池化</p>
+<p>最大池化，平均池化，总和池化</p>
+<h2 id="强化学习"><a href="#强化学习" class="headerlink" title="强化学习"></a>强化学习</h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wolfvoid.github.io/2024/01/16/Note-AI/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/04/27/Note-DBS/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Note-DBS
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/01/16/Note-CN/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Note-CN</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2025
+        <i class="ri-heart-fill heart_icon"></i> wolf void
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Wolf&#39;s void"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/649a5fe20000000010036f31">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2450887558&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

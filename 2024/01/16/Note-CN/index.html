@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Note-CN |  Wolf&#39;s void</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Note-CN"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Note-CN
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/01/16/Note-CN/" class="article-date">
+  <time datetime="2024-01-16T05:11:34.000Z" itemprop="datePublished">2024-01-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Note/">Note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">17.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">64 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="计算机网络-笔记"><a href="#计算机网络-笔记" class="headerlink" title="计算机网络-笔记"></a>计算机网络-笔记</h1><p>计科210X 甘晴void 202108010XXX</p>
+<img src="/note-cn/note-cn.png" class="" title="计算机网络笔记">
+
+<h2 id="期中复习"><a href="#期中复习" class="headerlink" title="期中复习"></a>期中复习</h2><p>【注明】这一部分是A橙学长划的重点</p>
+<p>第一章：分组交换和电路交换的比较</p>
+<p>应用层：要看懂HTTP报文，知道cookie，持续连接非持续连接区别，邮件工作的过程，DNS  原理，后面的没空可以不看了</p>
+<p>运输层： UDP和TCP比较，可靠数据传输的rdt不需要知道那么仔细，知道SR和GBN就可以，TCP要知道报文确认号序号，流量控制和拥塞控制有什么区别，拥塞控制算法</p>
+<h2 id="1计算机网络和因特网"><a href="#1计算机网络和因特网" class="headerlink" title="1计算机网络和因特网"></a>1计算机网络和因特网</h2><h3 id="1-1-因特网"><a href="#1-1-因特网" class="headerlink" title="1.1 因特网"></a>1.1 因特网</h3><p>主机，端系统，通信链路，分组交换机，传输速率bps，分组，路由器，链路层交换机，路径（一个分组经过的链路和分组交换机）</p>
+<p>因特网服务提供商ISP（InternetServiceProvider），传输控制协议TCP（TransmissionControlProtocol），网际协议IP（InternetProtocol），请求评论（RFC）</p>
+<p>互联网是什么？节点和边，通过网络互联设备连接起来</p>
+<p><strong>分布式应用以及为它提供通信服务的基础设施</strong></p>
+<p>分布式应用程序，套接字接口</p>
+<h3 id="1-2-网络边缘"><a href="#1-2-网络边缘" class="headerlink" title="1.2 网络边缘"></a>1.2 网络边缘</h3><p> 客户（client），服务器（server）， </p>
+<p>CS模式，P2P模式</p>
+<p>接入网，</p>
+<p>采用网络设施的面向连接服务</p>
+<h3 id="1-3-网络核心"><a href="#1-3-网络核心" class="headerlink" title="1.3 网络核心"></a>1.3 网络核心</h3><p>电路交换：频分复用FDM，时分复用TDM（独享）</p>
+<p>分组交换（将长报文划分为较小的数据块）：虚电路网络，数据报网络</p>
+<p>（电路交换会预留资源，分组交换不会）</p>
+<p>分组交换机</p>
+<p>存储转发传输（交换机开始向输出链路传输前必须先收到整个分组）：d(端到端)&#x3D;NL&#x2F;R,N表示中间路径数</p>
+<p>★分组交换优点：共享性；坏处：丢包&#x2F;时延</p>
+<p>★分组交换与电路交换的对比：</p>
+<ul>
+<li>提供了比电路交换更好的带宽共享</li>
+<li>比电路交换更简单有效，实现成本更低</li>
+</ul>
+<p>包含计算</p>
+<h3 id="1-4-分组交换的时延-丢包和吞吐量"><a href="#1-4-分组交换的时延-丢包和吞吐量" class="headerlink" title="1.4 分组交换的时延&#x2F;丢包和吞吐量"></a>1.4 分组交换的时延&#x2F;丢包和吞吐量</h3><p>节点总时延&#x3D;传输时延+传播时延+排队时延+处理时延【P25】</p>
+<p>处理时延：微秒或更低</p>
+<p>排队时延：毫秒到微秒</p>
+<p>传输时延：分组推向链路，L&#x2F;R，分组长度&#x2F;链路带宽，毫秒到微秒</p>
+<p>传播时延：链路到被接收，d&#x2F;s，物理链路长度&#x2F;传播速度，毫秒量级</p>
+<p>车队类比</p>
+<p>流量强度I&#x3D;La&#x2F;R,，所有分组由Lbit组成，R为传输速率，a为到达分组的平均速率</p>
+<p>流量强度I不能大于1，I接近1时，平均排队时延趋向于无穷大</p>
+<p>吞吐量，取决于瓶颈链路的传输速率</p>
+<h3 id="1-5-协议层次与服务模型"><a href="#1-5-协议层次与服务模型" class="headerlink" title="1.5  协议层次与服务模型"></a>1.5  协议层次与服务模型</h3><p>协议栈，5个层次，应用层（报文），运输层（报文段），网络层（数据报），链路层（帧），物理层</p>
+<p>应用层：HTTP,SMTP,FTP,DNS等；分组：报文</p>
+<p>运输层：TCP,UDP（可靠性，流量控制，拥塞控制）；分组：报文段</p>
+<p>网络层：IP；分组：数据报</p>
+<p>服务</p>
+<p>原语</p>
+<p>服务访问点SAP</p>
+<h2 id="2-应用层原理"><a href="#2-应用层原理" class="headerlink" title="2 应用层原理"></a>2 应用层原理</h2><h3 id="2-1-应用层协议原理"><a href="#2-1-应用层协议原理" class="headerlink" title="2.1 应用层协议原理"></a>2.1 应用层协议原理</h3><p>2.1.1 应用程序体系结构</p>
+<p>客户-服务器体系结构，P2P体系结构（自扩展性）</p>
+<p>2.1.2 数据通信</p>
+<p>2.1.3 可供应用程序使用的运输服务</p>
+<p>可靠数据传输，吞吐量（带宽敏感应用&lt;&gt;弹性应用），定时，安全性</p>
+<p>2.1.4 因特网提供的运输服务</p>
+<p>TCP：面向连接的服务，可靠的数据传送服务 ，拥塞控制机制</p>
+<p>UDP：</p>
+<p>安全套接字SSL（SecureSocketLayer）</p>
+<h3 id="2-2-Web和Http"><a href="#2-2-Web和Http" class="headerlink" title="2.2 Web和Http"></a>2.2 Web和Http</h3><p>2.2.1 HTTP</p>
+<p>超文本传输协议（HyperTextTransferProtocol）</p>
+<p>HTTP，建立在TCP上，默认端口80，无状态协议</p>
+<p>2.2.2 非持续连接和持续连接</p>
+<p>非持续连接，持续连接（所有请求响应经一个单独TCP连接发送） </p>
+<p>往返时间（RTT,RoundTripTime），总响应时间&#x3D;2*RTT+传输HTML文件的时间</p>
+<p>2.2.3 HTTP报文格式</p>
+<p>HTTP请求报文：</p>
+<pre class="line-numbers language-none"><code class="language-none">GET &#x2F;somdir&#x2F;page.html HTTP&#x2F;1.1	#方法，URL和HTTP版本字段
+Host: www.someschool.edu
+Connection: close
+User-agent: Mozilla&#x2F;5.0
+Accept-language: fr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>方法包括：GET,POST,HEAD,PUT,DELETE</p>
+<p>HTTP响应报文：</p>
+<pre class="line-numbers language-none"><code class="language-none">HTTP&#x2F;1.1 200 OK
+Connection: close
+Date: Tue, 18 Gug 2015 15:44:04 GMT
+Server: Apache&#x2F;2.2.3 (CentOS)
+Last-Modified: Tue, 18 Gug 2015 15:11:03 GMT
+Content-Length: 6821
+Content-Type: text&#x2F;html
+(data data ......)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>状态码包括</p>
+<ul>
+<li>200 OK</li>
+<li>301 Moved Permanently</li>
+<li>400 Bad Request</li>
+<li>404 Not Found</li>
+<li>505 HTTP Version Not Supported</li>
+</ul>
+<p>2.2.4 Cookie</p>
+<p>HTTP是一个无状态协议，服务器不保存用户的信息。使用cookie可以让服务器标识一个客户，提供服务。cookie有以下4个组件：</p>
+<ul>
+<li>响应报文中的一个cookie首部行</li>
+<li>请求报文中的一个cookie首部行</li>
+<li>用户端系统中保留一个cookie文件，由浏览器管理</li>
+<li>位于Web站点的一个数据库，记录用户信息</li>
+</ul>
+<p>2.2.5 Web缓存</p>
+<p>Web缓存器（WebCache）也叫代理服务器（proxy server）</p>
+<p>优先请求本地代理服务器，若得不到满足再请求</p>
+<p>能够代表初始Web服务器满足HTTP请求。Web缓存器可以在存储器空间中保留最近请求过的对象的副本。使用Web缓存器可以大大减少对客户请求的响应时间，还能够大大减少一个机构的接入链路到因特网的通信量。</p>
+<p>Web缓存器通常由ISP购买和安装</p>
+<p>Web缓存器既是服务器又是客户</p>
+<p>Web缓存器带来的一个问题是存放在缓存器中的副本可能不是最新的，因此需要有方式去证实请求的对象是最新的。解决：使用条件GET方法，在首部行中添加”If-Modified-Since”，这样只在指定日期后对象被修改过，才发送该对象。返回304NotModified表示未修改</p>
+<p>2.2.* FTP </p>
+<p>默认端口21</p>
+<p>server主动向client的20号端口建立连接。</p>
+<p>有状态协议</p>
+<h3 id="2-3-因特网中的电子邮件"><a href="#2-3-因特网中的电子邮件" class="headerlink" title="2.3 因特网中的电子邮件"></a>2.3 因特网中的电子邮件</h3><p>默认端口 25</p>
+<p>三个重要组成部分：用户代理，邮件服务器，简单邮件传输协议（SMTP,SimpleMailTransferProtocol）</p>
+<p>过程：用户代理—-&gt;邮件服务器—-SMTP—-&gt;邮件服务器—-&gt;用户代理</p>
+<p>SMTP（推协议）</p>
+<p>SMTP是一个推协议，由发送邮件的服务器将文件发给接收邮件的服务器，接收邮件的用户是不能使用该协议获取接收到的邮件的。获取接收到的邮件使用的是邮件访问协议。流行的邮件访问协议有：POP3,IMAP,HTTP。</p>
+<p>POP3（拉协议）</p>
+<p>POP3协议简单，但功能有限。用户代理打开与邮件服务器的TCP连接后，POP3开始工作。POP3工作有三个阶段：</p>
+<ul>
+<li><p>特许：用户代理发送用户名和口令以鉴别用户。</p>
+</li>
+<li><p>事务处理：用户代理取回报文，对报文进行删除标记，取消删除标记，获取邮件的统计信息。获取报文有以下两种方式：下载并保留 || 下载并删除</p>
+</li>
+<li><p>更新：结束POP3会话，删除被标记为删除的报文。</p>
+</li>
+</ul>
+<p>IMAP（拉协议）</p>
+<p>使用POP3协议只能获取报文，不能在服务器上创建文件夹对报文进行管理。为了解决这个或一些其他问题，产生了IMAP协议。IMAP服务器把每个报文与一个文件夹联系起来，报文到达时与INBOX文件夹相关联，而收件人能够把邮件移到一个新的文件夹中，阅读，删除或是移动到别的文件夹。IMAP还提供了查询邮件的命令，且IMAP维护了IMAP会话的用户状态信息(文件夹的名字等)。另外，IMAP还允许用户代理获取报文某些部分的命令。这样当用户处于低带宽连接时，可以选择性的只取回(MIME)报文的一部分。</p>
+<p>基于Web的电子邮件</p>
+<p>今天，基于Web的邮件已经非常常见了。这种电子邮件，用户代理就是浏览器，用户和远程邮箱之间的通信通过HTTP进行。用户发送和获取电子邮件时，都通过HTTP协议在浏览器和邮件服务器之间进行报文传输，但是邮件服务器之间发送和接收报文仍然使用SMTP。</p>
+<p>用户代理–HTTP–&gt;邮件服务器–SMTP–&gt;邮件服务器–HTTP–&gt;用户代理</p>
+<h3 id="2-4-DNS：因特网的目录服务"><a href="#2-4-DNS：因特网的目录服务" class="headerlink" title="2.4 DNS：因特网的目录服务"></a>2.4 DNS：因特网的目录服务</h3><p>4.1 DNS概述与DNS服务</p>
+<p>因特网上的主机可以使用多种方式标识。一种易于记忆的方式是主机名，而路由器所需要的标识则是更为具体的IP地址。将主机名转换到IP地址，就是域名系统DNS的任务。</p>
+<p>DNS是由分层的DNS服务器实现的分布式数据库。</p>
+<p>DNS是使主机能够查询分布式数据库的应用层协议。</p>
+<p>（期中考试20分）DNS协议运行在★★★UDP★★★上，使用53端口。</p>
+<p>（期中考试10分）A,NS,CNAME,MX分别是什么</p>
+<p>除了进行主机名到IP地址的转换，DNS还提供了以下服务：</p>
+<p>主机别名：一个主机除了规范主机名外，还可以有其他别名。通过DNS可以获取别名对应的规范主机名和IP地址。</p>
+<p>邮件服务器别名：和主机别名相同，邮件服务器也可以使用别名，通过DNS获取规范主机名和IP地址。</p>
+<p>负载分配：一个站点可能会被冗余分布在多台服务器上，有不同的IP地址。这些IP地址构成了一个IP地址集，DNS服务器可以在返回这些IP地址时循环改变次序，客户通常选择先返回的IP地址请求服务，这样通过更改返回IP地址的顺序，就能起到负载分配的作用。</p>
+<p>4.2 DNS工作原理</p>
+<p>使用单个DNS服务器有单点故障、通信容量，远距离集中(高时延)，维护等问题，因此DNS采用了分布式的设计方案。按照层次，DNS服务器分为三种：根DNS服务器；顶级域服务器；权威DNS服务器。除了以上三个层次外，还有一类重要的DNS服务器是本地DNS服务器。本地DNS服务器一般离主机很近，起到代理的作用。在进行DNS查询时，有两种查询方式：递归查询和迭代查询。通常，请求主机到本地DNS服务器的查询是递归的，其余的查询是迭代的。</p>
+<p>为了改善时延性能和减少报文传输，DNS还广泛使用了缓存技术。DNS服务器会缓存主机名&#x2F;IP地址对，一段时间后才丢弃缓存信息。</p>
+<h3 id="2-5-P2P文件分发"><a href="#2-5-P2P文件分发" class="headerlink" title="2.5 P2P文件分发"></a>2.5 P2P文件分发</h3><p>【计算题P95】两个公式</p>
+<p>使用P2P体系结构的网络应用对总是打开的基础设施服务器有最小的依赖。P2P体系结构具有内在自扩展性，无论有多少对等方，P2P体系结构的应用的文件分发时间都小于客户-服务器体系结构的应用。BitToreent是一种用于文件分发的流行P2P协议，以下是BitTorrent的部分功能原理。</p>
+<p>在BitTorrent协议中，参与一个文件分发的所有对等方的集合称为一个洪流。洪流中的对等方互相下载等长度的文件块(典型长度256KB)。对等方刚进入洪流时没有块，一段时间后就持有了块，并可为其他对等方上载块。每个洪流有一个追踪器，当对等方加入洪流时，将向追踪器注册自己，并周期性通知追踪器自己仍在洪流中。</p>
+<p>当一个对等方A加入洪流后，追踪器会给出一个对等方子集及这些对等方的IP地址，A可以从中选择临近的对等方建立TCP连接，交换块列表。选择向邻居请求哪些块使用的策略是最稀缺优先，首先请求邻居中副本最少的块，从而加快这些块的分发。而响应邻居的哪些请求则使用的是一种对换算法，优先响应前四个给A提供数据最高速率的邻居(他们被称为疏通)，并且还会每30s随机选择一个对等方B，如果B的速率够高，就把B换进前四位列表。这样对等方能够趋向于找到彼此的协调的速率上载。除了这五个对等方外，其他相邻的对等方不会收到A的块。这种激励机制被称为“一报还一报”。</p>
+<h3 id="2-6-视频流和内容分发网"><a href="#2-6-视频流和内容分发网" class="headerlink" title="2.6 视频流和内容分发网"></a>2.6 视频流和内容分发网</h3><p>6.1 视频流</p>
+<pre><code>    视频是一系列的图像，可以被压缩，通常用比特率来衡量质量。视频可以被压缩到不同的比特率，让用户根据网络带宽来选择观看的版本。对流式视频最重要的性能度量是平均端到端吞吐量，流式视频应用得到的平均吞吐量至少与压缩视频的比特率一样大。
+
+在HTTP流中，视频只是一个普通的文件。用户请求视频文件，将收到的字节进行缓存，一旦超过了预先设定的门限就开始播放，将字节处理成帧，并将这些帧解压缩展现在视频上。视频编码为不同比特率的版本经HTTP传输，被称为经HTTP的动态适应流(DASH)。使用DASH后，视频有不同版本存放在服务器中，服务器会有一个告示文件，提供每个版本的URL和比特率信息。客户可以根据可用带宽指定URL和一个字节范围，对视频数据块请求。
+</code></pre>
+<p>6.2 内容分发网</p>
+<pre><code>    因特网视频公式每天都需要向百万计的用户发送数据，如果在数据中心存储所有视频，会产生很大的问题。主要有三个问题：1.如果用户离数据中心太远，很可能产生停滞时延。2.流行的视频可能经相同链路发送多次，浪费带宽。3.单个数据中心出现单点故障，就不能分发视频流了。为了解决分发视频数据的问题，，几乎所有的视频流公司都使用内容分发网CDN。CDN管理分布在多个位置的服务器，将用户请求定位到能提供最好服务的CDN位置。CDN包括专用CDN(内容提供商自己的)和第三方CDN(代表多个内容提供商分发内容)。
+
+CDN通常集群部署。每个集群只保留一些视频，当用户请求视频时，如果集群中没有该视频，再从其他集群或中心仓库拉取视频到集群，并在本地存储一个副本。CDN的部署通常采用两种原则：
+</code></pre>
+<p>深入：在全球接入ISP中部署服务器集群，靠近端用户。</p>
+<p>邀请做客：在少量关键的位置建造大集群，邀请ISP做客。</p>
+<pre><code>使用CDN，用户的请求需要被重定向到CDN服务器，这通常是由DNS进行截获和重定向的。DNS检测到URL中有video以及内容提供商的名字，就返回一个CDN域的主机名，用户将再次发送请求到这个CDN域的DNS系统，并得到CDN节点的IP地址。CDN的集群选择策略是CDN部署的核心，一种简单的策略是指派用户到地理上最为临近的集群，也有周期性实时测量集群和用户到集群时延和丢包性能来选择集群的策略。
+</code></pre>
+<h3 id="2-7-套接字编程"><a href="#2-7-套接字编程" class="headerlink" title="2.7 套接字编程"></a>2.7 套接字编程</h3><pre><code>    网络应用程序有两类，一种使用协议标准(如RFC)定义的操作实现的，另一种是使用专用的应用层协议。如果是开发专用的网络应用程序，应该避免使用熟知端口号。另外一个实现网络应用程序的问题是，该选择TCP还是UDP。这两种协议有各自的特点。以下是分别使用UDP和TCP实现的简单客户-服务器程序(Python实现)。
+</code></pre>
+<p>7.1 UDP套接字编程</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Client</span>
+<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
+ 
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    serverName <span class="token operator">=</span> <span class="token string">'127.0.0.1'</span>										<span class="token comment">#本机IP</span>
+    serverPort <span class="token operator">=</span> <span class="token number">12000</span>												<span class="token comment">#端口</span>
+    clientSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span> SOCK_DGRAM<span class="token punctuation">)</span>						<span class="token comment">#IPV4,UDP</span>
+    message <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Input lowercase sentence:"</span><span class="token punctuation">)</span>
+    clientSocket<span class="token punctuation">.</span>sendto<span class="token punctuation">(</span>message<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>serverName<span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    modifiedMessage<span class="token punctuation">,</span>serverAddress <span class="token operator">=</span> clientSocket<span class="token punctuation">.</span>recvfrom<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>modifiedMessage<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    clientSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+ 
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+<span class="token comment"># Server</span>
+<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
+ 
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
+    serverSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_DGRAM<span class="token punctuation">)</span>
+    serverSocket<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    message<span class="token punctuation">,</span>clientAddress <span class="token operator">=</span> serverSocket<span class="token punctuation">.</span>recvfrom<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+    modifiedMessage <span class="token operator">=</span> message<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    serverSocket<span class="token punctuation">.</span>sendto<span class="token punctuation">(</span>modifiedMessage<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>clientAddress<span class="token punctuation">)</span>
+ 
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>7.2 TCP套接字编程</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Client</span>
+<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
+ 
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    serverName <span class="token operator">=</span> <span class="token string">'127.0.0.1'</span>	
+    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
+    clientSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">)</span>						<span class="token comment">#IPv4,TCP</span>
+    clientSocket<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token punctuation">(</span>serverName<span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>					<span class="token comment">#建立连接</span>
+    sentence <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"Input lowercase sentence:"</span><span class="token punctuation">)</span>
+    clientSocket<span class="token punctuation">.</span>send<span class="token punctuation">(</span>sentence<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>							<span class="token comment">#已建立连接，不需要地址了</span>
+    modifiedSentence <span class="token operator">=</span> clientSocket<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"From Server:"</span><span class="token punctuation">,</span>modifiedSentence<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    clientSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Server</span>
+<span class="token keyword">from</span> socket <span class="token keyword">import</span> <span class="token operator">*</span>
+ 
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    serverPort <span class="token operator">=</span> <span class="token number">12000</span>
+    serverSocket <span class="token operator">=</span> socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">)</span>
+    serverSocket<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>serverPort<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    serverSocket<span class="token punctuation">.</span>listen<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>											<span class="token comment">#欢迎套接字，等待建立连接</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The server is ready to receive"</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        connectionSocket<span class="token punctuation">,</span>addr <span class="token operator">=</span> serverSocket<span class="token punctuation">.</span>accept<span class="token punctuation">(</span><span class="token punctuation">)</span>				<span class="token comment">#客户专用套接字</span>
+        sentence <span class="token operator">=</span> connectionSocket<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        modifiedSentence <span class="token operator">=</span> sentence<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        connectionSocket<span class="token punctuation">.</span>send<span class="token punctuation">(</span>modifiedSentence<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        connectionSocket<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="3-传输层"><a href="#3-传输层" class="headerlink" title="3 传输层"></a>3 传输层</h2><h3 id="3-1-概述和运输层服务"><a href="#3-1-概述和运输层服务" class="headerlink" title="3.1 概述和运输层服务"></a>3.1 概述和运输层服务</h3><p>运输层协议为运行在不同主机上的应用进程之间提供了逻辑通信功能。运输层协议是在端系统实现的，将应用程序的报文转换为较小的块，加上运输层首部生成运输层分组，称为报文段，将报文段交给网络层，由网络层发送到目的地。</p>
+<p>因特网提供了两种可用的运输层协议：UDP(用户数据报协议)，TCP(传输控制协议)。UDP提供不可靠服务，而TCP提供面向连接的可靠数据传输，还提供拥塞控制。网络层的协议即网际协议IP，提供的是不可靠服务，不确保报文段的交付和按序交付，因此本章主要讨论的一个问题是TCP如何提供可靠数据传输，另一个主要讨论的问题是TCP如何实现拥塞控制。</p>
+<p>TCP:拥塞控制，流量控制，建立连接</p>
+<p>UDP:没有在IP之上提供更多服务（IP主机到主机，UDP进程到进程）</p>
+<p>都不提供延时与带宽保证，数据交付和交错检查（UDP仅能提供的）</p>
+<h3 id="3-2-多路复用与多路分解"><a href="#3-2-多路复用与多路分解" class="headerlink" title="3.2 多路复用与多路分解"></a>3.2 多路复用与多路分解</h3><p>运输层从紧邻其下的网络层接收报文段。运输层负责将报文段进程交付给主机上运行的适当进程。一个进程有一个或多个套接字，运输层实际上是将数据交给中间的套接字。接收主机可能同时有多个套接字，因此每个套接字都有一个唯一的标识符。为了将运输层报文段定向到合适的套接字，运输层报文段有一些字段，包含了套接字的标识符。</p>
+<p>多路分解：（运输层→套接字，向上）通过这些字段，将运输层报文段中的数据交付到正确的套接字的工作称为多路分解。</p>
+<p>多路复用：（套接字→网络层，向下）从不同套接字中收集数据块，将数据块封装并添加首部信息产生报文段，发送到网络层的过程工作称为多路复用。</p>
+<p>每个套接字都有唯一的标识符，每个报文段都有特殊字段来指示该报文要交付到的套接字。套接字需要使用端口号进行标识。端口号是一个16bit的数，其中0-1023为熟知端口号。保留给HTTP,FTP等熟知的应用层协议。</p>
+<p>UDP套接字：二元组标识，包含一个目的IP地址(标识主机)和一个目的端口号(标识具体的套接字)。接收主机的运输层收到报文段后，通过首部中的目的端口号，将报文段定向到相应的套接字。</p>
+<p>TCP套接字：四元组(源IP地址，源端口号，目的IP地址，目的端口号)标识。这四个值标识了一个连接，接收主机通过四个值将报文段定向到对应套接字。由于TCP是面向连接的，不同的源IP地址和源端口号与同一个目的IP的同个目的端口号建立的是不同的连接，使用的也是不同的套接字。但是初始创建连接时，连接还没有建立，因此使用的是同一个套接字(欢迎套接字)。连接建立后，接收端进程将创建一个新的套接字供该连接使用。</p>
+<h3 id="3-3-无连接运输UDP"><a href="#3-3-无连接运输UDP" class="headerlink" title="3.3 无连接运输UDP"></a>3.3 无连接运输UDP</h3><p>UDP是无连接的运输，只在IP的基础上进行复用和分解，并增加了少量的差错检测。UDP不能提供可靠的传输服务，但有以下优点：</p>
+<ul>
+<li><p>控制更加精细。采用UDP时，UDP会将数据打包直接传递给网络层，不像TCP存在拥塞控制机制，发送可能受到遏制。</p>
+</li>
+<li><p>无需建立连接。UDP不会引入建立连接的时延。因此DNS就是运行在UDP之上的。</p>
+</li>
+<li><p>无连接状态。UDP不维护连接状态。而TCP则需要维护包括接收和发送缓存，拥塞控制参数和确认号等连接状态。</p>
+</li>
+<li><p>分组首部开销小。仅有8字节。</p>
+</li>
+</ul>
+<p>除了不能提供可靠传输，UDP还可能导致其他问题，因为缺乏拥塞控制，UDP可能导致发送方接收方之间的高丢包率，挤垮TCP会话。</p>
+<p>UDP报文段由源端口号，目的端口号，长度和校验和组成，每个字段2字节，共8个字节。其中的校验和提供了差错检测功能，因为链路层协议可能没有提供差错检测，而报文段的传输可能经过一条没有使用差错检测协议的链路。因此UDP在端到端基础上，在运输层提供差错检测，这称为端到端原则。</p>
+<p>校验：</p>
+<p>发送方：对报文段中所有16比特字的和（任何时候若溢出要回滚），进行反码运算。</p>
+<p>接收方：若无差错，和将是0xFFFF</p>
+<h3 id="3-4-可靠数据传输原理"><a href="#3-4-可靠数据传输原理" class="headerlink" title="3.4 可靠数据传输原理"></a>3.4 可靠数据传输原理</h3><p>可靠数据传输协议（ReliableDataTransferProtocol）</p>
+<p>可靠传输问题不仅在运输层出现，也在链路层及应用层出现。实现可靠传输服务是可靠数据传输协议的任务。一般情况下，都是在下层协议提供不可靠数据传输(udt)下，建立可靠数据传输协议。由于可靠数据传输(rdt)不仅适用于运输层，收发端交换的数据以下称为分组，而不是运输层的报文段。</p>
+<h4 id="3-4-1-构造可靠数据传输协议（rdt1-0-2-0-2-1-2-2-3-0）"><a href="#3-4-1-构造可靠数据传输协议（rdt1-0-2-0-2-1-2-2-3-0）" class="headerlink" title="3.4.1 构造可靠数据传输协议（rdt1.0,2.0,2.1,2.2,3.0）"></a>3.4.1 构造可靠数据传输协议（rdt1.0,2.0,2.1,2.2,3.0）</h4><p>①经完全可靠信道的可靠数据传输 rdt1.0</p>
+<p>经完全可靠信道的可靠数据传输，接收与发送方不需要进行任何通信。发送方只需接收高层的数据，产生分组并发送到信道中，而接收方只需要从信道接收分组，从分组中取出数据交给上层。</p>
+<p>②经具有比特差错信道的可靠数据传输 rdt2.0</p>
+<p>实际情况下，底层信道的模型是会出现比特差错的模型，在分组的传输，传播或缓存的过程中都可能出现比特差错。为了处理差错，接收方需要对接收到的分组进行确认，发出肯定确认告知发送方分组被接收，发出否定确认告知发送方重发分组。基于这种重传机制的可靠数据传输协议称为自动重传协议(ARQ)。ARQ协议需要三种功能处理比特差错的情况：</p>
+<ul>
+<li><p>差错检测：通过检验和字段，使接收方能够检测到比特差错。</p>
+</li>
+<li><p>接收方反馈：接收方需要进行肯定确认(ACK)，否定确认(NAK)，只需要一个bit的分组就可以进行确认。</p>
+</li>
+<li><p>重传：接收方接收到有差错的分组时，发送方重传分组。</p>
+</li>
+</ul>
+<p>采用以上这种重传机制，发送方在发送分组后，将等待接收方的确认分组，决定是否重传还是传输新的分组。由于这种行为，rdt2.0这样的协议被称为停等协议。</p>
+<p>③rdt2.1</p>
+<p>由于信道本身可能出现差错，因此必须考虑确认分组ACK或NAK出现差错的情况。在这种情况下，发送方不知道接收方是否正确收到了分组。解决该问题的方式是，如果发送分组不能确定接收方是否接收到了正确的分组，就重新发送分组。这种方式给信道引入了冗余分组。但是接收方还需要知道接收到的是新的分组还是重传的分组，因此对于分组需要进行一个序号，需要只需要为0或1，让接收方能够区别分组是否和上一个接收到的分组一样就可以。</p>
+<p>④rdt2.2</p>
+<p>用对前一分组的正向确认替代对当前分组的反向确认（用ACK0替代NAK1回应P1）</p>
+<p>这个方法没有NAK状态，只有ACK。</p>
+<p>⑤经具有比特差错的丢包信道的可靠数据传输 rdt3.0</p>
+<p>除了比特差错，丢包也是常见的一种情况。解决丢包的方式和处理比特差错一样，如果没有接收到确认分组(发送的分组丢失或确认的ACK丢失，又或者只是分组或ACK延时)，就重传数据分组。新的问题是，到底等待多久才能判断分组丢失。这个时间至少大于一个往返时延，要根据情况设置。为了实现以上这种基于时间的重传机制，还需要一个倒计数定时器，发送方每发送一个分组就启动一个定时器，定时器超时就进行重传。解决冗余分组的方式则和rdt2.0相同。因为分组序号在0和1之间交替，rdt3.0也被称为是比特交替协议。</p>
+<p>可以对抗丢失&#x2F;出错</p>
+<h4 id="3-4-2-流水线可靠数据传输协议"><a href="#3-4-2-流水线可靠数据传输协议" class="headerlink" title="3.4.2 流水线可靠数据传输协议"></a>3.4.2 流水线可靠数据传输协议</h4><p>以上所形成的以停等协议为核心的可靠数据传输协议是功能正确的，但是在性能方面存在大的问题，因为发送方的信道利用率太低了，大量时间都在等待确认分组。而确认分组至少需要一个往返时延RTT才能回到发送方，还要加上协议处理时间和中间路由器的时延。这个性能问题的解决办法就是不以停等方式运行，允许发送方发送多个分组。例如发送方可以发送三个分组后再等待确认，这样的方式被称为流水线。不过，在提升性能的同时，采用流水线也会带来新的问题。</p>
+<p>必须增加序号范围，因为输送中的分组有多个。<br>发送方和接收方需要缓存多个分组。<br>需要处理丢失，损坏及延时过大的分组。两种基本方法是：回退N步；选择重传。</p>
+<h4 id="3-4-3-回退N步-GBN"><a href="#3-4-3-回退N步-GBN" class="headerlink" title="3.4.3 回退N步(GBN)"></a>3.4.3 回退N步(GBN)</h4><p>在回退N步协议GBN中，允许发送方发送多个分组，不需等待确认，但是未确认的分组数不能超过某个最大允许数N。定义基序号base为最早未确认分组的序号，下一个序号nextseqnum为下一个待发分组的序号，则：</p>
+<p>GBN协议也常被称为滑动窗口协议。分组的序号在分组首部的字段(k位)，范围为0-2^k-1。GBN发送方响应三种事件：</p>
+<p>上层调用：窗口未满，则发送分组，否则告知上层。上层可能过一会儿再试，也可能发送方直接把上层数据缓存。<br>接收ACK：GBN协议中，对分组的确认方式为累积确认。接收到n的ACK，则序号小于等于n的分组都被确认接收。<br>超时：如果出现超时，重传所有已发送但未被确认过的分组。GBN协议中只有一个定时器，最早发送且未被确认的分组启动计时器，接收到确认分组则重启计时器。<br>GBN协议中，接收方会丢弃所有失序的分组，因为发送方会重传这些分组。直接丢弃这些分组，接收缓存简单，不需要缓存失序分组，接收方唯一需要维护的信息就是下一个按序接收的分组的序号。</p>
+<h4 id="3-4-4-选择重传-SR"><a href="#3-4-4-选择重传-SR" class="headerlink" title="3.4.4 选择重传(SR)"></a>3.4.4 选择重传(SR)</h4><p>如果采用GBN协议，一旦最早发送的未确认分组超时，就需要从该分组开始重传，且接收方接收到的不按序的分组都会被丢掉。在信道差错率增加，时延很大的情况下，GBN可能大量重传分组。选择重传协议SR改进了这一点，只让发送方重传可能出错的分组。接收方将缓存失序的分组，并逐个对分组进行确认，连续的几个分组都收到后一起交付给上层。而发送方的每一个分组都有自己的定时器，超时后只重传一个分组，如果收到了最小未收到确认的分组的对应ACK，就将窗口重新移动到具有最小序号的未确认分组处。</p>
+<p>对于已收到的那些分组，接收方会重新进行确认，这是有必要的，否则发送方可能停留在一个固定的窗口(因为不进行累积确认了，不重新确认窗口就不移动了)。</p>
+<p>另外，考虑到序号是有限的，发送方与接收方窗口的不同步会导致严重的问题。例如，假设序号只有0,1,2，一种情况是正常的按照0,1,2,0来发送分组，另一种情况是分组0的ACK丢失了，发送次序是0,1,2,0(重传0)，因为有这两种不同的情况，接收方无法确认接收到的分组是重复发送的还是新的分组。因此必须限制窗口的大小，避免这种情况的发生。窗口长度必须小于或等于序号空间大小的一半。这样假设发送方没有收到正确的ACK，窗口不移动，接收方接收到了分组，一直向后移动，最后的结果就是发送方的窗口占了一半序号，接收方的窗口占了一半的序号，接收方的窗口最大值刚好停在发送方的窗口最小值前面，而不会发生序号重复。</p>
+<h3 id="3-5-面向连接的传输：TCP"><a href="#3-5-面向连接的传输：TCP" class="headerlink" title="3.5 面向连接的传输：TCP"></a>3.5 面向连接的传输：TCP</h3><p>面向连接，全双工（两方都可以同时收发），三次握手确定连接，通过连接发送数据</p>
+<p>TCP连接建立后，应用进程就可以互相发送数据了。客户进程通过套接字将数据交给TCP，TCP将数据存储到连接的发送缓存中，接下来TCP会从发送缓存中取出数据交给网络层。TCP可取出并添加到报文段的数据大小受限于最大报文长度MSS，而MSS又通常根据最大链路层帧长度(最大传输单元MTU)来设置，MSS要保证一个报文段加上TCP&#x2F;IP首部长度(40字节)适合链路层帧。以太网和PPP链路层协议都有1500字节的MTU，因此MSS的典型值为1460字节。TCP接收端接收到报文段，将数据放到接收缓存中，应用程序从该缓存中读取数据。</p>
+<p>根据以上的讨论，TCP连接的组成包括：一台主机上的缓存，变量和与进程连接的套接字，另一台主机上的缓存，变量和与进程连接的套接字。</p>
+<p>TCP报文结构</p>
+<p>序号和确认号</p>
+<p>发送的ACK是我期望从对方那边得到的期望序号</p>
+<p>3.5.3 往返时间的估计与超时</p>
+<ul>
+<li>EstimatedRTT &#x3D; (1-a) EstimatedRTT + a SampleRTT</li>
+<li>a推荐值取1&#x2F;8</li>
+<li>DevRTT  &#x3D; (1-b) DevRTT + b | SampleRTT - EstimatedRTT |</li>
+<li>b推荐值0.25</li>
+<li>TimeoutInterval &#x3D; EstimatedRTT  + 4 DevRTT</li>
+</ul>
+<p>可靠数据传输 使用单一重传定时器</p>
+<p>超时间隔加倍</p>
+<p>快速重传：监测到3个冗余ACK（期望序号比应该的ACK高）就执行快速重传，比超时重传要早</p>
+<p>产生TCP的ACK的建议（书P163）</p>
+<p>3.5.5 流量控制</p>
+<p>接收窗口（receive window）由发送方维护</p>
+<p>接受方接收到报文段后，将报文段存放到接收缓存当中，应用进程从中取出数据。如果应用程序读取的速度较慢，而发送方发送的数据太多太快，就会导致接收缓存溢出。因此TCP提供了流量控制服务，使发送方的发送速率与接收方应用程序的读取速率匹配。这与拥塞控制很相似，但是完全是出于不同的原因。</p>
+<p>TCP通过让发送方维护一个称为接收窗口的变量来进行流量控制。接收窗口表示接收方可用缓存的大小。发送方需要维护两个变量：</p>
+<p>lastbyteread：读出的最后一个字节<br>lastbyterecv：已到达接收缓存的最后一个字节<br>不允许接收缓存溢出，则lastbyterecv-lastbyteread&lt;&#x3D;rcvbuffer。则接收窗口为：</p>
+<p>rwnd&#x3D;rcvbuffer-[lastbyterecv-lastbyteread]</p>
+<p>rwnd是一个动态的值。在起始时，rwnd&#x3D;recvbuffer，此后接收主机会维护该值，并将其发给发送主机，而发送主机需要进行如下的控制：</p>
+<p>lastbytesent−lastbyteacked&lt;&#x3D;rwnd</p>
+<p>为了避免发送主机收到rwnd&#x3D;0后被阻塞，如果接收窗口为0，发送主机将发送一个只有一个字节的报文段，接收主机将会回发确认，并在确认报文中包含一个新的非0rwnd值。</p>
+<p>TCP提供了以上的流量控制服务，UDP是不提供这样的服务的。因此如果使用UDP，进程从缓存中读取报文段的速度不够快，缓存将会溢出，并丢失报文段。</p>
+<p>3.5.6 TCP连接管理</p>
+<p>TCP建立：三次握手</p>
+<p>两次连接的问题：维持虚假半连接，接收旧数据</p>
+<p>TCP结束：四次挥手</p>
+<h3 id="3-6-拥塞控制原理"><a href="#3-6-拥塞控制原理" class="headerlink" title="3.6 拥塞控制原理"></a>3.6 拥塞控制原理</h3><p>流量控制&lt;&gt;拥塞控制，相同点：都是对发送方进行遏制 </p>
+<ul>
+<li><p>流量控制：发送方的发送速率与接收方的读取速率相匹配，以取消出发送方使接收方缓存溢出的可能性</p>
+</li>
+<li><p>拥塞控制：避免网络拥堵</p>
+</li>
+</ul>
+<p>3.6.1 拥塞原因与代价</p>
+<p>通常出现拥塞有以下几种情况：</p>
+<ul>
+<li><p>（情况1：两个发送方和一台具有无穷大缓存的路由器）当发送速率超过吞吐量时，平均排队分组数不断增长，源与目的之间的时延也变为无穷大(假设不停发送，有无限大的缓存)。</p>
+</li>
+<li><p>（情况2：两个发送方和一台具有有限缓存的路由器）当缓存已满，部分分组被丢弃，这将引起发送方的重传，此外，提前发生超时还可能导致发送方重传没有丢失的分组。</p>
+</li>
+<li><p>（情况3：4个发送方和具有有限缓存的多台路由器及多跳路径）在有许多跳的情况下，不同的链路中不同连接的载荷不同。</p>
+</li>
+</ul>
+<p>从以上几种情况来看，由于拥塞丢弃分组产生了以下的代价：</p>
+<ul>
+<li>分组的到达速率接近链路容量时，分组经历巨大的排队时延</li>
+<li>发送方必须重传以补偿因为缓存溢出而丢弃的分组</li>
+<li>发送方在遇到大时延时进行的不必要重传会引起路由器利用链路带宽来转发不必要的分组副本</li>
+<li>一个分组沿一条路径被丢弃时，每个上游路由器用于转发该分组的传输容量最终被浪费掉了</li>
+</ul>
+<p>3.6.2 拥塞控制方法</p>
+<p>端到端拥塞控制：端系统自己来观察，网络层不提供信息</p>
+<p>网络辅助的拥塞控制：路由器向发送方提供关于网络中拥塞状态的显式反馈信息</p>
+<p>ATM ABR </p>
+<p>RM(资源管理)信元：NI位（轻微拥塞指示），CI位（拥塞指示），ER字段（中间路由器将自己可提供带宽写入）</p>
+<h3 id="3-7-TCP拥塞控制"><a href="#3-7-TCP拥塞控制" class="headerlink" title="3.7 TCP拥塞控制"></a>3.7 TCP拥塞控制</h3><p>当出现了网络拥塞时，TCP应该降低发送速率，进行拥塞控制。实现这样的控制，有三个问题需要解决。</p>
+<p>TCP发送方如何感知到与目的地之间的路径上存在拥塞，或是不存在拥塞<br>TCP如何限制其向连接上发送流量的速率<br>采用什么算法改变发送速率<br>下面逐个解决以上的问题。</p>
+<p>1.拥塞检测与速率的确定</p>
+<p>当发生拥塞时，路径上的路由器缓存溢出，就会引起丢包。对于发送方而言，丢包导致的是出现超时和收到3个冗余ACK。如果发生了这两种情况，就表示发生了拥塞，就应该减小发送速率。这就解决了拥塞检测的问题。在没有拥塞时，为了充分利用所有可用的带宽，TCP发送方还应该可以加快发送的速率。当TCP发送方接收到确认报文段ACK时，就认为一切顺利，网络不拥塞，可以增加发送速率。</p>
+<p>2.限制速率</p>
+<p>TCP采用了一个拥塞窗口cwnd来限制发送速率。注意这与流量控制相似但是不同。发送方未被确认的数据量不会超过cwnd与rwnd的最小值，即LastByteSent-LastByteAcked&lt;&#x3D;min{rwnd，cwnd}。由于此处仅探讨拥塞控制，先假设接收缓存无限大，这样发送速率就只与cwnd有关。通过cwnd的值，就可以调整向连接发送数据的速率了。</p>
+<p>3.TCP拥塞控制算法</p>
+<p>解决了上面两个问题，只要使用特定的算法控制cwnd就可以实现拥塞避免了。TCP拥塞控制算法包括三个部分：慢启动；拥塞避免；快恢复。</p>
+<p>慢启动</p>
+<ul>
+<li>起始时，cwnd的值以一个MSS开始，每当一个报文被确认，就增加一个MSS（对每个ACK都将cwnd增加一个MSS），故相当于*2</li>
+<li>出现超时丢包：cwnd设置为1，慢启动阈值ssthresh值设置为检测到拥塞时的cwnd&#x2F;2，重新开始慢启动。</li>
+<li>cwnd达到ssthresh：结束慢启动，进入拥塞避免模式</li>
+<li>出现三个冗余ACK：ssthresh&#x3D;cwnd&#x2F;2，cwnd&#x3D;ssthresh+3MMS，结束慢启动，进入快速恢复模式</li>
+</ul>
+<p>拥塞避免</p>
+<ul>
+<li>收到上一组全部cwnd的报文，增加一个MSS（线性加）</li>
+<li>出现超时丢包：与慢启动的反应相同，返回并重新开始慢启动</li>
+<li>出现三个冗余ACK：ssthresh&#x3D;cwnd&#x2F;2，cwnd&#x3D;ssthresh+3MMS，结束拥塞避免，进入快速恢复模式</li>
+</ul>
+<p>快速恢复</p>
+<ul>
+<li>对于每个冗余的ACK，cwnd++，在对丢失报文段的ACK到达后，cwnd&#x3D;ssthresh，进入拥塞避免模式</li>
+<li>出现超时丢包，与慢启动的反应相同，返回并重新开始慢启动</li>
+</ul>
+<p>TCP Tahoe（丢包全部按超时处理，进入慢启动）</p>
+<p>TCP Reno(含快速恢复)</p>
+<img src="/note-cn/cn-2.png" class="" title="图片来自中科大郑烇老师的PPT">
+
+
+<p>早期的TCP版本Tahoe没有快恢复机制，无论是收到冗余ACK还是丢包，都直接将cwnd设置为1。TCP的较新版本TCP Reno 则加入了快恢复机制。现在已有Reno的许多变种，例如Vegas，该算法在分组发生丢失之前检查源与目的地之间的拥塞，当检测出快要发生的分组丢失时(通过RTT的变化)，线性降低发送速率。</p>
+<p>7.2 对TCP吞吐量的宏观描述</p>
+<p>有了TCP的拥塞控制算法，可以考虑长期存活的TCP连接的吞吐量了。</p>
+<p>当窗口长度是w，往返时间为RTT，TCP的发送速率大约是W&#x2F;RTT，在一个窗口内发送了w后，收到前一半发送的分组的ACK，因此发送速率约为W&#x2F;RTT。不考虑慢开始阶段(指数增长，很快结束)，发生丢包时，假设速率减半，再增加到W&#x2F;RTT。在以上情况下，TCP的速率重复从W&#x2F;2RTT到W&#x2F;RTT的过程，在两个值之间线性增长，可以得出一个高度理想化的TCP稳态动态性模型：</p>
+<p>一条连接的平均吞吐量 &#x3D; 0.75 * W &#x2F;RTT</p>
+<p>在高带宽路径中，结合MSS和丢包率L，可以得出一条TCP连接的吞吐量公式：</p>
+<p>一条连接的平均吞吐量 &#x3D; 1.22 * MSS &#x2F; (RTT * sqrt(L) )</p>
+<p>7.3 公平性</p>
+<p>可以在吞吐量图上进行演示</p>
+<p>如果有多条TCP连接，通过同一段瓶颈链路，TCP趋于给竞争的多条TCP连接提供平等的带宽共享。书上给出了理想化的证明，在连接有相同MSS和RTT的情况下，公平性是可以保证的。</p>
+<p>现实中存在的不公平挑战：</p>
+<ul>
+<li>多媒体应用使用UDP连接压制TCP流量</li>
+<li>Web浏览器常使用并行连接传输多个对象</li>
+</ul>
+<p>7.4 明确拥塞通告</p>
+<p>拥塞控制的另一类是网络明确向TCP双方发送拥塞信号，这种形式的网络辅助拥塞控制称为明确网络拥塞控制通告ECN。这种形式下，路由器使用一种ECNbit指示该路由器正在经历拥塞，并将该标记携带在IP数据报中，发送给目的主机，再由目的主机告知源主机，实现拥塞控制。</p>
+<p>总结</p>
+<img src="/note-cn/cn-3.png" class="" title="图片来自中科大郑烇老师的PPT">
+
+
+<img src="/note-cn/cn-4.png" class="" title="图片来自中科大郑烇老师的PPT">
+
+
+
+
+
+
+<h2 id="4-网络层：数据平面"><a href="#4-网络层：数据平面" class="headerlink" title="4 网络层：数据平面"></a>4 网络层：数据平面</h2><h3 id="4-1-导论"><a href="#4-1-导论" class="headerlink" title="4.1 导论"></a>4.1 导论</h3><p>路由（控制平面，全局）&lt;&gt;转发（数据平面，局部）</p>
+<p>传统方式：基于目标地址+转发表</p>
+<p>SDN方式：基于多个字段+流表</p>
+<p>保证：服务模型，带宽，丢失，保序，延迟，拥塞反馈</p>
+<h3 id="4-2-路由器工作原理"><a href="#4-2-路由器工作原理" class="headerlink" title="4.2 路由器工作原理"></a>4.2 路由器工作原理</h3><p>路由器结构组件（4个）：</p>
+<ul>
+<li>输入端口，交换结构，输出端口，路由选择处理器</li>
+</ul>
+<p>输入端口处理和基于目的地的转发：最长前缀匹配规则</p>
+<p>“匹配+动作”抽象</p>
+<p>交换结构：</p>
+<ul>
+<li>经内存交换：由CPU（路由选择处理器）直接控制</li>
+<li>经总线交换：输入端口经一根共享总线将分组直接传送到输出端口</li>
+<li>经互联网络交换：纵横式交换机</li>
+<li>内存&#x2F;总线一次只能处理一个，纵横式只要彼此输出端口不同，一次可以处理n个</li>
+</ul>
+<p>交换速率：N倍输入&#x2F;输出端口速率，否则会成为瓶颈</p>
+<p>输出端口处理</p>
+<p>何处出现排队：输入排队，输出排队</p>
+<ul>
+<li><p>输入排队：线路前部阻塞（HOL）：由于队列前面的受到竞争而阻塞，后面的即使不存在竞争也要等待</p>
+</li>
+<li><p>输出排队：弃尾，主动队列管理（AQM）</p>
+</li>
+</ul>
+<p>多少缓存？</p>
+<ul>
+<li><p>缓存数量B&#x3D;平均往返时延RTT*链路容量C（少量TCP流量）</p>
+</li>
+<li><p>B&#x3D;RTT*C&#x2F;sqrt(N) （大量TCP流量，N条）</p>
+</li>
+</ul>
+<p>分组调度：FIFO，优先权排队（同一优先权分组之间使用FIFO，另：非抢占式优先权排队），循环和加权公平排队（）</p>
+<h3 id="★4-3-网际协议：IPV4，寻址，IPV6及其他"><a href="#★4-3-网际协议：IPV4，寻址，IPV6及其他" class="headerlink" title="★4.3 网际协议：IPV4，寻址，IPV6及其他"></a>★4.3 网际协议：IPV4，寻址，IPV6及其他</h3><p>★IPv4数据报格式</p>
+<p>【补充】</p>
+<p>★IPv4数据报分片</p>
+<p>MTU（最大传送单元）</p>
+<p>标识，标志（最后为0，其余为1），片偏移（计算题）</p>
+<p>★IPv4编址（地址协议）</p>
+<p>一个IP地址与一个接口（主机与物理链路的边界）相关联，而不是该接口的主机或路由器</p>
+<p>子网划分【考题：计算】</p>
+<ul>
+<li>网络地址（子网掩码确定的子网地址，后面部分全为0）</li>
+<li>主机地址（在网络地址和广播地址之间）</li>
+<li>广播地址（子网掩码确定的子网地址，后面部分全为1）</li>
+</ul>
+<p>（不考）特殊IPv4地址：</p>
+<ul>
+<li>默认路由：0.0.0.0</li>
+<li>环回地址：127.0.0.0&#x2F;8（测试IP协议栈是否正常）</li>
+<li>链路本地地址：169.254.0.0&#x2F;16</li>
+</ul>
+<p>（不考）地址分类（已经被淘汰了）</p>
+<ul>
+<li>A类地址（N.H.H.H）默认子网掩码（255.0.0.0）</li>
+<li>B类地址（N.N.H.H）默认子网掩码（255.255.0.0）</li>
+<li>C类地址（N.N.N.H）默认子网掩码（255.255.255.0）</li>
+</ul>
+<p>无类别域间路由选择（CIDR）</p>
+<ul>
+<li>a.b.c.d&#x2F;x前x最高比特构成IP地址的网络部分（网络前缀&#x2F;前缀）</li>
+</ul>
+<p>路由聚合&#x2F;地址聚合&#x2F;路由摘要：使用单个网络前缀通告多个网络的能力（书P221案例，通过申明更长的前缀，可以实现搬家的效果）</p>
+<p>★动态主机配置协议（DHCP，DynamicHostConfigurationProtocal）</p>
+<p>4个步骤【补充】</p>
+<ul>
+<li>DHCP发现报文</li>
+<li>DHCP提供报文</li>
+<li>DHCP请求报文</li>
+<li>DHCP ACK报文</li>
+</ul>
+<p>★网络地址转换NAT（NetworkAdressTranslation）</p>
+<p>10.0.0.0&#x2F;8这类地址被保留用于专用网络，仅在给定的网络中才有意义。</p>
+<p>NAT自己运行一个DHCP服务器给子网用户分IP地址，并从ISP的DHCP服务器得到自己的IP地址。</p>
+<p>NAT转换表（WAN端，LAN端）</p>
+<p>NAT缺点 ：</p>
+<ul>
+<li>（书上）服务器进程在周知端口号上等待入请求</li>
+<li>（书上）P2P对等方在充当服务器时需要接受入连接</li>
+<li>（书上）违背IP设计理念，破坏端到端模型</li>
+<li>延迟增加，</li>
+<li>应用限制</li>
+<li>端口限制（端口数量有限）</li>
+<li>单点故障</li>
+<li>未标准化</li>
+<li>突破NAT穿越问题很麻烦</li>
+</ul>
+<p>（不考）分类</p>
+<ul>
+<li>FullCone NAT（只要知道内部主机的IP和Port，就可以发送数据包）IP和端口都不限制</li>
+<li>Restricted  Cone NAT（只有内网主机主动请求过的外部主机，该外部主机可以使用自己的IP+任意端口，可以向内网主机发送）限制了IP不限制端口</li>
+<li>Port Restricted  Cone NAT（只有内网主机主动请求过的外部主机，该外部主机可以使用自己的IP+自己的端口，可以向内网主机发送）限制了IP+端口</li>
+<li>Symmetric NAT（只有收到内网主机发送的数据才能往回发送，无法实现UDP-P2P通信）</li>
+</ul>
+<p>（不考）NAT穿越</p>
+<ul>
+<li><p>中继，逆向链接，</p>
+</li>
+<li><p>UDP打洞（QQ的原理，A与B连接S进行注册，A向B通信时，A向S通信，要求B向S提供连接，一旦都打开，A可直接与B通信）</p>
+</li>
+</ul>
+<p>（老师给出）NAT的问题</p>
+<ul>
+<li>结构上不合理（与IP提供端到端可达性相悖）；单点故障；没有标准化；突破NAT穿越问题很麻烦；NAT不等同于防火墙；端口号限制</li>
+</ul>
+<p>IPv6</p>
+<p>IPv6数据报格式：版本，流量类型，流标签，有效载荷长度，下一个首部，跳限制，源地址，目的地址，数据</p>
+<p>★注意：IPv6地址共128bit，IPv6不允许在中间路由器上进行<strong>分片&#x2F;重新组装</strong>，并因此取消了<strong>首部检验和</strong>，同时取消了<strong>选项</strong>字段。</p>
+<p>IPv4到IPv6的迁移：建隧道，在中间使用IPv4的路段使用IPv4封装IPv6</p>
+<h3 id="（不考）4-4-通用转发和SDN"><a href="#（不考）4-4-通用转发和SDN" class="headerlink" title="（不考）4.4 通用转发和SDN"></a>（不考）4.4 通用转发和SDN</h3><h3 id="第4章补充"><a href="#第4章补充" class="headerlink" title="第4章补充"></a>第4章补充</h3><p>IP定位工具</p>
+<ul>
+<li>ping工具</li>
+<li>Traceroute工具</li>
+<li>HTTPHead</li>
+<li>CDN工具</li>
+<li>DNS工具</li>
+</ul>
+<p>网络空间测绘技术</p>
+<p>SDN三大特征</p>
+<ul>
+<li>集中控制、分离数据平面和可编程性</li>
+</ul>
+<p>P4 可编程协议无关报文处理语言</p>
+<p>SD-WAN 广域网组网</p>
+<h2 id="5-网络层：控制平面"><a href="#5-网络层：控制平面" class="headerlink" title="5 网络层：控制平面"></a>5 网络层：控制平面</h2><h3 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h3><p>路由选择算法</p>
+<p>分类方式（集中式&#x2F;分散式，静态&#x2F;动态，负载敏感&#x2F;负载迟钝）</p>
+<h3 id="5-2-路由选择算法"><a href="#5-2-路由选择算法" class="headerlink" title="5.2 路由选择算法"></a>5.2 路由选择算法</h3><h4 id="5-2-1-链路状态路由选择算法（LS）"><a href="#5-2-1-链路状态路由选择算法（LS）" class="headerlink" title="5.2.1 链路状态路由选择算法（LS）"></a>5.2.1 链路状态路由选择算法（LS）</h4><p>【具体内容……】Dijkstra算法</p>
+<p>问题：拥塞敏感的路由选择的振荡</p>
+<p>解决：确保并非所有路由器同时运行LS算法，避免自同步（发送链路通告的时间随机化）</p>
+<h4 id="5-2-2-距离向量路由选择算法（DV）"><a href="#5-2-2-距离向量路由选择算法（DV）" class="headerlink" title="5.2.2 距离向量路由选择算法（DV）"></a>5.2.2 距离向量路由选择算法（DV）</h4><p>【具体内容……】Bellman-Ford算法</p>
+<p>迭代的，异步的，分布式的算法</p>
+<p>问题：</p>
+<ul>
+<li>好消息传播快，坏消息传播慢（算法本身对于信息的真伪无法甄别）</li>
+<li>无穷计数问题：（链路突然变坏的消息没有及时被别的节点收到，误以为那条路仍然是好的，且这个消息会干扰到直接与那条路相连的节点）</li>
+<li>（解决：毒性逆转：z通告y路由选择到目的地x，则z向y通告它到x的距离是无穷大【三个以上节点的环路无法检测】）</li>
+<li>（书上没有）解决：水平分割：路由器不使用接收更新的同一接口来通告同一网络（从根本上解决问题）</li>
+</ul>
+<p>LS和DV比较</p>
+<ul>
+<li>报文复杂性：</li>
+<li>收敛速度：DV算法收敛慢，会遇到无穷计数问题</li>
+<li>健壮性：LS较好，DV上一个不正确的节点计算会扩散全网</li>
+</ul>
+<h3 id="5-3-OSPF：因特网中自治系统内部的路由选择"><a href="#5-3-OSPF：因特网中自治系统内部的路由选择" class="headerlink" title="5.3 OSPF：因特网中自治系统内部的路由选择"></a>5.3 OSPF：因特网中自治系统内部的路由选择</h3><p>开放最短路优先(OSPF)算法。</p>
+<p>OSPF是一种链路状态协议，使用洪泛链路状态信息和Dijkstra最短路径算法。每台路由器在本地运行Dijkstra算法，构建一个关于整个自治系统的完整拓扑图。</p>
+<p>使用OSPF时，路由器向自治系统内所有其他路由器广播路由选择信息（不仅仅是向邻居广播），当链路状态变化或经过一个特定周期，路由器就会广播链路状态信息。</p>
+<p>OSPF通告包含在OSPF报文中，直接由IP承载。</p>
+<p>OSPF优点如下：</p>
+<ul>
+<li>安全：使用鉴别，仅有受信任的路由器能参与一个AS内的OSPF协议。</li>
+<li>多条相同开销的路径：对于多条相同开销路径，OSPF允许使用多条路径，这样可以负载均衡。</li>
+<li>对单播与多播路由选择的综合支持。</li>
+<li>支持在单个AS中的层次结构：一个OSPF自治系统能够层次化配置多个区域，每个区域都运行自己的OSPF链路状态路由选择算法，路由器只在区域内进行广播，一台或多台边界路由器负责为流向区域外的分组提供路由选择。</li>
+</ul>
+<h3 id="★5-4-BGP：边界网关协议（Border-Gateway-Protocol）"><a href="#★5-4-BGP：边界网关协议（Border-Gateway-Protocol）" class="headerlink" title="★5.4 BGP：边界网关协议（Border Gateway Protocol）"></a>★5.4 BGP：边界网关协议（Border Gateway Protocol）</h3><p>对于BGP来说，只要把分组送到分组的目标网络，不需要考虑送到目标主机的问题。因此BGP中，一个目的地是一个地址前缀，即一个网络。BGP通过两个手段将分组送到目标网络：</p>
+<ul>
+<li>从邻居AS获取前缀的可达性信息：BGP允许每个子网向因特网中的其他部分通告自己的存在，这样一个AS就知道一个子网的存在，才可能将分组送达这个子网。即“我在这里”</li>
+<li>确定最好的路由路径：基于策略和可达性信息，路由器会选择一条尽可能好的路由路径传送分组。</li>
+</ul>
+<p>通告BGP路由信息</p>
+<ul>
+<li>路由器只有两种：网关路由器（在AS边缘），内部路由器（在AS内）</li>
+<li>路由器通过使用179端口的半永久【TCP连接】交换路由选择信息，每条路由器之间的连接和发送的BGP报文，称为BGP连接</li>
+<li>跨越两个AS的BGP连接为外部BGP(eBGP)，</li>
+<li>AS内部路由器的BGP会话为内部BGP(iBGP)</li>
+</ul>
+<p>BGP属性</p>
+<ul>
+<li>AS-PATH</li>
+<li>NEXT HOP：AS-PATH起始路由器的IP地址</li>
+</ul>
+<p>确定最好的路由</p>
+<ul>
+<li>热土豆路由选择：尽可能快地（最低开销地）送出本AS，即最靠近NEXT-HOP</li>
+<li>路由选择算法：依次采取以下规则：指派一个本地偏好作为属性之一，选择具有最短AS-PATH（AS-PATH就是从当前AS到达一个AS的路径）的路由，使用热土豆路由选择，使用BGP标识符</li>
+<li>注意：当在转发表中对于热土豆路由选择增加AS向外前缀时，AS间路由选择协议（BGP）和AS内部路由选择协议（OSPF）都要用到。</li>
+</ul>
+<p>IP任播</p>
+<ul>
+<li>常用于DNS</li>
+<li>用处：在分散不同的地理位置，替换不同服务器上的相同内容</li>
+<li>让每个用户从最靠近的服务器访问内容</li>
+<li>原理：为多台服务器指派相同的IP地址，并使用标准BGP通告该IP地址。这样当某台BGP路由器收到对于该IP地址的多个路由通告时，它会认为这是对相同物理位置的不同路径，因而根据本地的BGP路由选择算法选择一个较优的路径，事实上访问了最靠近的内容</li>
+<li>在CDN网络实践上并没有采用：BGP路由选择变化能导致相同的TCP连接的不同分组到达Web服务器的不同实例（即到达了不同的服务器上，虽然是同一个IP）</li>
+</ul>
+<p>路由选择策略</p>
+<ul>
+<li>客户网络&lt;&gt;提供商网络</li>
+<li>接入ISP：所有进入接入ISP网络的流量必定以该网络为目的地，所有离开该接入ISP网络的流量必定源于该网络。（我理解为该网络不承担中转任务，只作为终端节点的客户网络）</li>
+<li>多宿接入ISP：连接了多个提供商网络的客户网络。</li>
+<li>提供商网络间结算由它们自己协商</li>
+</ul>
+<p>拼装在一起</p>
+<p>如果要创建一个具有服务器的小型公司网络</p>
+<ul>
+<li><p>首先与本地ISP签合同，将网关路由器与ISP路由器相连，获取IP地址范围，分配IP地址，Web服务器，电子邮件服务器，DNS服务器，网关路由器以及其它设备都需要IP地址。</p>
+</li>
+<li><p>与因特网注册机构签合同，获取域名，向注册机构提供我的DNS服务器的IP地址，注册机构将在顶级域名服务器中为我的DNS服务器添加一个表项</p>
+</li>
+<li><p>本地ISP使用BGP向所有与它连接的ISP通告我的前缀，最终所有因特网路由器都将得知我的前缀。</p>
+</li>
+</ul>
+<h3 id="【不考】5-5-SDN控制平面"><a href="#【不考】5-5-SDN控制平面" class="headerlink" title="【不考】5.5 SDN控制平面"></a>【不考】5.5 SDN控制平面</h3><h3 id="★5-6-ICMP：因特网控制报文协议"><a href="#★5-6-ICMP：因特网控制报文协议" class="headerlink" title="★5.6 ICMP：因特网控制报文协议"></a>★5.6 ICMP：因特网控制报文协议</h3><p>主机和路由器用来彼此沟通网络层信息，用途：差错报告。</p>
+<p>ping的实现，ICMP源抑制报文，Traceroute的实现（向不可达UDP端口号发送TTL逐次递增的报文）</p>
+<p>补充：测试工具：</p>
+<ul>
+<li>ping的参数（-l size指定数据包大小，-i ttl设置存活，-w timeout设置超时时间）</li>
+<li>traceroute（tracert）</li>
+<li>netstat</li>
+<li>pathping（综合ping和traceroute的功能）</li>
+<li>tcping</li>
+<li>http-ping（解决针对ICMP-ping的伪装）</li>
+<li>dig（复现DNS查询过程，包括上级服务器等）</li>
+</ul>
+<h3 id="【】5-7-网络管理和SNMP"><a href="#【】5-7-网络管理和SNMP" class="headerlink" title="【】5.7 网络管理和SNMP"></a>【】5.7 网络管理和SNMP</h3><p>SNMP Protocol</p>
+<h2 id="6-链路层和局域网"><a href="#6-链路层和局域网" class="headerlink" title="6 链路层和局域网"></a>6 链路层和局域网</h2><h3 id="6-1-链路层概述"><a href="#6-1-链路层概述" class="headerlink" title="6.1 链路层概述"></a>6.1 链路层概述</h3><p>节点，链路，链路层帧（在链路之间传递的数据报被封装成链路层帧），</p>
+<p>链路层提供可能的服务</p>
+<ul>
+<li>成帧（framing）</li>
+<li>链路接入，媒体访问控制（MediumAccessControl,MAC）</li>
+<li>可靠交付（很多有线链路层协议不提供可靠交付）</li>
+<li>差错检测和纠正（EDC）</li>
+</ul>
+<p>链路层在何处实现？网络适配器&#x2F;网络接口卡（NIC）</p>
+<p>链路层是硬件和软件的结合体</p>
+<h3 id="6-2-差错检测和纠正技术"><a href="#6-2-差错检测和纠正技术" class="headerlink" title="6.2 差错检测和纠正技术"></a>6.2 差错检测和纠正技术</h3><p>【不重要】</p>
+<ul>
+<li>奇偶校验，</li>
+<li>检验和方法（运输层）：用软件实现。因特网检验和：TCP和UDP对首部&amp;数据字段计算，其他协议只对首部计算</li>
+<li>循环冗余检测（链路层）：硬件实现，可以使用复杂方法。</li>
+</ul>
+<p>循环冗余检测（CRC, Cyclic Redundancy Check）</p>
+<p>首先协商一个r+1比特模式，生成多项式G（最左边是1，剩下为r位）。</p>
+<p>发送方：对于给定要保护的多项式D，左移r位，右边空出来的部分填充R。变换后的式子是（D*2^r XOR R）。发送方要求出R，使得该式子可以整除G（整除的过程也相当于做异或）。</p>
+<p>R &#x3D; remainder[（D*2^r）&#x2F;G]，remainder的意思是取整除结果的后r位</p>
+<p>接收方：若接收到的式子是可以整除G的，就是正确的。</p>
+<p>这种方法可以检测小于r+1比特的突变。</p>
+<h3 id="★6-3-多路访问链路和协议"><a href="#★6-3-多路访问链路和协议" class="headerlink" title="★6.3 多路访问链路和协议"></a>★6.3 多路访问链路和协议</h3><p>多路访问协议</p>
+<ul>
+<li>信道划分协议（Channel Partition Protocol）</li>
+<li>随机接入协议（Random Access Protocol）</li>
+<li>轮流协议（Taking-turns Protocol）</li>
+</ul>
+<p>信道划分协议</p>
+<ul>
+<li>时分多路复用（TDM）</li>
+<li>频分多路复用（FDM）</li>
+<li>码分多址（CDMA）对每个节点分配一个不同的编码，接收方根据编码来接收，不同节点能同时传输（由于有混码问题，现在不再使用，【不重要】）</li>
+</ul>
+<p>随机接入协议</p>
+<ul>
+<li>时隙ALOHA：有一个新帧要发送的时候，在下一个时隙传输整个帧；若无碰撞，成功发出；若有碰撞，在之后以概率p在之后的每个时隙中重传该帧直到成功传出。（节点只在时隙起点开始传输帧，节点同步，每个节点知道时隙什么时候开始）</li>
+<li>ALOHA：没有引入时隙，规则同上。有一个新帧要发送的时候，立刻发送；若有碰撞，在该碰撞帧传递完后，立即以概率p重传以概率(1-p)等待这段时间，之后也是类似的。</li>
+<li>载波侦听多路访问（CSMA，Carrier Sense Multile Access）：【载波侦听】传输前先听信道，若有节点正在发送，就等它们传输完再等一小会儿自己再传输（还会发生碰撞，为什么？信道传播时延）</li>
+<li>具有碰撞检测的载波侦听多路访问（CSMA&#x2F;CD）：【载波侦听】跟上面一样+【碰撞检测】当检测到另一个节点正在传输干扰帧时，停止传输并随机等待一定时间（二进制指数后退binary exponential backoff算法：在该帧连续经历了n次碰撞后，等概率地从{0，1，……,2^n-1}中选择一个值作为K值。以太网中，K*512比特时间为在开始“侦听-当空闲时传输”前的等待时间）</li>
+<li>CSMA&#x2F;CD效率；近似公式：效率&#x3D;1&#x2F;（1+5d[prop]&#x2F;d[trans]），d[prop]为信号能量在仍任意两个适配器之间传播所需的最大时间，d[trans]表示传输一个最大长度的以太网帧的时间</li>
+</ul>
+<p>轮流协议</p>
+<ul>
+<li>轮询协议：主节点通知每个节点它可以传输的帧的最多数量（缺点：引入轮询时延，若主节点有故障整个网络瘫痪）</li>
+<li>令牌传递协议：没有主节点，不同节点之间传递一个被称为“令牌”的特殊帧（缺点，任意节点出问题使令牌没有正确传递，网络都会瘫痪）</li>
+</ul>
+<p>DOCSIS：用于电缆因特网接入的链路层协议【不重要】</p>
+<h3 id="★6-4-交换局域网LANS（LocalNetwork）"><a href="#★6-4-交换局域网LANS（LocalNetwork）" class="headerlink" title="★6.4 交换局域网LANS（LocalNetwork）"></a>★6.4 交换局域网LANS（LocalNetwork）</h3><p>链路层地址，又称：LAN地址，物理地址，MAC地址</p>
+<h4 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h4><ul>
+<li>主机和路由器（的适配器）具有MAC地址</li>
+<li>MAC地址是唯一的（由IEEE管理）</li>
+<li>MAC广播地址：FF-FF-FF-FF-FF-FF</li>
+</ul>
+<h4 id="ARP（Address-Relsolution-Protocol）"><a href="#ARP（Address-Relsolution-Protocol）" class="headerlink" title="ARP（Address Relsolution Protocol）"></a>ARP（Address Relsolution Protocol）</h4><ul>
+<li>作用：将IP地址转换为MAC地址</li>
+<li>区别：DNS为在因特网中任何地方的主机解析主机名，而ARP只为在同一个子网上的主机和路由器接口解析IP地址</li>
+<li>ARP表（保存IP地址和MAC地址，有TTL，通常为20mins）</li>
+<li>ARP是跨越链路层和网络层的协议</li>
+</ul>
+<p>在子网内发送：</p>
+<ul>
+<li>若ARP表中有对应IP的MAC地址，让适配器直接发送即可。</li>
+<li>若ARP表没有对应IP的MAC地址，向适配器传递ARP查询分组，适配器用广播MAC地址FF-FF-FF-FF-FF-FF发送使用链路层帧封装好的ARP分组；接收到的每个适配器都会检查自己的MAC地址是不是要找的，如果是，使用标准帧回应。</li>
+</ul>
+<p>发送到子网外：</p>
+<ul>
+<li>路由器的每个接口都有一个IP地址，一个ARP模块和一个适配器</li>
+<li>源主机A向该子网的网关路由器B发送数据包</li>
+<li>若主机A没有该路由器B的MAC，使用ARP寻址</li>
+<li>网关路由器B向目标子网发送数据包</li>
+<li>若网关路由器B没有目标主机C的MAC，使用ARP寻址</li>
+</ul>
+<h4 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h4><ul>
+<li>集线器（物理设备）&lt;&gt;交换机</li>
+<li>集线器作用于各比特，在一个接口上收到一个比特时，将能量强度放大，然后将该比特向其他所有接口传输出去（相当于一次只能接通一条线路）</li>
+<li>以太网帧结构：数据字段（46-1500字节，超过1500字节需要分片），目的地址（6字节），源地址（6字节），类型字段（2字节：IP?ARP?……），CRC（循环冗余检测，4字节），前同步码（8字节：用于唤醒适配器并且同步时钟）</li>
+<li>以太网技术向网络层：提供无连接服务（不握手），提供不可靠服务（不回ACK也不否认）</li>
+</ul>
+<h4 id="链路层交换机"><a href="#链路层交换机" class="headerlink" title="链路层交换机"></a>链路层交换机</h4><ul>
+<li>作用：接收入链路层帧并转发到出链路</li>
+<li>对于子网中的主机和路由器来说是透明的</li>
+<li>过滤：决定某帧是转发到某个接口还是丢弃</li>
+<li>转发：决定某帧应该被导向某个接口</li>
+</ul>
+<p>对于帧的处理</p>
+<ul>
+<li>对于从x接口到达的帧：</li>
+<li>若没有其目的MAC对应的表项，向除到来接口x外所有口广播该帧</li>
+<li>若有其目的MAC对应的表项且接口为x，丢弃该帧</li>
+<li>若有其目的MAC对应的表项且接口为y≠x，向接口y的输出缓存转发该帧</li>
+</ul>
+<p>交换机表的更新</p>
+<ul>
+<li>交换机表：</li>
+<li>表项为MAC地址，接口，时间</li>
+<li>具有自学习能力：初始为空，对于T时间从x接口接收到的MAC地址为M的入帧，在交换机表中加入一条（M,x,T），在老化期后若再没收到，就删除该表项</li>
+<li>交换机为“即插即用设备”，全双工（每个接口都能同时收发）</li>
+</ul>
+<p>链路层交换机&lt;&gt;路由器</p>
+<ul>
+<li>交换机即插即用，路由器需要人为配置IP地址</li>
+<li>路由器对分组处理时间更长</li>
+<li>路由器通常不会发生路由器循环，即使有冗余路径</li>
+<li>路由器对第二层的广播风暴提供了保护</li>
+</ul>
+<h4 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h4><p>之前的局域网存在缺陷：缺乏流量隔离，每个最小单位太多时导致交换机的无效使用，管理用户困难</p>
+<p>VLAN（Virtual LAN）允许用一个单一物理局域网的基础设施定义多个虚拟局域网</p>
+<p>VLAN干线连接（每个交换机上有一个特殊的端口用来连接一个交换机，一种特殊的帧802.1Q用于跨越VLAN干线）</p>
+<h3 id="【】6-5-链路虚拟化：网络作为链路层"><a href="#【】6-5-链路虚拟化：网络作为链路层" class="headerlink" title="【】6.5 链路虚拟化：网络作为链路层"></a>【】6.5 链路虚拟化：网络作为链路层</h3><p>PARP</p>
+<p>MPLS</p>
+<h3 id="【】6-6-数据中心网络"><a href="#【】6-6-数据中心网络" class="headerlink" title="【】6.6 数据中心网络"></a>【】6.6 数据中心网络</h3><h3 id="★6-7-回顾：Web页面请求的历程"><a href="#★6-7-回顾：Web页面请求的历程" class="headerlink" title="★6.7 回顾：Web页面请求的历程"></a>★6.7 回顾：Web页面请求的历程</h3><p>【书P326-330】</p>
+<p>DHCP(UDP)→DHCP服务器返回分配的IP地址，默认网关路由器IP地址，DNS服务器IP地址</p>
+<p>→ARP→查询默认网关路由器MAC地址</p>
+<p>→DNS(UDP)→查询<a target="_blank" rel="noopener" href="http://www.hnu.edu.cn的ip地址(路由器根据自治区内ospf知道dns服务器该如何转发)/">www.hnu.edu.cn的IP地址（路由器根据自治区内OSPF知道DNS服务器该如何转发）</a></p>
+<p>→TCP三次握手，HTTP GET</p>
+<h2 id="7-无线网络和移动网络"><a href="#7-无线网络和移动网络" class="headerlink" title="7 无线网络和移动网络"></a>7 无线网络和移动网络</h2><h3 id="7-1-概述"><a href="#7-1-概述" class="headerlink" title="7.1  概述"></a>7.1  概述</h3><p>无线主机，无线通信链路（两个主要特性：覆盖区域，链路速率）</p>
+<p>基站（蜂窝塔，接入点等），无线主机与基站“相关联”：该主机位于该基站的无线通信覆盖范围内，该主机使用该基站中继它与更大网络之间的数据</p>
+<p>基础设施模式（通过基站相连），自组织网络（无基础设施）</p>
+<p>基于一个无线跳&#x2F;多个无线跳分组：</p>
+<ul>
+<li>单跳，基于基础设施：802.11，4G LTE数据网络</li>
+<li>单跳，无基础设施：蓝牙网络，具有自组织模式的802.11</li>
+<li>多跳，基于基础设施：无线传感网络，无线网状网络</li>
+<li>多跳，无基础设施：移动自组织网络</li>
+</ul>
+<h3 id="7-2-无线链路和网络特征"><a href="#7-2-无线链路和网络特征" class="headerlink" title="7.2 无线链路和网络特征"></a>7.2 无线链路和网络特征</h3><p>★有线链路与无线链路的区别：</p>
+<ul>
+<li>递减的信号强度（路径损耗）</li>
+<li>来自其它源的干扰（同一个频段发射的电波源互相干扰）</li>
+<li>多径传播（电磁波受到物体和地面的反射，使得信号变模糊）</li>
+<li>隐藏终端问题：A和C都向B通信，但由于物理阻隔，A和C彼此不知道对方的存在</li>
+</ul>
+<p>对于CDMA编码的讨论【略】</p>
+<h3 id="7-3-WiFi：802-11-无线-LAN"><a href="#7-3-WiFi：802-11-无线-LAN" class="headerlink" title="7.3 WiFi：802.11 无线 LAN"></a>7.3 WiFi：802.11 无线 LAN</h3><p>802.11结构：</p>
+<ul>
+<li>基本服务集（BSS,Basic Service Set），一个BSS包含一个或多个无线站点和中央基站</li>
+<li>接入点（AP,Acess Point）</li>
+</ul>
+<p>信道与关联</p>
+<ul>
+<li>AP被安装时，会分配一个服务器标识符（SSID,Service Set Identifier）和一个信道号</li>
+<li>每个AP周期性地发送信标帧（包括该AP的SSID和MAC地址）</li>
+<li>我的无线站点扫描信道并连接可用的AP用于关联</li>
+<li>扫描方式可以有被动扫描和主动扫描（广播探测帧）</li>
+<li>确定想关联的AP后，我的无线主机向该AP发送一个关联请求帧，该AP使用关联响应帧回应</li>
+<li>关联后，我的主机通过关联的AP向子网发送DHCP发现报文，以获取在该AP子网中的一个IP地址</li>
+</ul>
+<p>802.11 MAC协议</p>
+<p>CSMA&#x2F;CA（collision avoidance）带碰撞避免的CSMA</p>
+<p>★802.11与以太网的区别</p>
+<ul>
+<li>802.11使用碰撞避免而非碰撞检测（接收信号的强度远远小于发送强度，无法同时发送&#x2F;接收信号，隐藏终端问题和衰减问题，没法做到碰撞检测）</li>
+<li>由于误比特率高，802.11使用链路层确认&#x2F;重传（ARQ）方案</li>
+</ul>
+<p>链路层确认：</p>
+<p>目的站点收到一个帧后，等待一小段时间（短帧间间隔SIFS），发挥一个确认帧，若发送站点一定时间内未收到确认帧，就假定错误并重传该帧，若多次错误就抛弃该帧。</p>
+<p>CSMA&#x2F;CA：</p>
+<ul>
+<li>站点最初监听到信道空闲，在短时间（分布式间隔帧DIFS）后发送该帧</li>
+<li>否则，该站点选取一个随机回退值，并在侦听信道空闲时递减该值，若信道忙，该值不变。</li>
+<li>当计数减为0时，该站点发送整个数据帧并等待确认</li>
+<li>若收到确认，则该帧成功发送。若未收到确认，重新进入选取回退值的阶段，并在一个更大的范围内选择回退值</li>
+</ul>
+<p>处理隐藏终端：RTS和CTS</p>
+<ul>
+<li>请求发送控制帧RTS</li>
+<li>允许发送控制帧CTS</li>
+<li>发送方先向AP发RTS并预约传输DATA帧和收回ACK帧需要的时间</li>
+<li>AP广播CTS，回应发送方并授权许可，同时该CTS还能指示其它站点在预约期内不要发送</li>
+</ul>
+<p>使用802.11作为一个点对点链路</p>
+<ul>
+<li>定向天线</li>
+</ul>
+<p>7.3.3 IEEE 802.11帧</p>
+<p>有4个地址（我们关注3个）</p>
+<ul>
+<li>地址2：传输该帧的站点的MAC地址</li>
+<li>地址1：要接受该帧的无线站点的MAC地址</li>
+<li>地址3：AP接入的路由器接口的MAC地址</li>
+<li>（前两个负责无线通信，最后一个确认路由器MAC）</li>
+</ul>
+<p>7.3.4 在相同的IP子网中的移动性</p>
+<ul>
+<li>我的无线站点在远离AP1后解除与AP1的关联，并与AP2关联。</li>
+<li>怎么让交换机知道？在新关联形成后，让AP2以我的无线站点的源地址向交换机发送以太网广播帧</li>
+</ul>
+<p>LTE：long term evolution</p>
+<h2 id="课程总结"><a href="#课程总结" class="headerlink" title="课程总结"></a>课程总结</h2><p>架构</p>
+<ul>
+<li>分层架构(internet)、集中&#x2F;分布式、端到端、C&#x2F;S、B&#x2F;S、P2P</li>
+</ul>
+<p>原则 - principles</p>
+<ul>
+<li>端到端：保持一个极简的网络核心，将复杂留在端</li>
+<li>传输层：不可靠网络层上的可靠通信、连接建立&#x2F;拆除和握手、拥塞和流量控制以及多路复用</li>
+<li>网络层：确定两个路由器之间的“良好”路径、互连大量异构网络以及管理现代网络的复杂性、控制平面&#x2F;数据平面</li>
+<li>链路层：共享多路访问信道，处理&#x2F;避免冲突，数据包转发与寻址</li>
+<li>分层之间的连接：DNS，DHCP，ARP</li>
+<li>性能指标：时延，吞吐率</li>
+<li>这些原则具有较长“保质期”—在今天的网络标准和协议过时之后，它们所体现的原则仍然很重要和相关。</li>
+<li>掌握与这些原则相关的基本问题和解决方法，以后能够快速了解几乎任何网络技术。</li>
+</ul>
+<p>发展与竞争</p>
+<ul>
+<li>技术演进：HTTP1.0-&gt;3.0,TCP算法，IPV4-&gt;IPV6，以太网（10M-&gt;100G），无线网（2G-&gt;6G,wifi-&gt;wifi7）</li>
+<li>产业兴衰：伴随网络发展，传统业务比如有线电视，语音电话，短信不断衰落;互联网-&gt;移动互联网-&gt;产业互联网</li>
+</ul>
+<p>争论与妥协</p>
+<ul>
+<li>电路交换-包交换，集中-分布式，端到端-NAT，IPV4-IPV6，非二层交换、硬件-软件，符号主义-连接主义，</li>
+</ul>
+<p>矛盾与演进</p>
+<ul>
+<li>对立统一（中心化&#x2F;去中心化）、在应用中螺旋上升</li>
+</ul>
+<h2 id="备考"><a href="#备考" class="headerlink" title="备考"></a>备考</h2><p>网路层路由，路由器怎么工作，路由协议，路由算法，路由器转发动作</p>
+<p>数据平面和控制平面分离，不考</p>
+<p>IPv4地址分配，NAT★P225，</p>
+<p>ICMP不考</p>
+<p>OSPF BGP</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wolfvoid.github.io/2024/01/16/Note-CN/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/01/16/Note-AI/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Note-AI
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/08/25/HEXO%E8%87%AA%E5%BB%BA%E7%BD%91%E7%AB%99/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">基于Hexo自建一个github托管的静态网页</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2025
+        <i class="ri-heart-fill heart_icon"></i> wolf void
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Wolf&#39;s void"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/649a5fe20000000010036f31">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2450887558&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

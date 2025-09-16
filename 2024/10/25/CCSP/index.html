@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>CCSP |  Wolf&#39;s void</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-CCSP"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  CCSP
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/10/25/CCSP/" class="article-date">
+  <time datetime="2024-10-25T03:37:14.000Z" itemprop="datePublished">2024-10-25</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">3.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">21 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p> 小蒟蒻前两天参加了CCSP2024</p>
+<img src="/2024/10/25/CCSP/CCSP-1.png" class="" title="CCSP-2024">
+
+<p>最终幸运蹭铜（蹭着本科的边边捞到了铜牌，没有遗憾了）。</p>
+<img src="/2024/10/25/CCSP/CCSP-2.png" class="" title="最终分数板">
+
+<h2 id="评价感受"><a href="#评价感受" class="headerlink" title="评价感受"></a>评价感受</h2><p>本来只是来打酱油（蹭吃蹭喝）的，因为自从推免结束后，已经正好一个月没碰代码了，上一次碰代码还是参加某学校的机考。但是编程这个东西很神奇，不管你多久没碰代码，一看到题目就突然会了，还是能比划比划的。于是上来20分钟直接贪心算法（我不会别的算法了），先AC了第一道题。之后又试了试贝壳统计，发现前10个点数据量很小，并且操作简单，完全可以暴力解决，故一番尝试之后先把这题拿了40分。</p>
+<img src="/2024/10/25/CCSP/CCSP-3.png" class="" title="前一个半小时就拿到了140分">
+
+<p>此时时间过去了一个半小时，我又看了看数树，发现这道题逻辑很清晰，三个层次的数据点，前两个层次只要把树模拟出来就可以很轻易地得分，故我就先拿到了这55分。此时已经12点过了，比赛过了3小时，拿到了195分。</p>
+<img src="/2024/10/25/CCSP/CCSP-4.png" class="" title="午饭前拿到195分">
+
+<p>正好吃一下午饭，收拾收拾心情。午饭没有拍照（没有手机），但感觉还是可以的，盒饭，还发了个香蕉。午饭结束后我感觉数树的后面45分有个旋转，当时潜意识里感觉没那么容易，于是就先放一放。开始开系统题（也就是超级大模拟），这一开不要紧，直接写了4个小时的bitTorent服务器，要求实现接受6个指令并做出反应，我感觉最低的得分门槛大概涵盖了70%的工作量，但只有30分，但一旦实现了这个最低门槛，再往上拿分就比较容易了。很遗憾，我写了四个小时没有写出来，没有通过这个最低门槛。后来看到似乎这个最低门槛还是与未要求的指令有关系，这个就不知道了。中途又对贝壳统计改进了又交了一发还是没有提升。此时已经到了晚上五点半，天黑了。等于是我一个下午一分都没有拿，心态有点炸。打开排行榜一看，发现自己已经掉出了铜奖线，遂没有什么别的想法，开始摆烂。正好又来了盒饭，故事已至此，先吃饭吧。</p>
+<p>边吃饭边看前面的题目，想再捞点分。发现数树的最后一部分其实还好，没有想象的那么难。边吃边想，想的差不多了就看最后一道系统题，发现前两个得分点还是比较简单的。遂定下方针，先把数树拿到，再最后一道系统题捞20分，就是赚了。如果这个策略能成真，那估计就有260，可能有铜奖了。</p>
+<p>饭后敲了半个小时，直接提交，数树AC了，此时已经六点半了，我AC了第二道题。这45分一加，效果很显著，直接跳到了铜奖中间的位置，240分。</p>
+<img src="/2024/10/25/CCSP/CCSP-5.png" class="" title="晚饭后拿到240分">
+
+<p>然后做最后一道系统题，本来以为能捞20分的，结果只拿到10分，此时已经七点了，先尝试找bug，找了半个小时没找到，又试试别的题，之后就没有任何进展了。</p>
+<p>临结束的时候交了一发贝壳统计，换了一种思路，当时没立刻出结果，后来看到还是TLE，那就没办法了，就这样吧。事后发现，如果这个拿满，还是可能银牌的，呵呵。</p>
+<img src="/2024/10/25/CCSP/CCSP-6.png" class="" title="结束时拿到250分">
+
+<p>全过程跌宕起伏吧，从一开始的无所谓，到发现自己还是有点希望的，再到跌出铜奖线，开始摆烂，然后又绝处逢生，再到最后实在找不出bug了，就这样潦草画上句点。</p>
+<p>总的来说我还是非常幸运的。感谢勇于尝试的自己。</p>
+<h2 id="金银铜奖情况"><a href="#金银铜奖情况" class="headerlink" title="金银铜奖情况"></a>金银铜奖情况</h2><p>金奖靠前ranklist（全都是大佬）</p>
+<p>第一名是在封榜前AK的，真的是非常厉害</p>
+<img src="/2024/10/25/CCSP/CCSP-7.png" class="" title="金奖前几名的得分情况">
+
+<p>金奖线（365）</p>
+<img src="/2024/10/25/CCSP/CCSP-8.png" class="" title="金银分界线">
+
+<p>银奖线（300）</p>
+<img src="/2024/10/25/CCSP/CCSP-9.png" class="" title="银铜分界线">
+
+<p>铜奖线（240靠前）</p>
+<p>只有时间较早拿到240的同学才有铜奖</p>
+
+
+<h2 id="题目与解答"><a href="#题目与解答" class="headerlink" title="题目与解答"></a>题目与解答</h2><p>部分题目不会，没答上来。</p>
+<h3 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h3><p>AC代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt;&gt; q;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> temp;</span><br><span class="line">        cin&gt;&gt;temp;</span><br><span class="line">        q.<span class="built_in">push</span>(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> t1=<span class="number">0</span>,t2=<span class="number">0</span>;</span><br><span class="line">    <span class="type">bool</span> flag1,flag2;</span><br><span class="line">    <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;q.top();</span></span><br><span class="line">        <span class="comment">// q.pop();</span></span><br><span class="line">        <span class="type">int</span> now = q.<span class="built_in">top</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (t2&lt;t1)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (now &gt; t2) t2=now+<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">else</span> t2+=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (now &gt; t1) t1=now+<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">else</span> t1+=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (t1&gt;t2) <span class="built_in">swap</span>(t1,t2);</span><br><span class="line">    cout&lt;&lt;t1&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;t2&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="第2题"><a href="#第2题" class="headerlink" title="第2题"></a>第2题</h3><p>40分代码（仅完成1-10数据点）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span> n,m;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> temp;</span><br><span class="line">        cin&gt;&gt;temp;</span><br><span class="line">        v.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (n&lt;=<span class="number">10000</span> &amp;&amp; m&lt;=<span class="number">10000</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(m--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> op,a,b;</span><br><span class="line">            cin&gt;&gt;op&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            <span class="keyword">if</span> (op==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// set&lt;int&gt; s;</span></span><br><span class="line">                <span class="comment">// for (int i=a-1; i&lt;=b-1; i++)</span></span><br><span class="line">                <span class="comment">// &#123;</span></span><br><span class="line">                <span class="comment">//     int now = v[i];</span></span><br><span class="line">                <span class="comment">//     if (s.find(now) == s.end())</span></span><br><span class="line">                <span class="comment">//     &#123;</span></span><br><span class="line">                <span class="comment">//         sum++;</span></span><br><span class="line">                <span class="comment">//         s.insert(now);</span></span><br><span class="line">                <span class="comment">//     &#125;</span></span><br><span class="line">                <span class="comment">// &#125;</span></span><br><span class="line">                <span class="type">bool</span> ntemp[<span class="number">20000</span>];</span><br><span class="line">                <span class="built_in">memset</span>(ntemp,<span class="number">0</span>,<span class="built_in">sizeof</span>(ntemp));</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> i=a<span class="number">-1</span>; i&lt;=b<span class="number">-1</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">int</span> now = v[i];</span><br><span class="line">                    <span class="keyword">if</span> (ntemp[now] == <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        sum++;</span><br><span class="line">                        ntemp[now] = <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                cout&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (op==<span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                v[a<span class="number">-1</span>] = b;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>()+a, b);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,vector&lt;<span class="type">int</span>&gt;&gt; mp;</span><br><span class="line">        <span class="type">bool</span> ntemp[<span class="number">200000</span>];</span><br><span class="line">        <span class="built_in">memset</span>(ntemp,<span class="number">0</span>,<span class="built_in">sizeof</span>(ntemp));</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (ntemp[v[i]] == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ntemp[v[i]] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j=<span class="number">0</span>; j&lt;mp[v[i]].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                temp.<span class="built_in">push_back</span>(mp[v[i]][j]);</span><br><span class="line">                mp[v[i]].<span class="built_in">push_back</span>(mp[v[i]][j]);&#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> x : temp) mp[x].<span class="built_in">push_back</span>(v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(m--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> op,a,b;</span><br><span class="line">            cin&gt;&gt;op&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            <span class="keyword">if</span> (op==<span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> x : mp)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">if</span> (x.first&gt;=a &amp;&amp; x.first&lt;=b)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">auto</span> y : x.second)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">if</span> (y&gt;=a &amp;&amp; y&lt;=b) count++;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    count /= <span class="number">2</span>;</span><br><span class="line">                    count --;</span><br><span class="line">                    sum+=count;</span><br><span class="line">                &#125;</span><br><span class="line">                cout&lt;&lt;b-a+<span class="number">1</span>-sum&lt;&lt;endl;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (op==<span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                v[a<span class="number">-1</span>] = b;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>()+a, b);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="第3题"><a href="#第3题" class="headerlink" title="第3题"></a>第3题</h3><p>AC代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="type">int</span> parent;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; child;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">findnum</span><span class="params">(vector&lt;node&gt; &amp;list, <span class="type">int</span> u, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (list[u].child.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (list[u].data &gt; v) ret = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;list[u].child.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ret += <span class="built_in">findnum</span>(list,list[u].child[i],v);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (list[u].data &gt; v) ret += <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">findmax</span><span class="params">(vector&lt;node&gt; &amp;list, <span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> maxnum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (list[u].child.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        maxnum = <span class="built_in">max</span>(list[u].data, maxnum); </span><br><span class="line">        <span class="keyword">return</span> maxnum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;list[u].child.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            maxnum = <span class="built_in">max</span>(maxnum, <span class="built_in">findmax</span>(list,list[u].child[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(maxnum, list[u].data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">findmin</span><span class="params">(vector&lt;node&gt; &amp;list, <span class="type">int</span> u, <span class="type">int</span>&amp; minvalue, <span class="type">int</span>&amp; minnum)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!list[u].child.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;list[u].child.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">findmin</span>(list, list[u].child[i], minvalue, minnum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (list[u].data &lt; minvalue)</span><br><span class="line">    &#123;</span><br><span class="line">        minnum = u;</span><br><span class="line">        minvalue = list[u].data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (list[u].data == minvalue &amp;&amp; u&lt;minnum)</span><br><span class="line">    &#123;</span><br><span class="line">        minnum = u;</span><br><span class="line">        minvalue = list[u].data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">rotate</span><span class="params">(vector&lt;node&gt; &amp;list, <span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (list[u].parent == <span class="number">-1</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">rotate</span>(list, list[u].parent);</span><br><span class="line">    <span class="type">int</span> parentnum = list[u].parent;</span><br><span class="line">    <span class="keyword">auto</span> childpos = <span class="built_in">find</span>(list[parentnum].child.<span class="built_in">begin</span>(), list[parentnum].child.<span class="built_in">end</span>(), u);</span><br><span class="line">    list[parentnum].child.<span class="built_in">erase</span>(childpos);</span><br><span class="line">    list[parentnum].parent = u;</span><br><span class="line">    list[u].parent = <span class="number">-1</span>;</span><br><span class="line">    list[u].child.<span class="built_in">push_back</span>(parentnum);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n,m;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    vector&lt;node&gt; list;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        node newnode;</span><br><span class="line">        newnode.parent = <span class="number">-1</span>;</span><br><span class="line">        list.<span class="built_in">push_back</span>(newnode);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u,v;</span><br><span class="line">        cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">        u--;</span><br><span class="line">        v--;</span><br><span class="line">        list[u].child.<span class="built_in">push_back</span>(v);</span><br><span class="line">        list[v].parent = u;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> temp;</span><br><span class="line">        cin&gt;&gt;temp;</span><br><span class="line">        list[i].data = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;m;</span><br><span class="line">    <span class="type">int</span> last = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> DEBUG =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG)</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;endl;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;list.<span class="built_in">size</span>(); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                cout&lt;&lt;<span class="string">&quot;index = &quot;</span>&lt;&lt;i&lt;&lt;<span class="string">&quot; value = &quot;</span>&lt;&lt;list[i].data&lt;&lt;<span class="string">&quot; | &quot;</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j=<span class="number">0</span>; j&lt;list[i].child.<span class="built_in">size</span>(); j++) cout&lt;&lt;list[i].child[j]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">                cout&lt;&lt;endl;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> op;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">            u ^= last;</span><br><span class="line">            v ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            last = <span class="built_in">findnum</span>(list,u,v);</span><br><span class="line">            cout&lt;&lt;last&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">            u ^= last;</span><br><span class="line">            v ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            list[u].data = v;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u&gt;&gt;v;</span><br><span class="line">            u ^= last;</span><br><span class="line">            v ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            <span class="type">int</span> now = list.<span class="built_in">size</span>();</span><br><span class="line">            node newnode;</span><br><span class="line">            list.<span class="built_in">push_back</span>(newnode);</span><br><span class="line">            list[now].data = v;</span><br><span class="line">            list[u].child.<span class="built_in">push_back</span>(now);</span><br><span class="line">            list[now].parent = u;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">4</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u;</span><br><span class="line">            u ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            <span class="type">int</span> parent = list[u].parent;</span><br><span class="line">            list[parent].child.<span class="built_in">erase</span>(<span class="built_in">find</span>(list[parent].child.<span class="built_in">begin</span>(),list[parent].child.<span class="built_in">end</span>(),u));</span><br><span class="line">            list[u].parent = <span class="number">-1</span>;</span><br><span class="line">            last = <span class="built_in">findmax</span>(list,u);</span><br><span class="line">            cout&lt;&lt;last&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u;</span><br><span class="line">            u ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            <span class="type">int</span> minvalue = <span class="number">9999999</span>;</span><br><span class="line">            <span class="type">int</span> minnum = <span class="number">99999</span>;</span><br><span class="line">            <span class="built_in">findmin</span>(list, u, minvalue, minnum);</span><br><span class="line">            last = minnum + <span class="number">1</span>;</span><br><span class="line">            cout&lt;&lt;last&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">6</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u,v;</span><br><span class="line">            cin&gt;&gt;u;</span><br><span class="line">            u ^= last;</span><br><span class="line">            u--;</span><br><span class="line">            <span class="built_in">rotate</span>(list,u);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="第4题"><a href="#第4题" class="headerlink" title="第4题"></a>第4题</h3><p>10分代码（只完成数据点1）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// CREATE_Proc pid load</span></span><br><span class="line"><span class="comment">// DESTROY_Thread tid</span></span><br><span class="line"><span class="comment">// CREATE_Thread pid tid load</span></span><br><span class="line"><span class="comment">// SCHEDULE_OPT</span></span><br><span class="line"></span><br><span class="line">map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; tidref;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">pnode</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> pid;</span><br><span class="line">    <span class="type">int</span> load;</span><br><span class="line">    map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; threadlist;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">map&lt;<span class="type">int</span>,pnode&gt; plist;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        string str;</span><br><span class="line">        <span class="built_in">getline</span>(cin,str);</span><br><span class="line">        stringstream ss;</span><br><span class="line">        ss &lt;&lt; str;</span><br><span class="line">        string op;</span><br><span class="line">        vector&lt;string&gt; envlist;</span><br><span class="line">        ss &gt;&gt; op;</span><br><span class="line">        string temp;</span><br><span class="line">        <span class="keyword">while</span>(ss &gt;&gt; temp)</span><br><span class="line">        &#123;</span><br><span class="line">            envlist.<span class="built_in">push_back</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;CREATE_Proc&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// CREATE_Proc pid load</span></span><br><span class="line">            <span class="type">int</span> pid = <span class="built_in">stoi</span>(envlist[<span class="number">0</span>]);</span><br><span class="line">            <span class="type">int</span> load = <span class="built_in">stoi</span>(envlist[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (plist.<span class="built_in">find</span>(pid) != plist.<span class="built_in">end</span>()) <span class="keyword">continue</span>;</span><br><span class="line">            pnode newnode;</span><br><span class="line">            newnode.pid = pid;</span><br><span class="line">            newnode.load = load;</span><br><span class="line">            newnode.threadlist.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(pid,load));</span><br><span class="line">            tidref.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(pid,pid));</span><br><span class="line">            plist.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(pid,newnode));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;CREATE_Thread&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// CREATE_Thread pid tid load</span></span><br><span class="line">            <span class="type">int</span> pid = <span class="built_in">stoi</span>(envlist[<span class="number">0</span>]);</span><br><span class="line">            <span class="type">int</span> tid = <span class="built_in">stoi</span>(envlist[<span class="number">1</span>]);</span><br><span class="line">            <span class="type">int</span> load = <span class="built_in">stoi</span>(envlist[<span class="number">2</span>]);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (plist.<span class="built_in">find</span>(tid) != plist.<span class="built_in">end</span>()) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">auto</span> pos = plist.<span class="built_in">find</span>(pid);</span><br><span class="line">            <span class="keyword">if</span> (pos != plist.<span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                pos-&gt;second.threadlist.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(tid,load));</span><br><span class="line">                tidref.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(tid,pid));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;DESTROY_Thread&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// DESTROY_Thread tid</span></span><br><span class="line">            <span class="type">int</span> tid = <span class="built_in">stoi</span>(envlist[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (tidref.<span class="built_in">find</span>(tid) == tidref.<span class="built_in">end</span>()) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> pid = tidref[tid]; </span><br><span class="line">            plist[pid].threadlist.<span class="built_in">erase</span>(tid);</span><br><span class="line">            tidref.<span class="built_in">erase</span>(tid);</span><br><span class="line">            <span class="keyword">if</span> (plist[pid].threadlist.<span class="built_in">empty</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                plist.<span class="built_in">erase</span>(pid);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;SCHEDULE_OPT&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// SCHEDULE_OPT</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> x : plist)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> y : x.second.threadlist)</span><br><span class="line">                &#123;</span><br><span class="line">                    cout&lt;&lt;<span class="string">&quot;Process (PID): &quot;</span>&lt;&lt;x.first&lt;&lt;<span class="string">&quot; Thread(Tid): &quot;</span>&lt;&lt;y.first&lt;&lt;<span class="string">&quot; Load: &quot;</span>&lt;&lt;y.second&lt;&lt;endl;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;Contention Cost: 0&quot;</span>&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="第5题"><a href="#第5题" class="headerlink" title="第5题"></a>第5题</h3><p>题面太长，不放了。这道题足足写了4个小时，但还是0分，很难受。</p>
+<img src="/2024/10/25/CCSP/CCSP-11.png" class="" title="整整写了4个小时">
+
+
+
+<p>0分代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> my_leecher pos-&gt;second.leecher</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> my_seeder pos-&gt;second.seeder</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> DEBUG = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">usernode</span></span><br><span class="line">&#123;</span><br><span class="line">    string peer_id;</span><br><span class="line">    string ip;</span><br><span class="line">    string port;</span><br><span class="line">    <span class="type">int</span> uploaded;</span><br><span class="line">    <span class="type">int</span> downloaded;</span><br><span class="line">    <span class="built_in">usernode</span>(string peer_id, string ip, string port, <span class="type">int</span> uploaded, <span class="type">int</span> downloaded)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;peer_id = peer_id;</span><br><span class="line">        <span class="keyword">this</span>-&gt;ip = ip;</span><br><span class="line">        <span class="keyword">this</span>-&gt;port = port;</span><br><span class="line">        <span class="keyword">this</span>-&gt;uploaded = uploaded;</span><br><span class="line">        <span class="keyword">this</span>-&gt;downloaded = downloaded;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">seednode</span></span><br><span class="line">&#123;</span><br><span class="line">    string info_hash;</span><br><span class="line">    string status;</span><br><span class="line">    map&lt;string,usernode&gt; seeder;</span><br><span class="line">    map&lt;string,usernode&gt; leecher;</span><br><span class="line">    <span class="type">int</span> complete;</span><br><span class="line">    <span class="type">int</span> incomplete;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">map&lt;string,seednode&gt; seedlist;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp_seeder</span><span class="params">(usernode&amp; a, usernode&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.uploaded &gt; b.uploaded) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (a.uploaded &lt; b.uploaded) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a.peer_id &lt; b.peer_id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp_leecher</span><span class="params">(usernode&amp; a, usernode&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.downloaded &gt; b.downloaded) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (a.downloaded &lt; b.downloaded) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a.peer_id &lt; b.peer_id;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">add</span><span class="params">(map&lt;string,seednode&gt;&amp; seedlist, vector&lt;string&gt;&amp; envlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string info_hash = envlist[<span class="number">0</span>].<span class="built_in">substr</span>(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line">    <span class="keyword">if</span> (seedlist.<span class="built_in">find</span>(info_hash) == seedlist.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        seednode newseed;</span><br><span class="line">        newseed.info_hash = info_hash;</span><br><span class="line">        seedlist.<span class="built_in">insert</span>(&#123;info_hash,newseed&#125;);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;OK&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;ERROR: Torrent already exists&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">del</span><span class="params">(map&lt;string,seednode&gt;&amp; seedlist, vector&lt;string&gt;&amp; envlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string info_hash = envlist[<span class="number">0</span>].<span class="built_in">substr</span>(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line">    map&lt;string,seednode&gt;::iterator now = seedlist.<span class="built_in">find</span>(info_hash);</span><br><span class="line">    <span class="keyword">if</span> (now != seedlist.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// TODO</span></span><br><span class="line">        <span class="comment">// if () in use</span></span><br><span class="line">        <span class="keyword">if</span> (now-&gt;second.status == <span class="string">&quot;FROZEN&quot;</span>) <span class="keyword">return</span> <span class="string">&quot;FROZEN&quot;</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            seedlist.<span class="built_in">erase</span>(now);</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;OK&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;ERROR: Invalid info_hash&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">annoounce</span><span class="params">(vector&lt;string&gt;&amp; envlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// announce </span></span><br><span class="line">    <span class="comment">// INFO_HASH=INFO-000000000000002 </span></span><br><span class="line">    <span class="comment">// PEER_ID=PEER-00000000000000D </span></span><br><span class="line">    <span class="comment">// IP=192.168.3.4 </span></span><br><span class="line">    <span class="comment">// PORT=5204 </span></span><br><span class="line">    <span class="comment">// UPLOADED=1200 </span></span><br><span class="line">    <span class="comment">// DOWNLOADED=300 </span></span><br><span class="line">    <span class="comment">// NUMWANT=3 </span></span><br><span class="line">    <span class="comment">// EVENT=completed</span></span><br><span class="line">    string info_hash = envlist[<span class="number">0</span>].<span class="built_in">substr</span>(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line">    string peer_id = envlist[<span class="number">1</span>].<span class="built_in">substr</span>(<span class="number">8</span>,<span class="number">20</span>);</span><br><span class="line">    string ip = envlist[<span class="number">2</span>].<span class="built_in">substr</span>(<span class="number">3</span>);</span><br><span class="line">    string port = envlist[<span class="number">3</span>].<span class="built_in">substr</span>(<span class="number">5</span>);</span><br><span class="line">    <span class="type">int</span> uploaded = <span class="built_in">stoi</span>(envlist[<span class="number">4</span>].<span class="built_in">substr</span>(<span class="number">9</span>));</span><br><span class="line">    <span class="type">int</span> downloaded = <span class="built_in">stoi</span>(envlist[<span class="number">5</span>].<span class="built_in">substr</span>(<span class="number">11</span>));</span><br><span class="line">    string temp = envlist[<span class="number">6</span>].<span class="built_in">substr</span>(<span class="number">8</span>);</span><br><span class="line">    <span class="type">int</span> numwant;</span><br><span class="line">    <span class="keyword">if</span> (temp==<span class="string">&quot;&quot;</span>) numwant = <span class="number">50</span>;</span><br><span class="line">    <span class="keyword">else</span> numwant = <span class="built_in">stoi</span>(envlist[<span class="number">6</span>].<span class="built_in">substr</span>(<span class="number">8</span>));</span><br><span class="line">    string event = envlist[<span class="number">7</span>].<span class="built_in">substr</span>(<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//if (DEBUG) cout&lt;&lt;&quot;DEBUG*****&quot;&lt;&lt;endl&lt;&lt;info_hash&lt;&lt;endl&lt;&lt;peer_id&lt;&lt;endl&lt;&lt;ip&lt;&lt;endl&lt;&lt;port&lt;&lt;endl&lt;&lt;uploaded&lt;&lt;endl&lt;&lt;downloaded&lt;&lt;endl&lt;&lt;numwant&lt;&lt;endl&lt;&lt;event&lt;&lt;endl&lt;&lt;&quot;*****DEBUG&quot;&lt;&lt;endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> pos = seedlist.<span class="built_in">find</span>(info_hash);</span><br><span class="line">    <span class="keyword">if</span> (pos != seedlist.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//auto my_seeder = pos-&gt;second.seeder;</span></span><br><span class="line">        <span class="keyword">auto</span> seeder_pos = my_seeder.<span class="built_in">find</span>(peer_id);</span><br><span class="line">        <span class="comment">//auto my_leecher = pos-&gt;second.leecher;</span></span><br><span class="line">        <span class="keyword">auto</span> leecher_pos = my_leecher.<span class="built_in">find</span>(peer_id);</span><br><span class="line">        string user_status = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="function">usernode <span class="title">newnode</span><span class="params">(peer_id, ip, port, uploaded, downloaded)</span></span>;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) cout&lt;&lt;<span class="string">&quot;AAAAA&quot;</span>&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) cout&lt;&lt;<span class="string">&quot;now info_hash:&quot;</span>&lt;&lt;info_hash&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) &#123;cout&lt;&lt;<span class="string">&quot;leecher:&quot;</span>; <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_leecher) cout&lt;&lt;x.first&lt;&lt;<span class="string">&quot; &quot;</span>; cout&lt;&lt;endl;&#125;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) &#123;cout&lt;&lt;<span class="string">&quot;seed:&quot;</span>; <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_seeder) cout&lt;&lt;x.first&lt;&lt;<span class="string">&quot; &quot;</span>; cout&lt;&lt;endl;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (event == <span class="string">&quot;started&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (seeder_pos != my_seeder.<span class="built_in">end</span>()) my_seeder.<span class="built_in">erase</span>(seeder_pos);</span><br><span class="line">            <span class="keyword">if</span> (leecher_pos == my_leecher.<span class="built_in">end</span>()) my_leecher.<span class="built_in">insert</span>(&#123;peer_id,newnode&#125;);</span><br><span class="line">            <span class="keyword">else</span> </span><br><span class="line">            &#123;</span><br><span class="line">                leecher_pos-&gt;second.downloaded = downloaded;</span><br><span class="line">                leecher_pos-&gt;second.uploaded = uploaded;</span><br><span class="line">            &#125;</span><br><span class="line">            user_status = <span class="string">&quot;leecher&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (event == <span class="string">&quot;completed&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (leecher_pos != my_leecher.<span class="built_in">end</span>()) my_leecher.<span class="built_in">erase</span>(leecher_pos);</span><br><span class="line">            <span class="keyword">if</span> (seeder_pos == my_seeder.<span class="built_in">end</span>()) my_seeder.<span class="built_in">insert</span>(&#123;peer_id,newnode&#125;);</span><br><span class="line">            <span class="keyword">else</span> </span><br><span class="line">            &#123;</span><br><span class="line">                seeder_pos-&gt;second.downloaded = downloaded;</span><br><span class="line">                seeder_pos-&gt;second.uploaded = uploaded;</span><br><span class="line">            &#125;</span><br><span class="line">            user_status = <span class="string">&quot;seeder&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (event == <span class="string">&quot;stopped&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (seeder_pos != my_seeder.<span class="built_in">end</span>()) my_seeder.<span class="built_in">erase</span>(seeder_pos);</span><br><span class="line">            <span class="keyword">if</span> (leecher_pos != my_leecher.<span class="built_in">end</span>()) my_leecher.<span class="built_in">erase</span>(leecher_pos);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (event == <span class="string">&quot;empty&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> complete = my_seeder.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> incomplete = my_leecher.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) cout&lt;&lt;<span class="string">&quot;now info_hash:&quot;</span>&lt;&lt;info_hash&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) cout&lt;&lt;<span class="string">&quot;complete:&quot;</span>&lt;&lt;complete&lt;&lt;endl&lt;&lt;<span class="string">&quot;incomplete:&quot;</span>&lt;&lt;incomplete&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) &#123;cout&lt;&lt;<span class="string">&quot;leecher:&quot;</span>; <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_leecher) cout&lt;&lt;x.first&lt;&lt;<span class="string">&quot; &quot;</span>; cout&lt;&lt;endl;&#125;</span><br><span class="line">        <span class="keyword">if</span> (DEBUG) &#123;cout&lt;&lt;<span class="string">&quot;seed:&quot;</span>; <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_seeder) cout&lt;&lt;x.first&lt;&lt;<span class="string">&quot; &quot;</span>; cout&lt;&lt;endl;&#125;</span><br><span class="line">        </span><br><span class="line">        vector&lt;usernode&gt; peers;</span><br><span class="line">        <span class="keyword">if</span> (user_status == <span class="string">&quot;seeder&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            numwant = <span class="built_in">min</span>(numwant, incomplete);</span><br><span class="line">            vector&lt;usernode&gt; seedervec,leechervec;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_leecher) leechervec.<span class="built_in">push_back</span>(x.second);</span><br><span class="line">            <span class="built_in">sort</span>(leechervec.<span class="built_in">begin</span>(),leechervec.<span class="built_in">end</span>(),cmp_leecher);</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;numwant; i++) peers.<span class="built_in">push_back</span>(leechervec[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (user_status == <span class="string">&quot;leecher&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            vector&lt;usernode&gt; seedervec,leechervec;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_seeder) seedervec.<span class="built_in">push_back</span>(x.second);</span><br><span class="line">            <span class="built_in">sort</span>(seedervec.<span class="built_in">begin</span>(),seedervec.<span class="built_in">end</span>(),cmp_seeder);</span><br><span class="line">            <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;seedervec.<span class="built_in">size</span>(); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                peers.<span class="built_in">push_back</span>(seedervec[i]);</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span> (count == numwant) <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (count &lt; numwant)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> x : my_leecher) leechervec.<span class="built_in">push_back</span>(x.second);</span><br><span class="line">                <span class="built_in">sort</span>(leechervec.<span class="built_in">begin</span>(),leechervec.<span class="built_in">end</span>(),cmp_leecher);</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;leechervec.<span class="built_in">size</span>(); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    peers.<span class="built_in">push_back</span>(leechervec[i]);</span><br><span class="line">                    count++;</span><br><span class="line">                    <span class="keyword">if</span> (count == numwant) <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// return</span></span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;OK: &quot;</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;COMPLETE=&quot;</span>&lt;&lt;complete&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;INCOMPLETE=&quot;</span>&lt;&lt;incomplete&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;PEERS=[&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;peers.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;<span class="string">&quot;(&quot;</span>&lt;&lt;peers[i].peer_id&lt;&lt;<span class="string">&quot;,&quot;</span>&lt;&lt;peers[i].ip&lt;&lt;<span class="string">&quot;,&quot;</span>&lt;&lt;peers[i].port&lt;&lt;<span class="string">&quot;)&quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (i != peers.<span class="built_in">size</span>()<span class="number">-1</span>) cout&lt;&lt;<span class="string">&quot;,&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;]&quot;</span>&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;ERROR: Invalid info_hash&quot;</span>&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// ios::sync_with_stdio(false);</span></span><br><span class="line">    <span class="comment">// cin.tie(0);</span></span><br><span class="line">    <span class="comment">// cout.tie(0);</span></span><br><span class="line">    string str;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">getline</span>(cin,str))</span><br><span class="line">    &#123;</span><br><span class="line">        stringstream ss;</span><br><span class="line">        ss &lt;&lt; str;</span><br><span class="line">        string op;</span><br><span class="line">        vector&lt;string&gt; envlist;</span><br><span class="line">        ss &gt;&gt; op;</span><br><span class="line">        string temp;</span><br><span class="line">        <span class="keyword">while</span>(ss &gt;&gt; temp)</span><br><span class="line">        &#123;</span><br><span class="line">            envlist.<span class="built_in">push_back</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// cout&lt;&lt;op&lt;&lt;endl;</span></span><br><span class="line">        <span class="comment">// for (auto x : envlist) cout&lt;&lt;x&lt;&lt;endl;</span></span><br><span class="line">        <span class="comment">// cout&lt;&lt;endl;</span></span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&quot;announce&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">annoounce</span>(envlist);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;add&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;<span class="built_in">add</span>(seedlist, envlist)&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;del&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;<span class="built_in">del</span>(seedlist, envlist)&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 30</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;scrape&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 50</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;run&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 70</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&quot;report&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wolfvoid.github.io/2024/10/25/CCSP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/11/04/Note-platform/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Note-platform
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/10/18/Note-algorithm/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Note-algorithm</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022-2025
+        <i class="ri-heart-fill heart_icon"></i> wolf void
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Wolf&#39;s void"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/649a5fe20000000010036f31">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=2450887558&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
